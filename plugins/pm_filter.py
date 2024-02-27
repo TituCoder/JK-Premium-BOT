@@ -17,7 +17,7 @@ from info import *
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, import_site, get_shortlink, send_all, check_verification, get_token, stream_site
+from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, import_site, get_shortlink, send_all, check_verification, get_token, import_site
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
 from database.filters_mdb import (
@@ -52,8 +52,8 @@ async def stream_download(bot, query):
         
     online = f"{URL}watch/{msg.id}"
     download = f"{URL}download/{msg.id}"
-    non_online = await stream_site(online)
-    non_download = await stream_site(download)
+    non_online = await import_site(online)
+    non_download = await import_site(download)
     if await db.has_premium_access(user_id):  
         await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\nPREMIUM USER ✅",
             reply_markup=InlineKeyboardMarkup([[
