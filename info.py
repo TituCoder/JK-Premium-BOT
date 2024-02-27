@@ -39,7 +39,7 @@ JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1001433302422')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
-
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "ArtisticDeveloper") # widout 👉 @
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5069888600 6445840990 5272400279').split()]
