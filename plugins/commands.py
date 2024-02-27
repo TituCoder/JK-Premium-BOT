@@ -3,6 +3,7 @@ import sys
 import logging
 import random
 import asyncio
+import pytz
 from Script import script
 from pyrogram import Client, filters, enums
 from datetime import datetime
