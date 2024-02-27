@@ -26,6 +26,21 @@ NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/b031170d30ba47f169859.
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
 
+
+# premium QR & PHOTO
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/12adf3a7451bf2a72b454.jpg'))
+CODE = (environ.get('CODE', 'https://graph.org/file/683300a0f61aba6657819.jpg')) # Scanner Code image 
+
+#streming link shortner
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'aslink.in')
+STREAM_API = environ.get('IMPORT_JK_API', 'db066611d1622def3020662694217310139d12c1')
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
+
+#premium Users Satuts
+premium = environ.get('PREMIUM_LOGS', '-1001433302422')
+PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
+
+
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5069888600 6445840990 5272400279').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001964677353 -1002043695166').split()]
@@ -46,21 +61,20 @@ DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-#this shortlink working
-IMPORT_JK_SITE = environ.get('IMPORT_JK_SITE', 'aslink.in')
-IMPORT_JK_API = environ.get('IMPORT_JK_API', 'db066611d1622def3020662694217310139d12c1')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
-
-# Others
+# verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/BackupChannel0143/64")
 VERIFY2_URL = environ.get('VERIFY2_URL', "aslink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "db066611d1622def3020662694217310139d12c1")
+# how to open link
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
-# 👇==============this doesn't work===============👇
+# files Shortner site
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'aslink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'db066611d1622def3020662694217310139d12c1')
-# ☝️==============don't remove this===============☝️
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
+
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
