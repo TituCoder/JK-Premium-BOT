@@ -5,6 +5,7 @@ import random
 import asyncio
 from Script import script
 from pyrogram import Client, filters, enums
+from datetime import datetime
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
@@ -17,6 +18,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
+TIMEZONE = "Asia/Kolkata"
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
