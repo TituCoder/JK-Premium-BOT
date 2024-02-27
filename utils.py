@@ -51,6 +51,8 @@ class temp(object):
     SEND_ALL_TEMP = {}
     KEYWORD = {}
     BOT = None
+    SHORT = {}
+    GETALL = {}
     
 async def is_subscribed(bot, query=None, userid=None):
     try:
