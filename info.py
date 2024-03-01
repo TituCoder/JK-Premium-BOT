@@ -63,7 +63,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/BackupChannel0143/64")
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/BackupChannel0143/17")
 VERIFY2_URL = environ.get('VERIFY2_URL', "ZxLink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "3ce7b1606dcf4b139f0cb88bc9f6f1fc96361f02")
 # how to open link
