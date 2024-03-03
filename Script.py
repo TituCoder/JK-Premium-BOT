@@ -422,13 +422,13 @@ Nᴀᴍᴇ - {}"""
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b><a href="https://t.me/Movie_Official_Hindi">{file_name}</a><b>
+<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b><a href="https://t.me/MyFilmyDuniya0143">{file_name}</a><b>
 
 मेरे भाई बैकअप चैनल ज्वाइन कर के रखो📥 
 पता न कब कॉपीराइट आ जाए 👇
 ========== • ✠ • ==========
-▫️ Backup Channel🤫 :  <a href="https://t.me/Movie_Official_Hindi">Click Here</a>
-▫️ Request Group🤫 :  <a href="https://t.me/Movie_GroupTM">Click Here</a>
+▫️ Backup Channel🤫 :  <a href="https://t.me/MyFilmyDuniya0143">Click Here</a>
+▫️ Request Group🤫 :  <a href="https://t.me/Happy_Hour_Home">Click Here</a>
 ========== • ✠ • ==========
 </b>"""
 
