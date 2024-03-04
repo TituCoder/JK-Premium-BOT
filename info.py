@@ -32,8 +32,8 @@ SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/12adf3a7451b
 CODE = (environ.get('CODE', 'https://graph.org/file/683300a0f61aba6657819.jpg')) # Scanner Code image 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'zxlink.in')
-STREAM_API = environ.get('IMPORT_JK_API', '3ce7b1606dcf4b139f0cb88bc9f6f1fc96361f02')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'krishnalink.com')
+STREAM_API = environ.get('IMPORT_JK_API', 'ee80d092c6eae94d3e6fffc4ae60e190612b813d')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 
 #premium Users Satuts
@@ -64,15 +64,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/BackupChannel0143/17")
-VERIFY2_URL = environ.get('VERIFY2_URL', "zxlink.in")
-VERIFY2_API = environ.get('VERIFY2_API', "3ce7b1606dcf4b139f0cb88bc9f6f1fc96361f02")
+VERIFY2_URL = environ.get('VERIFY2_URL', "krishnalink.com")
+VERIFY2_API = environ.get('VERIFY2_API', "ee80d092c6eae94d3e6fffc4ae60e190612b813d")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'zxlink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '3ce7b1606dcf4b139f0cb88bc9f6f1fc96361f02')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'krishnalink.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'ee80d092c6eae94d3e6fffc4ae60e190612b813d')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 
