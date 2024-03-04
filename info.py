@@ -71,7 +71,7 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'krishnalink.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'krishnalink.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'ee80d092c6eae94d3e6fffc4ae60e190612b813d')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
