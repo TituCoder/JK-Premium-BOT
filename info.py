@@ -37,7 +37,7 @@ STREAM_API = environ.get('IMPORT_JK_API', 'fbbd56e9ba6e1d89b17f38d63a6a735a93f38
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 
 #premium Users Satuts
-premium = environ.get('PREMIUM_LOGS', '-1001433302422')
+premium = environ.get('PREMIUM_LOGS', '-1002073485610')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Mr_Jaynath_Bot") # widout 👉 @
 
