@@ -39,7 +39,7 @@ JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
-OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Mr_Jaynath_Bot") # widout 👉 @
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 @
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5069888600 6445840990').split()]
@@ -81,7 +81,7 @@ MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Jaynath_Req_Movie')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/My_Filmy_Duniya0143')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Jaynath_Movie_Channel')
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002073485610))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Happy_HourTM')
