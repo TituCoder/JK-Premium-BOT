@@ -1,4 +1,4 @@
-⚡ Kanged From @JK_DEV
+# Kanged From @JK_DEV
 import asyncio
 import re
 import ast
