@@ -1,4 +1,4 @@
-# Kanged From @JK_DEV
+⚡ Kanged From @JK_DEV
 import asyncio
 import re
 import ast
@@ -250,7 +250,7 @@ async def next_page(bot, query):
     ])
     btn.insert(0, [
         InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ !", callback_data=f"sendfiles#{key}"),
+        InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}"),
     ])
     try:
         await query.message.edit_text(text=cap + files_link, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
@@ -300,7 +300,7 @@ async def language_check(bot, query):
 
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ !", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
         ])
 
         if offset != "":
@@ -411,7 +411,7 @@ async def quality_check(bot, query):
 
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ !", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
         ])
 
         if offset != "":
@@ -515,7 +515,7 @@ async def seasons_check(bot, query):
 
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ !", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
         ])
 
         if offset != "":
