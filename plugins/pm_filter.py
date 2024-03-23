@@ -2068,9 +2068,9 @@ async def auto_filter(client, msg, spoll=False):
         ]
         
     btn.insert(0, [
-        InlineKeyboardButton("Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
-        InlineKeyboardButton("Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}"),
-        InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
+        InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
+        InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}"),
+        InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
     ])
 
     btn.insert(0, [
