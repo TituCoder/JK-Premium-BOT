@@ -51,10 +51,10 @@ async def start(client, message):
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇꜱ •', callback_data='channels')
+                    InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
-                    InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='help'),
-                    InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
+                    InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
+                    InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
                   ]]
@@ -121,10 +121,10 @@ async def start(client, message):
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇꜱ •', callback_data='channels')
+                    InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
-                    InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='help'),
-                    InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
+                    InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
+                    InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
                   ]]
@@ -192,8 +192,8 @@ async def start(client, message):
                          [
                           InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                        ],[
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                          InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -212,8 +212,8 @@ async def start(client, message):
                           InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                           
                        ],[
-                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                          InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                          InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -351,8 +351,8 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup([[
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")],
-                      [InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)]]))
+                      [InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)]]))
             return 
         else:
             user = message.from_user.id
@@ -415,8 +415,8 @@ async def start(client, message):
                      [
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                    ],[
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                      InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                      ]
                     ]
                 )
@@ -450,8 +450,8 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup([[
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")],
-                      [InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)]]))
+                      [InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀', url=CHNL_LNK)]]))
             return 
         else:
             user = message.from_user.id
@@ -499,8 +499,8 @@ async def start(client, message):
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
               
                    ],[
-                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                      InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                      ]
                     ]
                 )
@@ -557,8 +557,8 @@ async def start(client, message):
              InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
               
            ],[
-              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+              InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+              InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀 ', url=CHNL_LNK)
              ]
             ]
         )
