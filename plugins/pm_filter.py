@@ -2016,7 +2016,7 @@ async def auto_filter(client, msg, spoll=False):
         if len(message.text) < 100:
             search = message.text
             m=await message.reply_sticker(sticker="CAACAgQAAxkBAAELmTdl4-p4tmDQNqdUzot-0a_F8aJo-gACBQMAAnJxFyVYcSIunXgGjjQE",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎", url=CHNL_LNK)]]))
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎ 🅱🆁🅾", url=CHNL_LNK)]]))
             search = search.lower()
             find = search.split(" ")
             search = ""
