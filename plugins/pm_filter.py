@@ -905,8 +905,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                 [
                                 InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                             ],[
-                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                                InlineKeyboardButton('😍Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ😍', url=GRP_LNK),
+                                InlineKeyboardButton('🍀Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀🐈🐑👨‍👧‍👧', url=CHNL_LNK)
                                 ]
                                 ]
                             )
@@ -1003,8 +1003,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                  [
                   InlineKeyboardButton("🖥️ Wᴀᴛᴄʜ & Dᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                ],[
-                  InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
-                  InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                  InlineKeyboardButton('😍Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ😍', url=GRP_LNK),
+                  InlineKeyboardButton('🍀Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀', url=CHNL_LNK)
                  ]
                 ]
             )
@@ -1322,10 +1322,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
                 ],[
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data="shortlink_info"),
-                    InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ', callback_data='channels')
+                    InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
-                    InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='help'),
-                    InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ', callback_data='about')
+                    InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
+                    InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
                 ],[
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
                   ]]
@@ -1407,14 +1407,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             buttons = [[
                 InlineKeyboardButton('• ꜰʀᴇᴇ ᴛʀɪᴀʟ •', callback_data='free')
             ],[
-                InlineKeyboardButton('• ʙʀᴏɴᴢᴇ •', callback_data='broze'),
-                InlineKeyboardButton('• ꜱɪʟᴠᴇʀ •', callback_data='silver')
+                InlineKeyboardButton('❗ ʙʀᴏɴᴢᴇ ❗', callback_data='broze'),
+                InlineKeyboardButton('❗ ꜱɪʟᴠᴇʀ ❗', callback_data='silver')
             ],[
-                InlineKeyboardButton('• ɢᴏʟᴅ •', callback_data='gold'),
-                InlineKeyboardButton('• ᴘʟᴀᴛɪɴᴜᴍ •', callback_data='platinum')
+                InlineKeyboardButton('❗ ɢᴏʟᴅ ❗', callback_data='gold'),
+                InlineKeyboardButton('❗ ᴘʟᴀᴛɪɴᴜᴍ ❗', callback_data='platinum')
             ],[
-                InlineKeyboardButton('• ᴅɪᴀᴍᴏɴᴅ •', callback_data='diamond'),
-                InlineKeyboardButton('• ᴏᴛʜᴇʀ •', callback_data='other')
+                InlineKeyboardButton('❗ ᴅɪᴀᴍᴏɴᴅ ❗', callback_data='diamond'),
+                InlineKeyboardButton('❗ ᴏᴛʜᴇʀ ❗', callback_data='other')
             ],[
                 InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
             ]]
@@ -1450,16 +1450,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             return 
         else:
             buttons = [[
-                InlineKeyboardButton('• ꜰʀᴇᴇ ᴛʀɪᴀʟ •', callback_data='free')
+                InlineKeyboardButton('❗ ꜰʀᴇᴇ ᴛʀɪᴀʟ ❗', callback_data='free')
             ],[
-                InlineKeyboardButton('• ʙʀᴏɴᴢᴇ •', callback_data='broze'),
-                InlineKeyboardButton('• ꜱɪʟᴠᴇʀ •', callback_data='silver')
+                InlineKeyboardButton('❗ ʙʀᴏɴᴢᴇ ❗', callback_data='broze'),
+                InlineKeyboardButton('❗ ꜱɪʟᴠᴇʀ ❗', callback_data='silver')
             ],[
-                InlineKeyboardButton('• ɢᴏʟᴅ •', callback_data='gold'),
-                InlineKeyboardButton('• ᴘʟᴀᴛɪɴᴜᴍ •', callback_data='platinum')
+                InlineKeyboardButton('❗ ɢᴏʟᴅ ❗', callback_data='gold'),
+                InlineKeyboardButton('❗ ᴘʟᴀᴛɪɴᴜᴍ ❗', callback_data='platinum')
             ],[
-                InlineKeyboardButton('• ᴅɪᴀᴍᴏɴᴅ •', callback_data='diamond'),
-                InlineKeyboardButton('• ᴏᴛʜᴇʀ •', callback_data='other')
+                InlineKeyboardButton('❗ ᴅɪᴀᴍᴏɴᴅ ❗', callback_data='diamond'),
+                InlineKeyboardButton('❗ ᴏᴛʜᴇʀ ❗', callback_data='other')
             ],[            
                 InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
             ]]
@@ -1649,10 +1649,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('• ʙᴏᴛ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='admic')
+            InlineKeyboardButton('✨ ʙᴏᴛ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ ✨', callback_data='admic')
         ], [
-            InlineKeyboardButton('• ᴜꜱᴇʀ •', callback_data='users'),
-            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', callback_data='group')
+            InlineKeyboardButton('✨ ᴜꜱᴇʀ ✨', callback_data='users'),
+            InlineKeyboardButton('✨ ɢʀᴏᴜᴘ ✨', callback_data='group')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
@@ -1672,8 +1672,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
         ], [
-            InlineKeyboardButton('• ᴏᴡɴᴇʀ •', url=f"https://t.me/{OWNER_USER_NAME}"),
-            InlineKeyboardButton('• ꜱᴛᴀᴛꜱ •', callback_data='stats')
+            InlineKeyboardButton('😎 ᴏᴡɴᴇʀ 😎', url=f"https://t.me/{OWNER_USER_NAME}"),
+            InlineKeyboardButton('🔻 ꜱᴛᴀᴛꜱ 🔻', callback_data='stats')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
