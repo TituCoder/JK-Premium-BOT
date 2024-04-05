@@ -434,11 +434,14 @@ Nᴀᴍᴇ - {}"""
 
     IMDB_TEMPLATE_TXT = """
 <b>
-🏷 Title: <a href={url}>{title}</a>
-🎭 Genres: {genres}
-📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating} / 10</a>
-📀 RunTime: {runtime} Minutes</b> """
+🏷 𝐓𝐢𝐭𝐥𝐞 : {title}
+🎭 𝐆𝐞𝐧𝐫𝐞𝐬 : {genres}
+🌟 𝐑𝐚𝐭𝐢𝐧𝐠 : {rating}
+📀 𝐑𝐮𝐧𝐓𝐢𝐦𝐞 : {runtime}
+📆 𝐑𝐞𝐥𝐞𝐚𝐬𝐞 𝐈𝐧𝐟𝐨 : {year}
+🎛 𝐂𝐨𝐮𝐧𝐭𝐫𝐢𝐞𝐬 : {countries}
+
+𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 {message.chat.title}</b>"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
