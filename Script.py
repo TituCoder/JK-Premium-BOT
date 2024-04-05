@@ -433,7 +433,6 @@ Nᴀᴍᴇ - {}"""
 </b>"""
 
     IMDB_TEMPLATE_TXT = """
-<b>
 🏷 𝐓𝐢𝐭𝐥𝐞 : {title}
 🎭 𝐆𝐞𝐧𝐫𝐞𝐬 : {genres}
 🌟 𝐑𝐚𝐭𝐢𝐧𝐠 : {rating}
