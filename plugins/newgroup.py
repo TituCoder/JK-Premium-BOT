@@ -1,5 +1,4 @@
 from info import *
-from Biisal import *
 from asyncio import sleep
 from pyrogram import Client, filters 
 
