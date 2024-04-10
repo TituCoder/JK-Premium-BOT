@@ -3,7 +3,6 @@ from utils import *
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery 
 import asyncio
-from Biisal import *
 
 user_states = {}
 
