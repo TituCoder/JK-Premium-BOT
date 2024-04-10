@@ -1,5 +1,4 @@
 from info import *
-from Biisal import *
 from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
 
