@@ -1692,7 +1692,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "extra_data":
-        btn = [[
+        buttons = [[
             InlineKeyboardButton('𝚂𝙾𝙽𝙶', callback_data='songs'),
             InlineKeyboardButton('𝙴𝚇𝚃𝚁𝙰', callback_data='extra'),
             InlineKeyboardButton("𝚅𝙸𝙳𝙴𝙾", callback_data='video')
@@ -1725,7 +1725,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙵𝙸𝙻𝙴-𝚂𝚃𝙾𝚁𝙴', callback_data='newdata'),
             InlineKeyboardButton('𝚂𝚃𝙰𝚃𝚄𝚂', callback_data='stats')
             ]]
-            reply_markup = InlineKeyboardMarkup(btn) 
+        reply_markup = InlineKeyboardMarkup(buttons) 
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
