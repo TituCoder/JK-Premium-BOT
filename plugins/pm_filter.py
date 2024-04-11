@@ -1324,6 +1324,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('💸 ᴇᴀʀɴ ᴍᴏɴᴇʏ 💸', callback_data="shortlink_info"),
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
+                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ==') 
+                ],[
                     InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
                 ],[
@@ -1724,6 +1726,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙶-𝚃𝚁𝙰𝙽𝚂', callback_data='gtrans'),
             InlineKeyboardButton('𝙵𝙸𝙻𝙴-𝚂𝚃𝙾𝚁𝙴', callback_data='newdata'),
             InlineKeyboardButton('𝚂𝚃𝙰𝚃𝚄𝚂', callback_data='stats')
+        ], [
+            InlineKeyboardButton('ʙᴀᴄᴋ 🔙', callback_data='start') 
             ]]
         reply_markup = InlineKeyboardMarkup(buttons) 
         await client.edit_message_media(
@@ -1746,7 +1750,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.RESTRIC_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "whois":
         buttons = [[
@@ -1756,7 +1760,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.WHOIS_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "corona":
         buttons = [[
@@ -1767,7 +1771,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.CORONA_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "urlshort":
         buttons = [[
@@ -1778,7 +1782,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.URLSHORT_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "zombies":
         buttons = [[
@@ -1789,7 +1793,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.ZOMBIES_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "fun":
         buttons = [[
@@ -1799,7 +1803,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.FUN_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "video":
         buttons = [[
@@ -1809,7 +1813,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.VIDEO_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "pin":
         buttons = [[
@@ -1819,7 +1823,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.PIN_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "son":
         buttons = [[
@@ -1829,7 +1833,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.JSON_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML   
         )
     elif query.data == "pastes":
         buttons = [[
@@ -1839,7 +1843,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.PASTE_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "pings":
         buttons = [[
@@ -1849,7 +1853,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.PINGS_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "ttss":
         buttons = [[
@@ -1859,7 +1863,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.TTS_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "purges":
         buttons = [[
@@ -1869,7 +1873,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.PURGE_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "tele":
         buttons = [[
@@ -1879,7 +1883,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.TELE_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )         
     elif query.data == "extra":
         buttons = [[
@@ -1890,7 +1894,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "gtrans":
         buttons = [[
@@ -1902,7 +1906,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.GTRANS_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "report":
         buttons = [[
@@ -1913,7 +1917,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.REPORT_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "sticker":
         buttons = [[
@@ -1924,7 +1928,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.STICKER_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "ytthumb":
         buttons = [[
@@ -1935,7 +1939,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.YTTHUMB_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "admin":
         buttons = [[
@@ -1945,7 +1949,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.ADMIN_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "abook":
         buttons = [[
@@ -1956,7 +1960,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.ABOOK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "newdata":
         buttons = [[
@@ -1966,7 +1970,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.FILE_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "songs":
         buttons = [[
@@ -1976,7 +1980,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.SONG_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "deploy":
         buttons = [[
@@ -1986,7 +1990,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.DEPLOY_TXT,
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "shortlink_info":
             btn = [[
