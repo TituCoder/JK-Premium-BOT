@@ -508,9 +508,9 @@ _𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐌𝐞 𝐖𝐢𝐭𝐡 𝐘𝐨𝐮𝐫 𝐂�
 
 ⪼ 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 ›
 
-<code>/batch https://t.me/MOVIES_ZILAA/3 https://t.me/MOVIES_ZILAA/8</code>
+<code>/batch https://t.me/Jaynath_Movie_Channel/405 https://t.me/Jaynath_Movie_Channel/409</code>
 
-𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/MOVIES_ZILAA><b>ᎯℕUℛᎯᎶ♥️</b></a>"""
+𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/Jaynath_Movie_Channel><b>𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡♥️</b></a>"""
     WHOIS_TXT ="""<b>WHOIS MODULE</b>
 Note:- Give a user details
 •/whois :-give a user full details"""
@@ -525,12 +525,12 @@ Note:- Give a user details
 5. /luck or /cownd - 𝚂𝙿𝙸𝙽 𝙰𝙽𝙳 𝚃𝚁𝚈 𝚈𝙾𝚄𝚁 𝙻𝚄𝙲𝙺"""
     DEPLOY_TXT = """<b>𝙷𝙾𝚆 𝚃𝙾 𝙳𝙴𝙿𝙻𝙾𝚈..?</b> 
   
-<b>✮ Deploy Tutorial ››</b> <i><b>https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg</b></i>
+<b>✮ Deploy Tutorial ››</b> <i><b>https://t.me/Jaynath_Movie_Channel/409</b></i>
 
-<b>𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙷𝙴 ᎯℕUℛᎯᎶ-𝙿𝚁𝙾-𝙼𝙰𝚇 𝚁𝙴𝙿𝙾 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 <a href=https://t.me/Am_RoBots>ᎯℕUℛᎯᎶ</a></b>
+<b>𝙸𝙵 𝚈𝙾𝚄 𝚆𝙰𝙽𝚃 𝚃𝙷𝙴 𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡-𝙿𝚁𝙾-𝙼𝙰𝚇 𝚁𝙴𝙿𝙾 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 <a href=https://t.me/Jaynath_Movie_Channel/409>𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡</a></b>
 
 <b>𝚂𝙷𝙰𝚁𝙴 𝙰𝙽𝙳 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴</b>
-𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/MOVIES_ZILAA><b>ᎯℕUℛᎯᎶ♥️</b></a>"""
+𝙲𝚁𝙴𝙳𝙸𝚃𝚂 ›› <a href=https://t.me/Jaynath_Movie_Channel/409><b>𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡♥️</b></a>"""
 
     SONG_TXT = """<b>𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙾𝙳𝚄𝙻𝙴</b>
 
@@ -542,7 +542,7 @@ Note:- Give a user details
 
 𝚆𝙾𝚁𝙺𝚂 𝙾𝙽𝙻𝚈 𝙾𝙽 𝙶𝚁𝙾𝚄𝙿
 
-𝙲𝚁𝙴𝙳𝙸𝚃𝚂 :- <a href=https://t.me/MOVIES_ZILAA>ᎯℕUℛᎯᎶ</a>"""
+𝙲𝚁𝙴𝙳𝙸𝚃𝚂 :- <a href=https://t.me/Jaynath_Movie_Channel/409>𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡</a>"""
     PIN_TXT ="""<b>PIN MODULE</b>
 <b>𝙿𝙸𝙽 𝙰 𝙼𝙴𝚂𝚂𝙰𝙶𝙴../</b>
 
@@ -694,7 +694,7 @@ Delete A Lot Of Messages From Groups!
 
 ➪ 𝖩𝗎𝗌𝗍 𝗌𝖾𝗇𝖽 𝗆𝖾 𝖺 𝗂𝗆𝖺𝗀𝖾 𝗍𝗈 𝖾𝖽𝗂𝗍 ✨
 
-𝖬𝖺𝖽𝖾 𝖻𝗒 <a href=https://t.me/MOVIES_ZILAA>ᎯℕUℛᎯᎶ</a>"""
+𝖬𝖺𝖽𝖾 𝖻𝗒 <a href=https://t.me/Jaynath_Movie_Channel/409>𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡</a>"""
 
     STICKER_TXT = """𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝚃𝙷𝙸𝚂 𝙼𝙾𝙳𝚄𝙻𝙴 𝚃𝙾 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂 𝙸𝙳.
 • 𝐔𝐒𝐀𝐆𝐄
