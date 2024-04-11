@@ -2317,8 +2317,8 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await message.reply_sticker(sticker="CAACAgQAAxkBAAELmTdl4-p4tmDQNqdUzot-0a_F8aJo-gACBQMAAnJxFyVYcSIunXgGjjQE",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎ 🅱🆁🅾", url=CHNL_LNK)]]))
+            m=await message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎  🅱🆁🅾", url=CHNL_LNK)]]))
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -2346,8 +2346,8 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        m=await message.reply_sticker(sticker="CAACAgQAAxkBAAELmTdl4-p4tmDQNqdUzot-0a_F8aJo-gACBQMAAnJxFyVYcSIunXgGjjQE",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎", url=CHNL_LNK)]]))
+        m=await message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎  🅱🆁🅾", url=CHNL_LNK)]]))
         settings = await get_settings(message.chat.id)
     key = f"{message.chat.id}-{message.id}"
     temp.GETALL[key] = files
