@@ -436,8 +436,7 @@ Nᴀᴍᴇ - {}"""
 ========== • ✠ • ==========
 </b>"""
 
-    IMDB_TEMPLATE_TXT = """
-<b>
+    IMDB_TEMPLATE_TXT = """<b>
 🏷 Title: <a href={url}>{title}</a>
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
