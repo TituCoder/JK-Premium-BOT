@@ -436,11 +436,13 @@ Nᴀᴍᴇ - {}"""
 ========== • ✠ • ==========
 </b>"""
 
-    IMDB_TEMPLATE_TXT = """<b>
+    IMDB_TEMPLATE_TXT = """
+<b>
 🏷 Title: <a href={url}>{title}</a>
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating} / 10</a>
+🌟 Rating: <a href={url}/ratings>{rating} / 10</
+a>
 📀 RunTime: {runtime} Minutes</b> """
     
     ALL_FILTERS = """
