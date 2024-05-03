@@ -1,8 +1,40 @@
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
 import motor.motor_asyncio
-from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL
+from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL, REFERAL_USER_TIME, INVITED_USER_TRAIL
 import datetime
 
+
+import pytz
+import re
+import time
+from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
+
+my_client = MongoClient(DATABASE_URI)
+mydb = my_client["referal_user"]
+
+async def referal_add_user(user_id, ref_user_id):
+    user_db = mydb[str(user_id)]
+    user = {'_id': ref_user_id}
+    try:
+        user_db.insert_one(user)
+        return True
+    except DuplicateKeyError:
+        return False
+    
+async def get_referal_all_users(user_id):
+    user_db = mydb[str(user_id)]
+    return user_db.find()
+    
+async def get_referal_users_count(user_id):
+    user_db = mydb[str(user_id)]
+    count = user_db.count_documents({})
+    return count
+    
+
+async def delete_all_referal_users(user_id):
+    user_db = mydb[str(user_id)]
+    user_db.delete_many({}) 
 class Database:
     
     def __init__(self, uri, database_name):
@@ -224,5 +256,27 @@ class Database:
         user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
         await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
         
-        
+  
+    async def save_invites(self, user_id):
+        user_data = await self.get_user(user_id)
+        if user_data:
+            return user_data.get("has_free_trial", False)
+        return False
+
+    async def give_referal(self, userid):        
+        user_id = userid
+        seconds = REFERAL_USER_TIME       
+        expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+        user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
+        await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
+
+    async def update_invited(self, userid):        
+        user_id = userid
+        seconds = INVITED_USER_TRAIL       
+        expiry_time = datetime.datetime.now() + datetime.timedelta(seconds=seconds)
+        user_data = {"id": user_id, "expiry_time": expiry_time, "has_free_trial": True}
+        await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
+
+
+      
 db = Database(DATABASE_URI, DATABASE_NAME)
