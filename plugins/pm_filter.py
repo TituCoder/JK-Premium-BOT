@@ -276,7 +276,7 @@ async def next_page(bot, query):
             pass
     else:
         try:
-            await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+            await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
         except MessageNotModified:
             pass
         await query.answer()
@@ -1396,11 +1396,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
-            buttons.append([
+            buttons.append([[
                 InlineKeyboardButton('ʀᴇғғᴇʀ 🎁', callback_data='reffer') 
             ], [
                 InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
-            ])
+            ]])
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
