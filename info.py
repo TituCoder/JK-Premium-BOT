@@ -67,7 +67,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/BackupChannel0143/71")
 VERIFY2_URL = environ.get('VERIFY2_URL', "jaynath.aslink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "fbbd56e9ba6e1d89b17f38d63a6a735a93f3809b")
