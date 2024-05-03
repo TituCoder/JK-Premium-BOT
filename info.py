@@ -31,6 +31,11 @@ SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/12adf3a7451bf2a72b454.jpg'))
 CODE = (environ.get('CODE', 'https://graph.org/file/683300a0f61aba6657819.jpg')) # Scanner Code image 
 
+#refer time, or user count
+REFERAL_USER_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
+USERS_COUNT = int(environ.get('USERS_COUNT', "2")) # Set Referel User Count
+INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
+
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'jaynath.aslink.in')
 STREAM_API = environ.get('IMPORT_JK_API', 'fbbd56e9ba6e1d89b17f38d63a6a735a93f3809b')
