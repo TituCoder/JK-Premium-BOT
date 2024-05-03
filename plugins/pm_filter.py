@@ -1442,12 +1442,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⇚Back', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-            await query.message.reply_photo(
-                photo=random.choice(PICS),
-                caption=script.REFFER_TXT.format(query.from_user.mention),
-                reply_markup=reply_markup,
-                parse_mode=enums.ParseMode.HTML
-            )
+        await query.message.reply_photo(
+            photo=random.choice(PICS),
+            caption=script.REFFER_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "reffer":
         user_id = query.from_user.id
         total_referrals = await get_referal_users_count(user_id)
