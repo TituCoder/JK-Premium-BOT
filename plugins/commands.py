@@ -61,7 +61,8 @@ async def start(client, message):
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
                 InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
-            ],[
+            ])
+            buttons.append([
                 InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
             ])
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -137,7 +138,8 @@ async def start(client, message):
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
                 InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
-            ],[
+            ])
+            buttons.append([
                 InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
             ])
         reply_markup = InlineKeyboardMarkup(buttons)
