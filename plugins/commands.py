@@ -352,6 +352,8 @@ async def start(client, message):
                         InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                     ],[
                         InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                    ], [
+                       InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                     ]
                 ]
             )
@@ -404,7 +406,10 @@ async def start(client, message):
                             InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)], 
                             [InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                             ],[
-                            InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')]]))
+                            InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                            ], [
+                            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                            ]]))
                 return
     elif data.startswith("all"):
         files = temp.GETALL.get(file_id)
@@ -432,6 +437,8 @@ async def start(client, message):
                         InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url=HOW_TO_VERIFY)
                         ],[
                         InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                        ], [
+                        InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                         ]]
                 await message.reply_text(
                     text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
@@ -504,6 +511,8 @@ async def start(client, message):
                             [InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
                             ],[
                             InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                            ], [
+                            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                             ]]))
                 return
     files_ = await get_file_details(file_id)           
@@ -516,6 +525,8 @@ async def start(client, message):
                     InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
                 ],[
                     InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                ], [
+                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                 ]]
                 await message.reply_text(
                     text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
@@ -573,6 +584,8 @@ async def start(client, message):
             InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
         ],[
             InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+        ], [
+            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
         ]]
         await message.reply_text(
             text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
