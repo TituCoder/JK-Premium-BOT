@@ -94,10 +94,10 @@ async def force_sub(client, message):
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         btn = [[
-                InlineKeyboardButton("❆ Jᴏɪɴ Oᴜʀ Bᴀᴄᴋ-Uᴘ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link)
+                InlineKeyboardButton("⚡ Jᴏɪɴ Cʜᴀɴɴᴇʟ ⚡", url=invite_link.invite_link)
               ]]
         await message.reply(
-            text="<b>⚠ Dᴇᴀʀ Usᴇʀ  {message.from_user.mention}!\n\nᴛᴏ ɢᴇᴛ ᴍᴏᴠɪᴇs ᴅɪʀᴇᴄᴛʟʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶\n\n ᴀғᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴄᴀᴍᴇ ʙᴀᴄᴋ ᴀɴᴅ sᴇᴀʀᴄʜ ᴀɢᴀɪɴ 👻</b>",
+            text=f"<b>⚠ Dᴇᴀʀ Usᴇʀ {message.from_user.mention}!\n\nᴛᴏ ɢᴇᴛ ᴍᴏᴠɪᴇs ᴅɪʀᴇᴄᴛʟʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ғɪʀsᴛ 🥶\n\n ᴀғᴛᴇʀ ᴊᴏɪɴɪɴɢ ᴄᴀᴍᴇ ʙᴀᴄᴋ ᴀɴᴅ sᴇᴀʀᴄʜ ᴀɢᴀɪɴ 👻</b>",
             reply_markup=InlineKeyboardMarkup(btn),
         )
         return
