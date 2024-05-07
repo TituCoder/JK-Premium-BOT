@@ -1503,7 +1503,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ==') 
                 ],[
                     InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
-                    InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ 😎', callback_data='about')
+                    InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
@@ -1894,7 +1894,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
         ], [
-            InlineKeyboardButton('😎 ᴏᴡɴᴇʀ 😎', url=f"https://t.me/{OWNER_USER_NAME}"),
+            InlineKeyboardButton('🫠 ᴏᴡɴᴇʀ 🫠', url=f"https://t.me/{OWNER_USER_NAME}"),
             InlineKeyboardButton('🔻 ꜱᴛᴀᴛꜱ 🔻', callback_data='stats')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
