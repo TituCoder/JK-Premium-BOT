@@ -323,6 +323,7 @@ async def language_check(bot, query):
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
+            btn = []
             btn.insert(0, [
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
@@ -448,6 +449,7 @@ async def quality_check(bot, query):
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
+            btn = []
             btn.insert(0, [
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
@@ -567,6 +569,7 @@ async def seasons_check(bot, query):
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
+            btn = []
             btn.insert(0, [
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
