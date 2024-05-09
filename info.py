@@ -33,7 +33,7 @@ CODE = (environ.get('CODE', 'https://graph.org/file/683300a0f61aba6657819.jpg'))
 
 #refer time, or user count
 REFERAL_USER_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
-USERS_COUNT = int(environ.get('USERS_COUNT', "2")) # Set Referel User Count
+USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
