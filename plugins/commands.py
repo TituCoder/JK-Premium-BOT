@@ -358,7 +358,7 @@ async def start(client, message):
                 ]
             )
         )
-        asyncio.sleep(900) 
+        await asyncio.sleep(900) 
         await k.edit_text("<b>Your message is successfully deleted!!!</b>")
         return
     elif data.startswith("short"):
@@ -393,7 +393,7 @@ async def start(client, message):
                       InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)]]))
             del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
             safari = msg
-            asyncio.sleep(900)
+            await asyncio.sleep(900)
             await safari.delete() 
             await del_msg.edit_text("<b>ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢</b>")
             return 
@@ -417,7 +417,7 @@ async def start(client, message):
                             ], [
                             InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                             ]]))
-                asyncio.sleep(900) 
+                await asyncio.sleep(900) 
                 await k.edit_text("<b>Your message is successfully deleted!!!</b>")
                 return
     elif data.startswith("all"):
@@ -504,7 +504,7 @@ async def start(client, message):
                       InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀', url=CHNL_LNK)]]))
             del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
             safari = msg
-            asyncio.sleep(900)
+            await asyncio.sleep(900)
             await safari.delete() 
             await del_msg.edit_text("<b>ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢</b>")
             return 
@@ -528,7 +528,7 @@ async def start(client, message):
                             ], [
                             InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
                             ]]))
-                asyncio.sleep(900) 
+                await asyncio.sleep(900) 
                 await k.edit_text("<b>Your message is successfully deleted!!!</b>")
                 return
     files_ = await get_file_details(file_id)           
@@ -579,7 +579,7 @@ async def start(client, message):
             await msg.edit_caption(f_caption)
             del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
             safari = msg
-            asyncio.sleep(900)
+            await asyncio.sleep(900)
             await safari.delete() 
             await del_msg.edit_text("<b>ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢</b>")
             return
@@ -633,7 +633,7 @@ async def start(client, message):
     )
     del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
     safari = msg
-    asyncio.sleep(900)
+    await asyncio.sleep(900)
     await safari.delete() 
     await del_msg.edit_text("<b>ʏᴏᴜʀ ғɪʟᴇ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ 📢</b>")
 
