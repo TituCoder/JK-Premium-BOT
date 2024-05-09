@@ -67,7 +67,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/16")
 VERIFY2_URL = environ.get('VERIFY2_URL', "krishnalink.com")
 VERIFY2_API = environ.get('VERIFY2_API', "ee80d092c6eae94d3e6fffc4ae60e190612b813d")
@@ -78,7 +78,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 # files Shortner site
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'krishnalink.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'ee80d092c6eae94d3e6fffc4ae60e190612b813d')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
