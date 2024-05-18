@@ -9,9 +9,9 @@ from plugins.helper_functions.cust_p_filters import f_onw_fliter
 
 # -- Constants -- #
 ALIVE = "ചത്തിട്ടില്ല മുത്തേ ഇവിടെ തന്നെ ഉണ്ട്.. നിനക്ക് ഇപ്പൊ എന്നോട് ഒരു സ്നേഹവും ഇല്ല. കൊള്ളാം.. നീ പാഴെ പോലെയേ അല്ല മാറിപോയി..😔 ഇടക്ക് എങ്കിലും ചുമ്മാ ഒന്ന് /start ചെയ്തു നോക്ക്..🙂" 
-REPO = "<b>𝙳𝙴𝙿𝙻𝙾𝚈 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 ›› https://youtu.be/s_1VHL-SbEM</b>"
-CHANNEL = "<b>𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b> ›› https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg\n\n<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/MOVIES_ZILAA</b>\n\n<b>𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/sources_cods</b>"
-ANURAG = "<b>𝙱𝙾𝚃 ›› https://t.me/BetterFilters_Ro_Bot</b>"
+REPO = "<b>Owner ›› https://t.me/Owner0423_Bot</b>"
+CHANNEL = "<b>Movie 𝙲𝙷𝙰𝙽𝙽𝙴𝙻</b> ›› https://t.me/Jaynath_Movie_Channel\n\n<b>𝚄𝙿𝙳𝙰𝚃𝙴𝚂 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/Jaynath_Backup_Channel</b>\n\n<b>𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ›› https://t.me/MovieTM0143_Bot</b>"
+𝐌𝐫 𝐉𝐚𝐲𝐧𝐚𝐭𝐡 𝐕𝟒.𝟐 ⚡ = "<b>𝙱𝙾𝚃 ›› https://t.me/MovieTM0143_Bot</b>"
 # -- Constants End -- #
 
 
@@ -44,6 +44,6 @@ async def channel(_, message):
     await message.reply_text(CHANNEL)
 
 
-@Client.on_message(filters.command("anurag", COMMAND_HAND_LER) & f_onw_fliter)
+@Client.on_message(filters.command("𝐌𝐫 𝐉𝐚𝐲𝐧𝐚𝐭𝐡 𝐕𝟒.𝟐 ⚡", COMMAND_HAND_LER) & f_onw_fliter)
 async def ajax(_, message):
     await message.reply_text(ANURAG)
