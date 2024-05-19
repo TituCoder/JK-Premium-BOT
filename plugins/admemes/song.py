@@ -149,7 +149,7 @@ async def vsong(client, message: Message):
         thumb=sedlyf,
         caption=capy,
         supports_streaming=True,        
-        reply_to_message_id=message.message_id 
+        reply_to_message_id=message.id 
     )
     await pablo.delete()
     for files in (sedlyf, file_stark):
