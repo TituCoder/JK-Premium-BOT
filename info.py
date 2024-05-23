@@ -37,7 +37,7 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'Jaynath.aslink.in')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'jaynath.aslink.in')
 STREAM_API = environ.get('IMPORT_JK_API', 'd3acdf5f60e372b6d7377f3962ca688182d325ee')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
 
@@ -69,14 +69,14 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/16")
-VERIFY2_URL = environ.get('VERIFY2_URL', "Jayanth.aslink.in")
+VERIFY2_URL = environ.get('VERIFY2_URL', "jayanth.aslink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "d3acdf5f60e372b6d7377f3962ca688182d325ee")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'Jayanth.aslink.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'jayanth.aslink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'd3acdf5f60e372b6d7377f3962ca688182d325ee')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
 
