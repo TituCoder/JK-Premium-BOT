@@ -69,14 +69,14 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/16")
-VERIFY2_URL = environ.get('VERIFY2_URL', "jayanth.aslink.in")
+VERIFY2_URL = environ.get('VERIFY2_URL', "jaynath.aslink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "d3acdf5f60e372b6d7377f3962ca688182d325ee")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'jayanth.aslink.in')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'jaynath.aslink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'd3acdf5f60e372b6d7377f3962ca688182d325ee')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
 
