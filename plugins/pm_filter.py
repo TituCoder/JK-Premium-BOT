@@ -2585,10 +2585,6 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-try:
-        await react_msg(client, message)
-    except:
-        pass
             m=await messag message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎  🅱🆁🅾", url=CHNL_LNK)]]))
             search = search.lower()
@@ -2616,10 +2612,6 @@ try:
         else:
             return
     else:
-try:
-        await react_msg(client, message)
-    except:
-        pass
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         m=await message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
