@@ -2585,11 +2585,11 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            m=await
-    try:
+try:
         await react_msg(client, message)
     except:
-        pass message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
+        pass
+            m=await messag message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🅿︎🅻︎🅴︎🅰︎🆂︎🅴︎  🆆︎🅰︎🅸︎🆃︎  🅱🆁🅾", url=CHNL_LNK)]]))
             search = search.lower()
             find = search.split(" ")
