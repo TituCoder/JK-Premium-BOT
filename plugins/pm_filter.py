@@ -2616,6 +2616,10 @@ try:
         else:
             return
     else:
+try:
+        await react_msg(client, message)
+    except:
+        pass
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         m=await message.reply_sticker(sticker="CAACAgUAAxkBAAI7MGYYPcZiS8OaD3mvUX-mv7SAiXoKAAJxDQACMR_wVMpswjKZuanTHgQ",
