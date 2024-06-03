@@ -37,9 +37,9 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'jaynath.aslink.in')
-STREAM_API = environ.get('IMPORT_JK_API', 'd3acdf5f60e372b6d7377f3962ca688182d325ee')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'nanolinks.in')
+STREAM_API = environ.get('IMPORT_JK_API', 'eb07cdc69e7553a5ad540a84155b954d9f439408')
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
@@ -67,18 +67,18 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/34")
-VERIFY2_URL = environ.get('VERIFY2_URL', "jaynath.aslink.in")
-VERIFY2_API = environ.get('VERIFY2_API', "d3acdf5f60e372b6d7377f3962ca688182d325ee")
+VERIFY2_URL = environ.get('VERIFY2_URL', "nanolinks.in")
+VERIFY2_API = environ.get('VERIFY2_API', "eb07cdc69e7553a5ad540a84155b954d9f439408")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'jaynath.aslink.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'd3acdf5f60e372b6d7377f3962ca688182d325ee')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'nanolinks.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'eb07cdc69e7553a5ad540a84155b954d9f439408')
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'Ture')), False)
 
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
