@@ -479,6 +479,7 @@ async def start(client, message):
             )
             
     elif data.startswith("files"):
+        chat_id = temp.SHORT.get(user)
         if await db.has_premium_access(message.from_user.id):
             files = await get_file_details(file_id)
             if not files:
@@ -519,24 +520,24 @@ async def start(client, message):
             if temp.SHORT.get(user)==None:
                 await message.reply_text(text="<b><i>Nᴏ Sᴜᴄʜ Fɪʟᴇ Eᴇxɪsᴛ.</b></i>")
             else:
-                chat_id = temp.SHORT.get(user)
-            settings = await get_settings(chat_id)
-            if settings['is_shortlink']:
-                files_ = await get_file_details(file_id)
-                files = files_[0]
-                g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
-                k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷5 ᴍɪɴᴜᴛᴇs.</i></b>", 
-                reply_markup=InlineKeyboardMarkup([[
-                            InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)], 
-                            [InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
-                            ],[
-                            InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
-                            ], [
-                            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
-                            ]]))
-                await asyncio.sleep(900) 
-                await k.edit_text("<b>Your message is successfully deleted!!!</b>")
-                return
+                #chat_id = temp.SHORT.get(user)
+                settings = await get_settings(chat_id)
+                if settings['is_shortlink']:
+                    files_ = await get_file_details(file_id)
+                    files = files_[0]
+                    g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
+                    k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {g}\n\n<i>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 𝟷5 ᴍɪɴᴜᴛᴇs.</i></b>", 
+                    reply_markup=InlineKeyboardMarkup([[
+                                InlineKeyboardButton('📂 ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ 📂', url=g)], 
+                                [InlineKeyboardButton('🤔 Hᴏᴡ Tᴏ Dᴏᴡɴʟᴏᴀᴅ 🤔', url=await get_tutorial(chat_id))
+                                ],[
+                                InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                                ], [
+                                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                                ]]))
+                    await asyncio.sleep(900) 
+                    await k.edit_text("<b>Your message is successfully deleted!!!</b>")
+                    return
     files_ = await get_file_details(file_id)           
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
