@@ -1,5 +1,5 @@
 import logging
-from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid, ChatAdminRequired
+from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid, ChatAdminRequired, MessageIdInvalid, EmoticonInvalid, ReactionInvalid
 from info import *
 from imdb import Cinemagoer 
 import asyncio
@@ -56,45 +56,16 @@ class temp(object):
     GETALL = {}
     IMDB_CAP = {}
 
-async def react_msg(client, message):
-    emojis = [
-        "👍",
-        "❤",
-        "🔥",
-        "🥰",
-        "👏",
-        "😁",
-        "🤔",
-        "😱",
-        "🎉",
-        "🤩",
-        "🤡",
-        "😍",
-        "❤‍🔥",
-        "🌚",
-        "🤣",
-        "⚡",
-        "🏆",
-        "🤨",
-        "😐",
-        "😈",
-        "🤓",
-        "👻",
-        "😇",
-        "🤝",
-        "🤗",
-        "🫡",
-        "🎅",
-        "🎄",
-        "🆒",
-        "😘",
-        "😎",
-    ]
-    rnd_emoji = random.choice(emojis)
-    await client.send_reaction(
-        chat_id=message.chat.id, message_id=message.id, emoji=rnd_emoji, big=True
-    )
-    return
+async def reacts(_, m: Message):
+    try:
+        await m.react(emoji=choice(EMOJIS), big=True)
+    except (
+        MessageIdInvalid,
+        EmoticonInvalid,
+        ChatAdminRequired,
+        ReactionInvalid
+    ):
+        pass
 
 async def check_expired_premium(client):
     while 1:
