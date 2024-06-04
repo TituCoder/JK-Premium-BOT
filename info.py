@@ -111,6 +111,17 @@ TG_MAX_SELECT_LEN = environ.get("TG_MAX_SELECT_LEN", "100")
 TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
+EMOJIS = [
+        "👍", "❤️", "🔥", "👀",
+        "🥰", "👏", "😎","🚀",
+        "😱","😍","💥","✨",
+        "🎉", "🤩","👌", "🕊",
+        "❤️‍🔥", "💯", "⚡️", "✅", "👻",
+        "😇","🤗", "💝","🥀",
+        "🆒","😘","🌚","🎭",
+        "🤪","🐬","☘️","🌼",
+        "💙","🌻","🐰","😱"]
+
 # Streaming
 BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002073485610")
 if len(BIN_CHANNEL) == 0:
