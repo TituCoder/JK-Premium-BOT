@@ -8,9 +8,9 @@ from pyrogram import enums
 from typing import Union
 from Script import script
 import pytz
-import random 
-from asyncio import sleep
+import random
 from random import choice
+from asyncio import sleep
 import time
 import re
 import os
