@@ -39,7 +39,7 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'onepagelink.in')
 STREAM_API = environ.get('IMPORT_JK_API', '208ae16f993999a65342e91727abc59215e5efe8')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
@@ -67,7 +67,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'Ture')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/35")
 VERIFY2_URL = environ.get('VERIFY2_URL', "onepagelink.in")
 VERIFY2_API = environ.get('VERIFY2_API', "208ae16f993999a65342e91727abc59215e5efe8")
@@ -78,7 +78,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 # files Shortner site
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'onepagelink.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '208ae16f993999a65342e91727abc59215e5efe8')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'Ture')), False)
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
