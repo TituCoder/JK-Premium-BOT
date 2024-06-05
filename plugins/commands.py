@@ -479,7 +479,7 @@ async def start(client, message):
             )
             
     elif data.startswith("files"):
-        chat_id = temp.SHORT.get(user)
+        
         if await db.has_premium_access(message.from_user.id):
             files = await get_file_details(file_id)
             if not files:
@@ -520,7 +520,7 @@ async def start(client, message):
             if temp.SHORT.get(user)==None:
                 await message.reply_text(text="<b><i>Nᴏ Sᴜᴄʜ Fɪʟᴇ Eᴇxɪsᴛ.</b></i>")
             else:
-                #chat_id = temp.SHORT.get(user)
+                chat_id = temp.SHORT.get(user)
                 settings = await get_settings(chat_id)
                 if settings['is_shortlink']:
                     files_ = await get_file_details(file_id)
