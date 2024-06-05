@@ -1574,7 +1574,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif curr_time < 21:
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
+            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
