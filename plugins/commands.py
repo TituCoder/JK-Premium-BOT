@@ -158,7 +158,7 @@ async def start(client, message):
         elif curr_time < 21:
             gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 👋"
+            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
         m=await message.reply_sticker("CAACAgIAAxkBAAKgtGZRsSFEdPSdkpiZVrFqyNtEP3C6AALkAQACFkJrConmkBp4wKpBHgQ") 
         await asyncio.sleep(2)
         await m.delete()
