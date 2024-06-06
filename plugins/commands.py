@@ -78,7 +78,7 @@ async def start(client, message):
         elif curr_time < 17:
             gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
+            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
         m=await message.reply_text("<i>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>ᴛʜᴇ ᴍᴏᴠɪᴇ ʙᴏᴛ</b>.\nʜᴏᴘᴇ ʏᴏᴜ'ʀᴇ ᴅᴏɪɴɢ ᴡᴇʟʟ...</i>")
@@ -156,7 +156,7 @@ async def start(client, message):
         elif curr_time < 17:
             gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 👋"
+            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇"
         else:
             gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
         m=await message.reply_sticker("CAACAgIAAxkBAAKgtGZRsSFEdPSdkpiZVrFqyNtEP3C6AALkAQACFkJrConmkBp4wKpBHgQ") 
