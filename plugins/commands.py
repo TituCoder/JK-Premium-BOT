@@ -74,13 +74,13 @@ async def start(client, message):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "<b> ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕</b>" 
+            gtxt = "<b><i> ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕</i></b>" 
         elif curr_time < 17:
-            gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗</i></b>" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇"
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇</i></b>"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
+            gtxt = "<b><i>ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱</i></b>"
         m=await message.reply_text("<i>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ <b>ᴛʜᴇ ᴍᴏᴠɪᴇ ʙᴏᴛ</b>.\nʜᴏᴘᴇ ʏᴏᴜ'ʀᴇ ᴅᴏɪɴɢ ᴡᴇʟʟ...</i>")
         await asyncio.sleep(0.4)
         await m.edit_text("👀")
@@ -152,13 +152,13 @@ async def start(client, message):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕" 
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕</i></b>" 
         elif curr_time < 17:
-            gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗</i></b>" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇"
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇</i></b>"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
+            gtxt = "<b><i>ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱</i></b>"
         m=await message.reply_sticker("CAACAgIAAxkBAAKgtGZRsSFEdPSdkpiZVrFqyNtEP3C6AALkAQACFkJrConmkBp4wKpBHgQ") 
         await asyncio.sleep(2)
         await m.delete()
