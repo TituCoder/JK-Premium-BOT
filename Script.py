@@ -20,10 +20,11 @@ class script(object):
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</b>"""
 
     ABOUT_TXT = """<b><blockquote>
-✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
+✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: <a
+href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
 ✯ ᴍʏ ʟᴏᴠᴇ: <a href=https://t.me/Mr_Jaynath>ᴍʏ ᴏᴡɴᴇʀ 🥰</a>
 ✯ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/Jaynath_Movie_Channel>ᴊᴀʏɴᴀᴛʜ ᴍᴏᴠɪᴇ ᴄʜ...</a>
-✯ ᴍʏ ᴏᴡɴᴇʀ: href=https://t.me/Mr_Jaynath>ᴍʀ ᴊᴀʏɴᴀᴛʜ ⚡</a>
+✯ ᴍʏ ᴏᴡɴᴇʀ: <a href=https://t.me/Mr_Jaynath>ᴍʀ ᴊᴀʏɴᴀᴛʜ ⚡</a>
 ✯ ʟɪʙʀᴀʀʏ: ɴᴏ ɪᴅᴇᴀ
 ✯ ʟᴀɴɢᴜᴀɢᴇ: ʜɪɴᴅɪ 🇮🇳
 ✯ ᴅᴀᴛᴀʙᴀsᴇ: ꜰʀᴇᴇ ᴠᴀʟᴀ 🤫
