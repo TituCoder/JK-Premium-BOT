@@ -74,7 +74,7 @@ async def start(client, message):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕" 
+            gtxt = "<b> ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕</b>" 
         elif curr_time < 17:
             gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
         elif curr_time < 21:
