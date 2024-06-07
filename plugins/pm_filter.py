@@ -1568,13 +1568,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
         if curr_time < 12:
-            gtxt = "ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕" 
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ☕</i></b>" 
         elif curr_time < 17:
-            gtxt = "ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗" 
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴀꜰᴛᴇʀɴᴏᴏɴ 🌗</i></b>" 
         elif curr_time < 21:
-            gtxt = "ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇"
+            gtxt = "<b><i>ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ 🌇</i></b>"
         else:
-            gtxt = "ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱"
+            gtxt = "<b><i>ɢᴏᴏᴅ ɴɪɢʜᴛ 🥱</i></b>"
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
