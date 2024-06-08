@@ -19,6 +19,7 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
 from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, reacts, save_group_settings, import_site, get_shortlink, send_all, check_verification, get_token, import_site, get_text
 from database.users_chats_db import db, get_referal_users_count
+from database.top_search import db3
 from database.ia_filterdb import Media, get_file_details, get_search_results, get_bad_files
 from database.filters_mdb import (
     del_all,
@@ -140,6 +141,7 @@ async def reply_stream(client, message):
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def force_sub(client, message):
+    await db3.update_top_messages(message.from_user.id, message.text)
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         btn = [[
@@ -1346,6 +1348,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 parse_mode=enums.ParseMode.HTML,
                 reply_to_message_id=query.message.id
             )
+    elif query.data == "topsearch":
+        await query.answer(url=f"https://t.me/{temp.U_NAME}?start=topsearch")
+        
     elif query.data.startswith("not_available"):
         _, user_id, movie = data.split(":")
         try:
@@ -1556,6 +1561,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
+                ],[
+                    InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
