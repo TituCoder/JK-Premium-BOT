@@ -12,6 +12,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
 from database.users_chats_db import db, delete_all_referal_users, get_referal_users_count, get_referal_all_users, referal_add_user
 from info import *
+from database.top_search import db3
 from utils import get_settings, get_size, is_subscribed, reacts, save_group_settings, temp, verify_user, check_token, check_verification, get_token, send_all, get_tutorial, get_shortlink
 from database.connections_mdb import active_connection
 from utils import react_msg
@@ -62,6 +63,8 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
+                ],[
+                    InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
@@ -140,6 +143,8 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
+                ],[
+                    InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
@@ -168,6 +173,28 @@ async def start(client, message):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+        return
+    if message.command[1] == "topsearch":
+        m = await message.reply_text(f"<b>Finding Movie's List For You...😘</b>")
+        top_messages = await db3.get_top_messages(30)
+
+        truncated_messages = set()  # Use a set instead of a list
+        for msg in top_messages:
+            if len(msg) > 30:
+                truncated_messages.add(msg[:30 - 3].lower().title() + "...")  # Convert to lowercase, capitalize and add to set
+            else:
+                truncated_messages.add(msg.lower().title())  # Convert to lowercase, capitalize and add to set
+
+        keyboard = []
+        for i in range(0, len(truncated_messages), 2):
+            row = list(truncated_messages)[i:i+2]  # Convert set to list for indexing
+            keyboard.append(row)
+    
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True, placeholder="Most searches of the day")
+        sf=await message.reply_text(f"<b>ʜᴇʀᴇ ɪs ᴛʜʀ ʟɪsᴛ ᴏғ ᴍᴏᴠɪᴇ's ɴᴀᴍᴇ 👇👇</b>", reply_markup=reply_markup)
+        await m.delete()
+        await asyncio.sleep(60*60) 
+        await sf.delete()
         return
     data = message.command[1]
     try:
