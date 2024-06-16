@@ -38,7 +38,7 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'livekhabar.online')
-STREAM_API = environ.get('IMPORT_JK_API', '0874049b698a3a3f446b02273602892616e244d5')
+STREAM_API = environ.get('IMPORT_JK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
 
 #premium Users Satuts
@@ -70,14 +70,14 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/36")
 VERIFY2_URL = environ.get('VERIFY2_URL', "livekhabar.online")
-VERIFY2_API = environ.get('VERIFY2_API', "0874049b698a3a3f446b02273602892616e244d5")
+VERIFY2_API = environ.get('VERIFY2_API', "3620dd89465003b493d4518e2dcff30aea3b1742")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/shortnfly_official')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'livekhabar.online')
-SHORTLINK_API = environ.get('SHORTLINK_API', '0874049b698a3a3f446b02273602892616e244d5')
+SHORTLINK_API = environ.get('SHORTLINK_API', '3620dd89465003b493d4518e2dcff30aea3b1742')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), False)
 
 
