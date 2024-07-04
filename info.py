@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['27106563'])
+API_HASH = environ['bc347e85dfa4ce7cae0fe3479cda705f']
+BOT_TOKEN = environ['6697056535:AAH-mF2_8OHzAAWH7U3YVRKvppzimFHpsHE']
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -89,7 +89,7 @@ GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Jaynath_Req_Movie')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Jaynath_Movie_Channel')
 MSG_ALRT = environ.get('MSG_ALRT', '𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002073485610))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Happy_HourTM')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Jaynath_Req_Movie')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
