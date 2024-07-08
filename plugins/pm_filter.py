@@ -2583,7 +2583,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_reply_markup(reply_markup)
     await query.answer(MSG_ALRT)
 
-    
+async def ai_spell_check(chat_id, wrong_name):
+    try:  
+        async def search_movie(wrong_name):
+            search_results = imdb.search_movie(wrong_name)
+            movie_list = [movie['title'] for movie in search_results]
+            return movie_list
+        movie_list = await search_movie(wrong_name)
+        if not movie_list:
+            return
+        for _ in range(5):
+            closest_match = process.extractOne(wrong_name, movie_list)
+            if not closest_match or closest_match[1] <= 80:
+                return 
+            movie = closest_match[0]
+            files, offset, total_results = await get_search_results(chat_id=chat_id, query=movie)
+            if files:
+                return movie
+            movie_list.remove(movie)
+    return
 async def auto_filter(client, msg, spoll=False):
     if not spoll:
         message = msg
