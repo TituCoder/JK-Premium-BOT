@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b><i>ʜᴇʏ 😎</i></b> {}, {}
 <b><i> ☞ᴍʏ ɴᴀᴍᴇ ɪꜱ</i></b> <a href=https://t.me/{}>{}</a>
-<b><i><blockquote> ɪᴍ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏ ꜰɪʟʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ꜰᴇᴀᴛᴜʀᴇꜱ. ᴊᴜꜱᴛ ᴀ ᴍᴇ ᴀᴅᴍɪɴ ᴏꜰ ʏᴏᴜʀ ɢʀᴏᴜᴘ..</blockquote></i></b>
+<b><i><blockquote> ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴍᴏʀᴇ ᴀᴅᴠᴀɴᴄᴇ ғᴇᴀᴛᴜʀᴇꜱ.!! 😍</blockquote></i></b>
 <s> 🌿 𝐃𝐄𝐕𝐋𝐎𝐏𝐄𝐃 𝐁𝐘  : <a href=https://t.me/Owner0423_Bot> 𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵 </s></a>"""
 
     REFFER_TXT = """
