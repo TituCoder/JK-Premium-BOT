@@ -22,7 +22,7 @@ import pytz
 import pyromod.listen
 import time, os
 from jk_dev import web_server
-from utils import temp
+from utils import temp, check_expired_premium
 from aiohttp import web
 from pyrogram.errors import AccessTokenExpired, AccessTokenInvalid
 
@@ -51,6 +51,7 @@ class Bot(Client):
         temp.U_NAME = me.username
         temp.B_NAME = me.first_name
         self.username = '@' + me.username
+        self.loop.create_task(check_expired_premium(self))
         app = web.AppRunner(await web_server())
         await app.setup()
         await web.TCPSite(app, "0.0.0.0", PORT).start()
