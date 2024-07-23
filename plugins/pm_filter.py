@@ -201,7 +201,7 @@ async def pm_text(bot, message):
             text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
         )
     else:
-        await auto_filter(client, message)
+        await auto_filter(bot, message)
         
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
