@@ -188,9 +188,8 @@ async def give_filter(client, message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
-    if PM_FILTER is True or await db.has_premium_access(message.from_user.id):
+    if not PM_FILTER and not await db.has_premium_access(message.from_user.id):
         await auto_filter(client, message)
-    else:
         content = message.text
         user = message.from_user.first_name
         user_id = message.from_user.id
@@ -201,7 +200,9 @@ async def pm_text(bot, message):
             chat_id=LOG_CHANNEL,
             text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
         )
-
+    else:
+        await auto_filter(client, message)
+        
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
@@ -2774,6 +2775,8 @@ async def auto_filter(client, msg, spoll=False):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await m.delete()
+            await asyncio.sleep(300)
+            await message.delete()
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(600)
@@ -2814,6 +2817,8 @@ async def auto_filter(client, msg, spoll=False):
     else:
         fuk = await message.reply_photo(photo=NOR_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await m.delete()
+        await asyncio.sleep(300)
+        await message.delete()
         try:
             if settings['auto_delete']:
                 await asyncio.sleep(600)
