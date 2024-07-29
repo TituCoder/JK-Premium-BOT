@@ -239,12 +239,12 @@ async def next_page(bot, query):
         ]
         btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{req}"),
-            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
         ])
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}"),
         ])
     else:
