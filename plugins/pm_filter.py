@@ -778,6 +778,7 @@ async def seasons_check(bot, query):
             ]
             btn.insert(0, [
                 InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
                 InlineKeyboardButton("❗Sᴇʟᴇᴄᴛ Aɢᴀɪɴ❗", callback_data=f"jk_dev#{userid}")
             ])
@@ -2852,6 +2853,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = []
         btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
         ])
