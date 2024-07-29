@@ -251,12 +251,12 @@ async def next_page(bot, query):
         btn = []
         btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{req}"),
-            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
         ])
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}"),
         ])
     try:
@@ -538,6 +538,7 @@ async def language_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
@@ -550,6 +551,7 @@ async def language_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])   
         if offset != "":
@@ -664,6 +666,7 @@ async def quality_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
@@ -676,6 +679,7 @@ async def quality_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
 
@@ -778,13 +782,14 @@ async def seasons_check(bot, query):
             ]
             btn.insert(0, [
                 InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
+                
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
                 InlineKeyboardButton("❗Sᴇʟᴇᴄᴛ Aɢᴀɪɴ❗", callback_data=f"jk_dev#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
@@ -797,6 +802,7 @@ async def seasons_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         if offset != "":
