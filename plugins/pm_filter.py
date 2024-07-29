@@ -538,7 +538,7 @@ async def language_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
@@ -551,7 +551,7 @@ async def language_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])   
         if offset != "":
@@ -666,7 +666,7 @@ async def quality_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
@@ -679,7 +679,7 @@ async def quality_check(bot, query):
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
 
