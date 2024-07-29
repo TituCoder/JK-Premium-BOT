@@ -80,6 +80,7 @@ SHORTLINK_URL = environ.get('SHORTLINK_URL', 'livekhabar.online')
 SHORTLINK_API = environ.get('SHORTLINK_API', '12ec82d0862c93225c46edfd4f9039a83a89fa09')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
+YEARS =  ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000",]
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
