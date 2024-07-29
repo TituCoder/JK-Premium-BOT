@@ -2,7 +2,7 @@ class script(object):
     START_TXT = """<b><i>ʜᴇʏ 😎</i></b> {}, {}
 <b><i> ☞ᴍʏ ɴᴀᴍᴇ ɪꜱ</i></b> <a href=https://t.me/{}>{}</a>
 <b> ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴍᴏʀᴇ ᴀᴅᴠᴀɴᴄᴇ ғᴇᴀᴛᴜʀᴇꜱ.!!😍 </b>
-<blockquote> 🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ :  <a href=https://t.me/Owner0423_Bot> ᴍʀ ᴊᴀʏɴᴀᴛʜ </blockquote></a>"""
+<spoiler> 🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ :  <a href=https://t.me/Owner0423_Bot> ᴍʀ ᴊᴀʏɴᴀᴛʜ </spoiler></a>"""
 
     REFFER_TXT = """
 <b>ʀᴇғᴇʀʀᴇ ʏᴏᴜʀ ʟɪɴᴋ ᴛᴏ ʏᴏᴜʀ ғʀɪᴇɴᴅs, ғᴀᴍɪʟʏ, ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ɢʀᴏᴜᴘ ᴛᴏ ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ ғᴏʀ 1 ᴍᴏɴᴛʜ
