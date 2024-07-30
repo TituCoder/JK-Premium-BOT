@@ -238,25 +238,27 @@ async def next_page(bot, query):
             for file in files
         ]
         btn.insert(0, [
+            ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
+            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
+        btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{req}"),
-            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"),
-            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
+            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"), 
         ])
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}"),
         ])
     else:
         btn = []
         btn.insert(0, [
+            ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
+            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
+        btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{req}"),
-            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"),
-            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
+            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{req}"), 
         ])
         btn.insert(0, [
             InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
             InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}"),
         ])
     try:
@@ -340,167 +342,134 @@ async def next_page(bot, query):
             pass
         await query.answer()
 
-@Client.on_callback_query(filters.regex(r"^years#"))
-async def years_cb_handler(client: Client, query: CallbackQuery):
 
-    try:
-        if int(query.from_user.id) not in [query.message.reply_to_message.from_user.id, 0]:
-            return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
-                show_alert=True,
-            )
-    except:
-        pass
-    _, key = query.data.split("#")
-    # if BUTTONS.get(key+"1")!=None:
-    #     search = BUTTONS.get(key+"1")
-    # else:
-    #     search = BUTTONS.get(key)
-    #     BUTTONS[key+"1"] = search
-    search = FRESH.get(key)
-    search = search.replace(' ', '_')
-    btn = []
-    for i in range(0, len(YEARS)-1, 2):
-        btn.append([
-            InlineKeyboardButton(
-                text=YEARS[i].title(),
-                callback_data=f"fy#{YEARS[i].lower()}#{key}"
-            ),
-            InlineKeyboardButton(
-                text=YEARS[i+1].title(),
-                callback_data=f"fy#{YEARS[i+1].lower()}#{key}"
-            ),
-        ])
-
-    btn.insert(
-        0,
-        [
-            InlineKeyboardButton(
-                text="👇 ꜱᴇʟᴇᴄᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʏᴇᴀʀ 👇", callback_data="ident"
-            )
-        ],
-    )
-    req = query.from_user.id
-    offset = 0
-    btn.append([InlineKeyboardButton(text="🏃🏻‍♂️ 𝙱𝙰𝙲𝙺 𝚃𝙾 𝙵𝙸𝙻𝙴𝚂 🏃🏻‍♂️", callback_data=f"fy#homepage#{key}")])
-
-    await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
+@Client.on_callback_query(filters.regex(r"^years"))
+async def years_search(bot, query):
+    _, userid, years = query.data.split("#")
+    if int(userid) not in [query.from_user.id, 0]:
+        return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+    if years == "unknown":
+        return await query.answer("Sᴇʟᴇᴄᴛ ᴀɴʏ ʟᴀɴɢᴜᴀɢᴇ ғʀᴏᴍ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs !", show_alert=True)
+    movie = temp.KEYWORD.get(query.from_user.id)
+#    if not movie:
+#        return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+    if years != "home":
+        movie = f"{movie} {years}"
+    files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
+    if files:
+        settings = await get_settings(query.message.chat.id)
+        key = f"{query.message.chat.id}-{query.message.id}"
+        temp.SHORT[query.from_user.id] = query.message.chat.id
+        curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+        temp.GETALL[key] = files
+        pre = 'filep' if settings['file_secure'] else 'file'
+        if settings['button']:
+            btn = [
+                [
+                    InlineKeyboardButton(
+                        text=f"⚡[{get_size(file.file_size)}] {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
+                    ),
+                ]
+                for file in files
+            ]
+            btn.insert(0, [
+                ineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
+            ])
+            btn.insert(0, [
+            btn.insert(0, [
+                InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
+            ])
+        else:
+            btn = []
+            btn.insert(0, [
+                ineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
+            ])
     
+            btn.insert(0, [
+                InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
+                InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
+            ])   
+        if offset != "":
+            key = f"{query.message.chat.id}-{query.message.id}"
+            BUTTONS[key] = movie
+            req = userid
+            try:
+                if settings['max_btn']:
+                    btn.append(
+                        [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
+                    )
 
-@Client.on_callback_query(filters.regex(r"^fy#"))
-async def filter_years_cb_handler(client: Client, query: CallbackQuery):
-    _, year, key = query.data.split("#")
-    curr_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
-    search = FRESH.get(key)
-    search = search.replace("_", " ")
-    baal = year in search
-    if baal:
-        search = search.replace(year, "")
-    else:
-        search = search
-    req = query.from_user.id
-    chat_id = query.message.chat.id
-    message = query.message
-    try:
-        if int(req) not in [query.message.reply_to_message.from_user.id, 0]:
-            return await query.answer(
-                f"⚠️ ʜᴇʟʟᴏ {query.from_user.first_name},\nᴛʜɪꜱ ɪꜱ ɴᴏᴛ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ,\nʀᴇǫᴜᴇꜱᴛ ʏᴏᴜʀ'ꜱ...",
-                show_alert=True,
-            )
-    except:
-        pass
-    if year != "homepage":
-        search = f"{search} {year}" 
-    BUTTONS[key] = search
-
-    files, offset, total_results = await get_search_results(chat_id, search, offset=0, filter=True)
-    if not files:
-        await query.answer("🚫 ɴᴏ ꜰɪʟᴇꜱ ᴡᴇʀᴇ ꜰᴏᴜɴᴅ 🚫", show_alert=1)
-        return
-    temp.GETALL[key] = files
-    settings = await get_settings(message.chat.id)
-    pre = 'filep' if settings['file_secure'] else 'file'
-    if settings["button"]:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"🀄️{get_size(file.file_size)}🎴{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@') and not x.startswith('www.'), file.file_name.split()))}", callback_data=f'{pre}#{file.file_id}'
-                ),
-            ]
-            for file in files
-        ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
-                InlineKeyboardButton(f"🍿 Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton(f"🎬 Qᴜᴀʟɪᴛʏ",  callback_data=f"qualities#{key}"),
-            InlineKeyboardButton(f"♻️ Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}")
-            ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton(f"📰 Lᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-            ]
-        )
-    else:
-        btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
-                InlineKeyboardButton(f"🍿 Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
-            ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton(f"🎬 Qᴜᴀʟɪᴛʏ",  callback_data=f"qualities#{key}"),
-            InlineKeyboardButton(f"♻️ Sᴇɴᴅ Aʟʟ", callback_data=f"sendfiles#{key}")
-            ]
-        )
-        btn.insert(0, [
-            InlineKeyboardButton(f"📰 Lᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}")
-            ]
-        )
-
-    if offset != "":
-        try:
-            if settings['max_btn']:
+                else:
+                    btn.append(
+                        [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
+                    )
+            except KeyError:
+                await save_group_settings(query.message.chat.id, 'max_btn', True)
                 btn.append(
-                    [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⇛",callback_data=f"next_{req}_{key}_{offset}")]
+                    [InlineKeyboardButton("𝐏𝐀𝐆𝐄", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝐍𝐄𝐗𝐓 ➪",callback_data=f"next_{req}_{key}_{offset}")]
                 )
-    
-            else:
-                btn.append(
-                    [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/int(MAX_B_TN))}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⇛",callback_data=f"next_{req}_{key}_{offset}")]
-                )
-        except KeyError:
-            await save_group_settings(query.message.chat.id, 'max_btn', True)
+        else:
             btn.append(
-                [InlineKeyboardButton("ᴘᴀɢᴇ", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="ɴᴇxᴛ ⇛",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton(text="𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄",callback_data="pages")]
             )
+        if not settings["button"]:
+            cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
+            time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
+            remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
+            cap = await get_text(settings, remaining_seconds, files, query, total_results, movie)
+            try:
+                await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
+            except MessageNotModified:
+                pass
+        else:
+            try:
+                await query.edit_message_reply_markup(reply_markup=InlineKeyboardMarkup(btn))
+            except MessageNotModified:
+                pass
+            await query.answer()
     else:
-        btn.append(
-            [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸",callback_data="pages")]
-        )
+        return await query.answer(f"Sᴏʀʀʏ, Nᴏ ғɪʟᴇs ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {movie}.", show_alert=True)
     
-    if not settings["button"]:
-        cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
-        time_difference = timedelta(hours=cur_time.hour, minutes=cur_time.minute, seconds=(cur_time.second+(cur_time.microsecond/1000000))) - timedelta(hours=curr_time.hour, minutes=curr_time.minute, seconds=(curr_time.second+(curr_time.microsecond/1000000)))
-        remaining_seconds = "{:.2f}".format(time_difference.total_seconds())
-        cap = await get_cap(settings, remaining_seconds, files, query, total_results, search)
-        try:
-            await query.message.edit_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
-        except MessageNotModified:
-            pass
-    else:
-        try:
-            await query.edit_message_reply_markup(
-                reply_markup=InlineKeyboardMarkup(btn)
+@Client.on_callback_query(filters.regex(r"^serach_years"))
+async def select_years(bot, query):
+    current_year = datetime.datetime.now().year
+    start_year = 2000
+    _, userid = query.data.split("#")
+    if int(userid) not in [query.from_user.id, 0]:
+        return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+    buttons = []
+    row = []
+    for year in range(start_year, current_year + 1):
+        row.append(
+            InlineKeyboardButton(
+                str(year), 
+                callback_data=f"years#{userid}#{year}"
             )
-        except MessageNotModified:
-            pass
+        )
+        if len(row) == 4:
+            buttons.append(row)
+            row = []
+    
+    if row:
+        buttons.append(row)
+    try:
+       await query.edit_message_reply_markup(
+           reply_markup=InlineKeyboardMarkup(buttons)
+       )
+    except MessageNotModified:
+        pass
     await query.answer()
 
+               
 @Client.on_callback_query(filters.regex(r"^lang"))
 async def language_check(bot, query):
     _, userid, language = query.data.split("#")
@@ -531,27 +500,29 @@ async def language_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
-                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
             btn = []
             btn.insert(0, [
-                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])   
         if offset != "":
@@ -659,27 +630,29 @@ async def quality_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
                 InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("❗Sᴇʟᴇᴄᴛ Aɢᴀɪɴ❗", callback_data=f"lusi_films#{userid}"),
-                InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+                InlineKeyboardButton("❗Sᴇʟᴇᴄᴛ Aɢᴀɪɴ❗", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
             btn = []
             btn.insert(0, [
-                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"lusi_films#{user}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
 
@@ -781,28 +754,29 @@ async def seasons_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
                 InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
-                
-                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
-                InlineKeyboardButton("❗Sᴇʟᴇᴄᴛ Aɢᴀɪɴ❗", callback_data=f"jk_dev#{userid}")
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         else:
             btn = []
             btn.insert(0, [
-                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}"),
-                InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
+                ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
+            btn.insert(0, [
+                InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
+                InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
-                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
         if offset != "":
@@ -2844,11 +2818,12 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-        
+        btn.insert(0, [
+            ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
+            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
         btn.insert(0, [
             InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
-            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}"),
-            InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
+            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}")
         ])
     
         btn.insert(0, [
@@ -2858,10 +2833,11 @@ async def auto_filter(client, msg, spoll=False):
     else:
         btn = []
         btn.insert(0, [
-            InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
-            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"years#{key}"),
-            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}"),
+            ineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
+        btn.insert(0, [
+            InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇs", callback_data=f"select_lang#{message.from_user.id}"),
+            InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{message.from_user.id}")
         ])
     
         btn.insert(0, [
