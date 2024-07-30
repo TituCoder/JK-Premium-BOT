@@ -655,7 +655,7 @@ async def quality_check(bot, query):
             ])
             btn.insert(0, [
                 InlineKeyboardButton("📚Lᴀɴɢᴜᴀɢᴇ", callback_data=f"select_lang#{userid}"),
-                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"lusi_films#{user}")
+                InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"lusi_films#{userid}")
             ])
     
             btn.insert(0, [
