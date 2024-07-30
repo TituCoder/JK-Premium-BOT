@@ -238,7 +238,7 @@ async def next_page(bot, query):
             for file in files
         ]
         btn.insert(0, [
-            IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
         ])
         btn.insert(0, [
@@ -252,7 +252,7 @@ async def next_page(bot, query):
     else:
         btn = []
         btn.insert(0, [
-            IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
         ])
         btn.insert(0, [
@@ -375,7 +375,7 @@ async def years_search(bot, query):
                 for file in files
             ]
             btn.insert(0, [
-                IneKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -389,7 +389,7 @@ async def years_search(bot, query):
         else:
             btn = []
             btn.insert(0, [
-                IneKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -503,7 +503,7 @@ async def language_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -518,7 +518,7 @@ async def language_check(bot, query):
         else:
             btn = []
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -635,7 +635,7 @@ async def quality_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -650,7 +650,7 @@ async def quality_check(bot, query):
         else:
             btn = []
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -761,7 +761,7 @@ async def seasons_check(bot, query):
                 for file in files
             ]
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -776,7 +776,7 @@ async def seasons_check(bot, query):
         else:
             btn = []
             btn.insert(0, [
-                IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
+                InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
             ])
             btn.insert(0, [
@@ -2828,7 +2828,7 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
         btn.insert(0, [
-            IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
         ])
         btn.insert(0, [
@@ -2843,7 +2843,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         btn = []
         btn.insert(0, [
-            IneKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
+            InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
         ])
         btn.insert(0, [
