@@ -383,7 +383,6 @@ async def years_search(bot, query):
                 InlineKeyboardButton("🤡Qᴜᴀʟɪᴛʏꜱ", callback_data=f"lusi_films#{userid}")
             ])
             btn.insert(0, [
-            btn.insert(0, [
                 InlineKeyboardButton("ᴘʀᴇᴍɪᴜᴍ 🔒", callback_data='seeplans'),
                 InlineKeyboardButton("⚡ Sᴇɴᴅ Aʟʟ ⚡", callback_data=f"sendfiles#{key}")
             ])
