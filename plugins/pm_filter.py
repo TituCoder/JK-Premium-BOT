@@ -441,37 +441,60 @@ async def years_search(bot, query):
             await query.answer()
     else:
         return await query.answer(f"Sᴏʀʀʏ, Nᴏ ғɪʟᴇs ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {movie}.", show_alert=True)
-    
+
 @Client.on_callback_query(filters.regex(r"^serach_years"))
 async def select_years(bot, query):
-    current_year = datetime.datetime.now().year
-    start_year = 2000
     _, userid = query.data.split("#")
     if int(userid) not in [query.from_user.id, 0]:
         return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-    buttons = []
-    row = []
-    for year in range(start_year, current_year + 1):
-        row.append(
-            InlineKeyboardButton(
-                str(year), 
-                callback_data=f"years#{userid}#{year}"
-            )
-        )
-        if len(row) == 4:
-            buttons.append(row)
-            row = []
-    
-    if row:
-        buttons.append(row)
+    btn = [[
+        InlineKeyboardButton("Sᴇʟᴇᴄᴛ Yᴏᴜʀ Dᴇꜱɪʀᴇᴅ Yᴇᴀʀs ↓", callback_data=f"years#{userid}#unknown")
+    ],[
+        InlineKeyboardButton("2000", callback_data=f"years#{userid}#2000"),
+        InlineKeyboardButton("2001", callback_data=f"years#{userid}#2001"),
+        InlineKeyboardButton("2002", callback_data=f"years#{userid}#2002"), 
+        InlineKeyboardButton("2003", callback_data=f"years#{userid}#2003")
+    ],[
+        InlineKeyboardButton("2004", callback_data=f"years#{userid}#2004"),
+        InlineKeyboardButton("2005", callback_data=f"years#{userid}#2005"), 
+        InlineKeyboardButton("2006", callback_data=f"years#{userid}#2006"), 
+        InlineKeyboardButton("2007", callback_data=f"years#{userid}#2007")
+    ],[
+        InlineKeyboardButton("2008", callback_data=f"years#{userid}#2008"), 
+        InlineKeyboardButton("2009", callback_data=f"years#{userid}#2009"), 
+        InlineKeyboardButton("2010", callback_data=f"years#{userid}#2010"), 
+        InlineKeyboardButton("2011", callback_data=f"years#{userid}#2011")
+    ],[
+        InlineKeyboardButton("2012", callback_data=f"years#{userid}#2012"),
+        InlineKeyboardButton("2013", callback_data=f"years#{userid}#2013"),
+        InlineKeyboardButton("2014", callback_data=f"years#{userid}#2014"), 
+        InlineKeyboardButton("2015", callback_data=f"years#{userid}#2015")
+    ],[
+        InlineKeyboardButton("2016", callback_data=f"years#{userid}#2016"),
+        InlineKeyboardButton("2017", callback_data=f"years#{userid}#2017"), 
+        InlineKeyboardButton("2018", callback_data=f"years#{userid}#2018"), 
+        InlineKeyboardButton("2019", callback_data=f"years#{userid}#2019")
+    ],[
+        InlineKeyboardButton("2020", callback_data=f"yearsyears#{userid}#2020"),
+        InlineKeyboardButton("2021", callback_data=f"years#{userid}#2021"), 
+        InlineKeyboardButton("2022", callback_data=f"years#{userid}#2022"), 
+        InlineKeyboardButton("2023", callback_data=f"years#{userid}#2023")
+    ],[
+        InlineKeyboardButton("2024", callback_data=f"years#{userid}#2024")
+        # InlineKeyboardButton("2025", callback_data=f"years#{userid}#dual"), 
+        # InlineKeyboardButton("2026", callback_data=f"years#{userid}#hin"), 
+        # InlineKeyboardButton("2027", callback_data=f"years#{userid}#hin")
+    ],[
+        InlineKeyboardButton("Gᴏ Bᴀᴄᴋ", callback_data=f"years#{userid}#home")
+    ]]
     try:
        await query.edit_message_reply_markup(
-           reply_markup=InlineKeyboardMarkup(buttons)
+           reply_markup=InlineKeyboardMarkup(btn)
        )
     except MessageNotModified:
         pass
     await query.answer()
-
+    
                
 @Client.on_callback_query(filters.regex(r"^lang"))
 async def language_check(bot, query):
