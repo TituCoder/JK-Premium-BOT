@@ -442,7 +442,7 @@ async def years_search(bot, query):
     else:
         return await query.answer(f"Sᴏʀʀʏ, Nᴏ ғɪʟᴇs ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {movie}.", show_alert=True)
 
-@Client.on_callback_query(filters.regex(r"^serach_years"))
+@Client.on_callback_query(filters.regex(r"^search_years"))
 async def select_years(bot, query):
     _, userid = query.data.split("#")
     if int(userid) not in [query.from_user.id, 0]:
@@ -475,7 +475,7 @@ async def select_years(bot, query):
         InlineKeyboardButton("2018", callback_data=f"years#{userid}#2018"), 
         InlineKeyboardButton("2019", callback_data=f"years#{userid}#2019")
     ],[
-        InlineKeyboardButton("2020", callback_data=f"yearsyears#{userid}#2020"),
+        InlineKeyboardButton("2020", callback_data=f"years#{userid}#2020"),
         InlineKeyboardButton("2021", callback_data=f"years#{userid}#2021"), 
         InlineKeyboardButton("2022", callback_data=f"years#{userid}#2022"), 
         InlineKeyboardButton("2023", callback_data=f"years#{userid}#2023")
