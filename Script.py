@@ -446,7 +446,7 @@ Nᴀᴍᴇ - {}"""
 पता न कब कॉपीराइट आ जाए 👇
 ========== • ✠ • ==========
 ▫️ Backup Channel🤫 :  <a href="https://t.me/Jaynath_Movie_Channel">Click Here</a>
-▫️ Request Group🤫 :  <a href="https://t.me/Jaynath_Req_Movie">Click Here</a>
+▫️ Request Group🤫 :  <a href="https://t.me/Jaynath_Request_Group">Click Here</a>
 ========== • ✠ • ==========
 </b>"""
 
