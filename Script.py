@@ -2,7 +2,7 @@ class script(object):
     START_TXT = """<b><i>ʜᴇʏ 😎</i></b> {}, {}
 <b><i> ☞ᴍʏ ɴᴀᴍᴇ ɪꜱ</i></b> <a href=https://t.me/{}>{}</a>
 <b><blockquote> ɪ ᴀᴍ ᴀ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴍᴏʀᴇ ᴀᴅᴠᴀɴᴄᴇ ғᴇᴀᴛᴜʀᴇꜱ.!!😍 </blockquote></b> 
-<b><blockquote>sᴇɴᴅ ᴍᴇ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ ᴀɴʏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ..✨</blockquote></b>  
+<b><blockquote>sᴇɴᴅ ᴍᴇ ᴘʀᴇᴍɪᴜᴍ ᴜꜱᴇʀ ᴀɴʏ ᴍᴏᴠɪᴇ ᴏʀ sᴇʀɪᴇs ɴᴀᴍᴇ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ..✨</blockquote></b> 
 <b><blockquote>ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛᴀɪʟs ᴜsᴇ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ 🤞🏻</blockquote></b>
 
 <b><spoiler> 🌿 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ :  <a href=https://t.me/Owner0423_Bot> ᴍʀ ᴊᴀʏɴᴀᴛʜ </spoiler></b></a>"""
