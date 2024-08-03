@@ -27,6 +27,7 @@ href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
 ✯ ᴍʏ ʟᴏᴠᴇ: <a href=https://t.me/Mr_Jaynath>ᴍʏ ᴏᴡɴᴇʀ 🥰</a>
 ✯ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/Jaynath_Movie_Channel>ᴊᴀʏɴᴀᴛʜ ᴍᴏᴠɪᴇ ᴄʜ...</a>
 ✯ ᴍʏ ᴏᴡɴᴇʀ: <a href=https://t.me/Mr_Jaynath>ᴍʀ ᴊᴀʏɴᴀᴛʜ ⚡</a>
+✯ ʀᴇᴘᴏ : <a href="https://telegram.me/Mr_Jaynath">ʟɪɴᴋ</a>
 ✯ ʟɪʙʀᴀʀʏ: ɴᴏ ɪᴅᴇᴀ
 ✯ ʟᴀɴɢᴜᴀɢᴇ: ʜɪɴᴅɪ 🇮🇳
 ✯ ᴅᴀᴛᴀʙᴀsᴇ: ꜰʀᴇᴇ ᴠᴀʟᴀ 🤫
