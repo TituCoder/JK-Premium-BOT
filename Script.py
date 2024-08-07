@@ -399,7 +399,7 @@ Cᴏᴍᴍᴀɴᴅs Aɴᴅ Usᴀɢᴇ:
 ★ Usᴇᴅ Sᴛᴏʀᴀɢᴇ: <code>{}</code>
 ★ Fʀᴇᴇ Sᴛᴏʀᴀɢᴇ: <code>{}</code></blockquote></b>"""
 
-    NEW_GROUP_TXT = """#New_Group {}
+    LOG_TEXT_G = """#New_Group {}
 
 Group name - {}
 Id - <code>{}</code>
@@ -409,8 +409,8 @@ Total members - <code>{}</code>
 User - {}"""
 
     LOG_TEXT_P = """#NewUser
-ID - <code>{}</code>
-Nᴀᴍᴇ - {}"""
+≈ ɪᴅ:- <code>{}</code>
+≈ ɴᴀᴍᴇ:- {}</b>"""
 
     ALRT_TXT = """<b><blockquote>मेरे दोस्त {}, ये किसी और की मूवी है तुम खुद मूवी मांगो 💁...</blockquote><b>"""
 
