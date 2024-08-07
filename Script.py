@@ -22,6 +22,8 @@ class script(object):
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</blockquote></b>"""
 
     ABOUT_TXT = """<b><blockquote>
+🎭 ᴊᴀɪ sʜʀᴇᴇ ᴋʀɪsʜɴᴀ {},
+
 ✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: <a
 href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
 ✯ ᴍʏ ʟᴏᴠᴇ: <a href=https://t.me/Jaynath_Request_Group>ᴍʏ ɢʀᴏᴜᴘs 🥰</a>
