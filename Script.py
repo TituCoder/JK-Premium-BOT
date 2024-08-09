@@ -16,7 +16,7 @@ class script(object):
 ʙᴜʏ ᴘᴀɪᴅ ᴘʟᴀɴ ʙʏ - /plans</b>"""
 
 
-    GSTART_TXT = """ʜᴇʏ {},\n\nɪ ᴀᴍ ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ꜰᴇᴀᴛᴜʀᴇꜱ.\n\nᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/Owner0423_Bot">𝗢𝘄𝗻𝗲𝗿⚡</a>"""
+    GSTART_TXT = """ʜᴇʏ {},\n\nɪ ᴀᴍ ᴛʜᴇ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ ʙᴏᴛ ᴡɪᴛʜ ᴘʀᴇᴍɪᴜᴍ ꜰᴇᴀᴛᴜʀᴇꜱ.\n\nᴍᴀɴᴛᴀɪɴᴇᴅ ʙʏ : <a href="https://t.me/Jaynath_Request_Group_bot">Mᴀɴᴀɢᴇʀ⚡</a>"""
 
     HELP_TXT = """<b><blockquote>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</blockquote></b>"""
@@ -30,7 +30,7 @@ href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
 ✯ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/Jaynath_Movie_Channel>ᴊᴀʏɴᴀᴛʜ ᴍᴏᴠɪᴇ ᴄʜ...</a>
 ✯ ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘ: <a href=https://t.me/Jaynath_Request_Group>ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘs 🥳</a>
 ✯ ᴍʏ ᴏᴡɴᴇʀ: <a href=https://t.me/Mr_Jaynath>Dᴇᴠʟᴏᴘᴇʀ 🧑‍💻</a>
-✯ ᴍʏ ᴍᴀɴᴀɢᴇʀ : <a href="https://telegram.me/Owner0423_Bot">ᴍᴀɴᴀɢᴇʀ</a>
+✯ ᴍʏ ᴍᴀɴᴀɢᴇʀ : <a href="https://telegram.me/Jaynath_Request_Group_bot">ᴍᴀɴᴀɢᴇʀ⚡</a>
 ✯ ʀᴇᴘᴏ : <a href="https://telegram.me/Mr_Jaynath">ʟɪɴᴋ</a>
 ✯ ʟɪʙʀᴀʀʏ: ɴᴏ ɪᴅᴇᴀ
 ✯ ʟᴀɴɢᴜᴀɢᴇ: ʜɪɴᴅɪ 🇮🇳
@@ -50,9 +50,9 @@ href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
 
     SOURCE_TXT = """<b><blockquote>ɴᴏᴛᴇ:
 - ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴀɴ ᴏᴘᴇɴ ꜱᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ.
-<a href=https://t.me/Owner0423_Bot>Nhi Dunga 😁</a>
+<a href=https://t.me/Jaynath_Request_Group_bot>Nhi Dunga 😁</a>
 Dᴇᴠᴇʟᴏᴘᴇʀ:
-- <a href="https://t.me/Owner0423_Bot">𝗢𝘄𝗻𝗲𝗿⚡</a></blockquote></b>"""
+- <a href="https://t.me/Jaynath_Request_Group_bot">Mᴀɴᴀɢᴇʀ⚡</a></blockquote></b>"""
 
     MANUELFILTER_TXT = """ʜᴇʟᴘ: <b>ꜰɪʟᴛᴇʀꜱ</b>
 - ꜰɪʟᴛᴇʀ ɪꜱ ᴀ ꜰᴇᴀᴛᴜʀᴇ ᴡᴇʀᴇ ᴜꜱᴇʀꜱ ᴄᴀɴ ꜱᴇᴛ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ʀᴇᴘʟɪᴇꜱ ꜰᴏʀ ᴀ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴋᴇʏᴡᴏʀᴅ ᴀɴᴅ ɪ ᴡɪʟʟ ʀᴇꜱᴘᴏɴᴅ ᴡʜᴇɴᴇᴠᴇʀ ᴀ ᴋᴇʏᴡᴏʀᴅ ɪꜱ ꜰᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴍᴇꜱꜱᴀɢᴇ
