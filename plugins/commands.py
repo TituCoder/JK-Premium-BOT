@@ -24,41 +24,39 @@ logger = logging.getLogger(__name__)
 TIMEZONE = "Asia/Kolkata"
 BATCH_FILES = {}
 
-async def check_premium_for_quality(message , file_name: str):
-    mode = True
-    if not mode:return True
+async def check_premium_for_quality(message, file_name: str):
+    if not CHECK_PREMIUM_FOR_QUALITY:return True
     try:
         if '480p' in file_name.lower():
             return True
         else:
             if not await db.has_premium_access(message.from_user.id):
                 btn = [[
-                    InlineKeyboardButton('🍁 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 🍁', callback_data='premium_info')
+                    InlineKeyboardButton('🍁 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 🍁', callback_data='seeplans')
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)
-                await message.reply('To Acces This Quality file You need to take Premium Subscription !', reply_markup=reply_markup)
+                message_text = f"<b>File Name : {file_name}\n You Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !<b>"
+                await message.reply(message_text, reply_markup=reply_markup)
                 return False
+            return True
     except Exception as e:
-        print("error in preminum quality check : " , e)
+        print("Error in preminum quality check : " , e)
         return True
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     try:
-        is_file = message.command[1]
-        if is_file.startswith('files_'):
-            file_id_ = is_file.split('_')[1]
-            file_dets = await get_file_details(file_id_)
-            if file_dets:
-                file_name_ = file_dets[0]['file_name']
-                chk = await check_premium_for_quality(message, file_name_)
-                if not chk:
-                    return
-    except Exception as e:
-        print("error in preminum quality check start command: " , e)
-    try:
         await react_msg(client, message)
     except:
         pass
+    try:
+        is_file = message.command[1]
+        if is_file.startswith('files_'):
+            file_name_ = await get_file_details(is_file.split('_')[1])[0]['file_name']
+            chk = await check_premium_for_quality(message, file_name_)
+            if not chk:
+                return
+    except Exception as e:
+        print("error in preminum quality check start command: " , e)
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
