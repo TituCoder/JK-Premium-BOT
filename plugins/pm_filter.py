@@ -194,7 +194,9 @@ async def pm_text(bot, message):
         user_id = message.from_user.id
         if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
         if user_id in ADMINS: return # ignore admins
-        await message.reply_text("<b>ए दोस्त यहां सिफ़्ह PREMIUM UESR मूवी ले साखते है NORMAL USER को नही मिलेगा ग्रुप में मांगो 👉@Jaynath_Request_Group</b>")
+        await message.reply_text("<b>ए दोस्त यहां सिफ़्ह PREMIUM UESR मूवी ले साखते है NORMAL USER को नही मिलेगा ग्रुप में मांगो 👉@Jaynath_Request_Group</b>",
+        reply_markup=InlineKeyboardMarkup([
+            [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')]]))
         await bot.send_message(
             chat_id=LOG_CHANNEL,
             text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
@@ -936,6 +938,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
     data=query.data
     if query.data == "close_data":
         await query.message.delete()
+    elif query.data == "seepl":
+        buttons = [[
+            InlineKeyboardButton('• QR •', callback_data='qr_pm'),
+            InlineKeyboardButton('• UPI •', callback_data='upi_pm')
+        ],[
+            InlineKeyboardButton("📸sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ📸", url=f"https://t.me/safaridev")
+        ],[
+            InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.reply_video(
+            video=(VID),
+            caption=script.PREMIUM_PM,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        
+    elif query.data == "qr_pm":
+        await query.message.reply_photo(CODE)
+
+    elif query.data == "upi_pm":
+        await query.message.reply_text("☟ ᴛᴀᴘ ᴛᴏ ᴄᴏᴘʏ ☟\n\n<code>thehappyhour003@okicici</code>")
+
     elif query.data == "gfiltersdeleteallconfirm":
         await del_allg(query.message, 'gfilters')
         await query.answer("Dᴏɴᴇ !")
