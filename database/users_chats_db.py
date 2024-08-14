@@ -132,7 +132,36 @@ class Database:
         b_chats = [chat['id'] async for chat in chats]
         b_users = [user['id'] async for user in users]
         return b_users, b_chats
+
+
+    #files Counting system, thanks🙏 for @safaridev
+   
+    async def get_userr(self, id):
+        user = await self.col.find_one({'id': int(id)})
+        return False if not user else user
+        
+    async def files_count(self, user_id, key):
+        user = await self.col.find_one({"id": user_id})
+        if user is None:
+            await self.add_user(user_id, "None")
+            return 0
+        return user.get(key, 0)
+        
+    async def update_files(self, user_id, key, value):
+        await self.col.update_one({"id": user_id}, {"$set": {key: value}})
     
+    async def reset_all_files_count(self):
+        await self.col.update_many({}, {"$set": {"files_count": 0, "last_reset": datetime.now().strftime("%Y-%m-%d")}})
+
+    async def reset_allsend_files(self):
+        await self.col.update_many({}, {"$set": {"send_all": 0, "last_reset": datetime.now().strftime("%Y-%m-%d")}})
+        
+    async def reset_daily_files_count(self, user_id):
+        user = await self.col.find_one({"id": user_id})
+        if user is None:
+            return
+        await self.col.update_one({"id": user_id}, {"$set": {"files_count": 0, "last_reset": datetime.now().strftime("%Y-%m-%d")}})
+#files Counting system end
 
 
     async def add_chat(self, chat, title):
