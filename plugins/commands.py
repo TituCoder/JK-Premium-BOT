@@ -24,8 +24,37 @@ logger = logging.getLogger(__name__)
 TIMEZONE = "Asia/Kolkata"
 BATCH_FILES = {}
 
+async def check_premium_for_quality(message , file_name: str):
+    mode = True
+    if not mode:return True
+    try:
+        if '480p' in file_name.lower():
+            return True
+        else:
+            if not await db.has_premium_access(message.from_user.id):
+                btn = [[
+                    InlineKeyboardButton('🍁 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 🍁', callback_data='premium_info')
+                ]]
+                reply_markup = InlineKeyboardMarkup(btn)
+                await message.reply('To Acces This Quality file You need to take Premium Subscription !', reply_markup=reply_markup)
+                return False
+    except Exception as e:
+        logger.exception(e)
+        return True
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    try:
+        is_file = message.command[1]
+        if is_file.startswith('files_'):
+            file_id_ = int(is_file.split('_')[1])
+            file_dets = await get_file_details(file_id_)
+            if file_dets:
+                file_name_ = file_dets[0]['file_name']
+                chk = await check_premium_for_quality(message, file_name_)
+                if not chk:
+                    return
+    except:
+        pass             
     try:
         await react_msg(client, message)
     except:
@@ -220,6 +249,9 @@ async def start(client, message):
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
             f_caption=msg.get("caption", "")
+            chk = await check_premium_for_quality(client, message, title)
+            if chk == False:
+                continue
             if BATCH_FILE_CAPTION:
                 try:
                     f_caption=BATCH_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
