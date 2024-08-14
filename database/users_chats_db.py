@@ -1,7 +1,7 @@
 # https://github.com/odysseusmax/animated-lamp/blob/master/bot/database/database.py
 import motor.motor_asyncio
 from info import DATABASE_NAME, DATABASE_URI, IMDB, IMDB_TEMPLATE, MELCOW_NEW_USERS, P_TTI_SHOW_OFF, SINGLE_BUTTON, SPELL_CHECK_REPLY, PROTECT_CONTENT, AUTO_DELETE, MAX_BTN, AUTO_FFILTER, SHORTLINK_API, SHORTLINK_URL, IS_SHORTLINK, TUTORIAL, IS_TUTORIAL, REFERAL_USER_TIME, INVITED_USER_TRAIL
-import datetime
+from datetime import datetime, timedelta
 
 
 import pytz
@@ -49,6 +49,10 @@ class Database:
         return dict(
             id = id,
             name = name,
+            send_all=0,
+            files_count=0,
+            lifetime_files=0, 
+            last_reset=datetime.now().strftime("%Y-%m-%d"),
             ban_status=dict(
                 is_banned=False,
                 ban_reason="",
@@ -244,7 +248,7 @@ class Database:
             if expiry_time is None:
                 # User previously used the free trial, but it has ended.
                 return False
-            elif isinstance(expiry_time, datetime.datetime) and datetime.datetime.now() <= expiry_time:
+            elif isinstance(expiry_time, datetime) and datetime.now() <= expiry_time:
                 return True
             else:
                 await self.users.update_one({"id": user_id}, {"$set": {"expiry_time": None}})
