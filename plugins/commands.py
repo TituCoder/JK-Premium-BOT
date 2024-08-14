@@ -519,6 +519,8 @@ async def start(client, message):
             if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+                    if not await db.has_premium_access(message.from_user.id):
+                        f_caption += f"<b>\n\nSᴇɴᴅ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/3</b>"
                 except Exception as e:
                     logger.exception(e)
                     f_caption=f_caption
@@ -582,6 +584,8 @@ async def start(client, message):
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+                        if not await db.has_premium_access(message.from_user.id):
+                            f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/15</b>"
                     except Exception as e:
                         logger.exception(e)
                         f_caption=f_caption
@@ -686,6 +690,8 @@ async def start(client, message):
             if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
+                    if not await db.has_premium_access(message.from_user.id):
+                        f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/15</b>"
                 except:
                     return
             await msg.edit_caption(f_caption)
