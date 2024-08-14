@@ -6,7 +6,7 @@ import asyncio
 import pytz
 from Script import script
 from pyrogram import Client, filters, enums
-from datetime import datetime
+from datetime import datetime, timedelta
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id, get_bad_files
@@ -44,6 +44,24 @@ async def check_premium_for_quality(message,  file_name: str):
         return True
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    send_count = await db.files_count(message.from_user.id, "send_all") or 0
+    files_counts = await db.files_count(message.from_user.id, "files_count") or 0
+    lifetime_files = await db.files_count(message.from_user.id, "lifetime_files")
+    user_id = message.from_user.id
+    user = await db.get_userr(user_id)
+    last_reset = user.get("last_reset")
+    kolkata = pytz.timezone('Asia/Kolkata')
+    current_datetime = datetime.now(kolkata)
+    next_day = current_datetime + timedelta(days=1)
+    next_day_midnight = datetime(next_day.year, next_day.month, next_day.day, tzinfo=kolkata)
+    time_difference = next_day_midnight - current_datetime
+    # Extract hours, minutes, and seconds
+    hours, remainder = divmod(time_difference.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    today = current_datetime.strftime("%Y-%m-%d")
+    if last_reset != today:
+        await db.reset_all_files_count()
+        await db.reset_allsend_files()
     try:
         await react_msg(client, message)
     except:
@@ -506,6 +524,15 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
+            await db.update_files(message.from_user.id, "send_all", send_count + 5)
+            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
+            if not await db.has_premium_access(message.from_user.id) and send_count is not None and send_count >= 15:
+                buttons = [[
+                            InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                          ]]
+                reply_markup = InlineKeyboardMarkup(buttons)
+                return await message.reply(f"<b>आपने Send All, बटन का 3 बार यूज कर चुके है, अब आप रात्रि 12 बजे के बाद फिर से 3 बार यूज कर सकते है\n\nअगर आप Send All, बटन का अनलिमिटेड यूज करना चाहते है तो\nइस bot का प्रीमियम ले सकते है सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, and {seconds} seconds.</b>",
+                reply_markup=reply_markup)
             if not await check_verification(client, message.from_user.id) and not await db.has_premium_access(message.from_user.id) and IS_VERIFY == True:
                 btn = [[
                         InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
@@ -560,6 +587,15 @@ async def start(client, message):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
+                await db.update_files(message.from_user.id, "files_count", files_counts + 1)
+                await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
+                if not await db.has_premium_access(message.from_user.id) and files_counts is not None and files_counts >= 15:
+                    buttons = [[
+                                InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                              ]]
+                    reply_markup = InlineKeyboardMarkup(buttons)
+                    await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+                    reply_markup=reply_markup)
             msg=await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
@@ -602,6 +638,15 @@ async def start(client, message):
     if not files_:
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
+            await db.update_files(message.from_user.id, "files_count", files_counts + 1)
+            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
+            if not await db.has_premium_access(message.from_user.id) and files_counts is not None and files_counts >= 15:
+                buttons = [[
+                            InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                          ]]
+                reply_markup = InlineKeyboardMarkup(buttons)
+                await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+                reply_markup=reply_markup)
             if IS_VERIFY and not await check_verification(client, message.from_user.id) and not await db.has_premium_access(message.from_user.id):
                 btn = [[
                     InlineKeyboardButton("Vᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
@@ -665,7 +710,15 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), files.file_name.split()))}"
-
+    await db.update_files(message.from_user.id, "files_count", files_counts + 1)
+    await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
+    if not await db.has_premium_access(message.from_user.id) and files_counts is not None and files_counts >= 15:
+        buttons = [[
+                    InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                  ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+        reply_markup=reply_markup)
     if IS_VERIFY and not await check_verification(client, message.from_user.id) and not await db.has_premium_access(message.from_user.id):
         btn = [[
             InlineKeyboardButton("Vᴇʀɪғʏ", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
