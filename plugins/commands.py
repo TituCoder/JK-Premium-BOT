@@ -46,7 +46,7 @@ async def start(client, message):
     try:
         is_file = message.command[1]
         if is_file.startswith('files_'):
-            file_id_ = int(is_file.split('_')[1])
+            file_id_ = is_file.split('_')[1]
             file_dets = await get_file_details(file_id_)
             if file_dets:
                 file_name_ = file_dets[0]['file_name']
