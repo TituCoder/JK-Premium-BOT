@@ -36,9 +36,7 @@ async def check_premium_for_quality(message,  file_name: str):
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)
                 message_text = f"<b>File Name : {file_name}\nYou Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !
-
-आप केवल 480p  Quality वाली फ़ाइलों को ही ले सकते हैं!
-सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको प्रीमियम  लेनी होगी!</b>"
+आप केवल\n480p  Quality वाली फ़ाइलों को ही ले सकते हैं!\nसभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको प्रीमियम  लेनी होगी!</b>"
                 await message.reply(message_text, reply_markup=reply_markup)
                 return False
             return True
