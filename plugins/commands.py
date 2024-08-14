@@ -35,7 +35,7 @@ async def check_premium_for_quality(message,  file_name: str):
                     InlineKeyboardButton('🍁 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 🍁', callback_data='seeplans')
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)
-                message_text = f"<b>File Name : {file_name}\n You Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !<b>"
+                message_text = f"<b>File Name : {file_name}\nYou Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !</b>"
                 await message.reply(message_text, reply_markup=reply_markup)
                 return False
             return True
@@ -59,8 +59,7 @@ async def start(client, message):
                 if not chk:
                     return
     except Exception as e:
-        print("error in preminum quality check start command: " , e)
-    
+        pass
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
