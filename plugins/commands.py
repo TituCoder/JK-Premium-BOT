@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 TIMEZONE = "Asia/Kolkata"
 BATCH_FILES = {}
 
-async def check_premium_for_quality(message, file_name: str):
+async def check_premium_for_quality(message,  file_name: str):
     if not CHECK_PREMIUM_FOR_QUALITY:return True
     try:
         if '480p' in file_name.lower():
@@ -51,12 +51,16 @@ async def start(client, message):
     try:
         is_file = message.command[1]
         if is_file.startswith('files_'):
-            file_name_ = await get_file_details(is_file.split('_')[1])[0]['file_name']
-            chk = await check_premium_for_quality(message, file_name_)
-            if not chk:
-                return
+            file_id_ = is_file.split('_')[1]
+            file_dets = await get_file_details(file_id_)
+            if file_dets:
+                file_name_ = file_dets[0]['file_name']
+                chk = await check_premium_for_quality(message, file_name_)
+                if not chk:
+                    return
     except Exception as e:
         print("error in preminum quality check start command: " , e)
+    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
