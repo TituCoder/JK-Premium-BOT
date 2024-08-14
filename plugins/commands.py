@@ -290,8 +290,8 @@ async def start(client, message):
                          [
                           InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                        ],[
-                          InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                          InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
+                          InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                          InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -310,8 +310,8 @@ async def start(client, message):
                           InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                           
                        ],[
-                          InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                          InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
+                          InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                          InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
                          ]
                         ]
                     )
@@ -473,8 +473,8 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup([[
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")],
-                      [InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)]]))
+                      [InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)]]))
             del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
             safari = msg
             await asyncio.sleep(900)
@@ -560,8 +560,9 @@ async def start(client, message):
                      [
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
                    ],[
-                      InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
+                      InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
+                      [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                      ]
                     ]
                 )
@@ -607,8 +608,9 @@ async def start(client, message):
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup([[
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")],
-                      [InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀', url=CHNL_LNK)]]))
+                      [InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ🍀', url=CHNL_LNK)],
+                      [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')]]))
             del_msg=await message.reply("<b>⚠️ᴛʜɪs ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs\n\nᴘʟᴇᴀsᴇ ғᴏʀᴡᴀʀᴅ ᴛʜᴇ ғɪʟᴇ sᴏᴍᴇᴡʜᴇʀᴇ ʙᴇғᴏʀᴇ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ..</b>") 
             safari = msg
             await asyncio.sleep(900)
@@ -676,8 +678,9 @@ async def start(client, message):
                       InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
               
                    ],[
-                      InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ😍', url=GRP_LNK),
-                      InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
+                      InlineKeyboardButton('😍 Gʀᴏᴜᴘ😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
+                      [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                      ]
                     ]
                 )
@@ -751,8 +754,9 @@ async def start(client, message):
              InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
               
            ],[
-              InlineKeyboardButton('😍 Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-              InlineKeyboardButton('🍀 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ🍀 ', url=CHNL_LNK)
+              InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+              InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ🍀 ', url=CHNL_LNK)],
+              [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
              ]
             ]
         )
