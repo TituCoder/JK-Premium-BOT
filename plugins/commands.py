@@ -35,7 +35,7 @@ async def check_premium_for_quality(message,  file_name: str):
                     InlineKeyboardButton('🍁 ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ 🍁', callback_data='seeplans')
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)
-                message_text = f"<b>File Name : {file_name}\nYou Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !\nआप केवल 480p Quality वाली फ़ाइलों  ही  सकते हैं!\nसभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!</b>"
+                message_text = f"<b>File Name : {file_name}\nYou Can Only Access 480p Quality Files !\nTo Get All Quality Files You Need To Take Premium Subscription !\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं!\nसभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!</b>"
                 await message.reply(message_text, reply_markup=reply_markup)
                 return False
             return True
