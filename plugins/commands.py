@@ -39,7 +39,7 @@ async def check_premium_for_quality(message , file_name: str):
                 await message.reply('To Acces This Quality file You need to take Premium Subscription !', reply_markup=reply_markup)
                 return False
     except Exception as e:
-        logger.exception(e)
+        print("error in preminum quality check : " , e)
         return True
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
@@ -53,8 +53,8 @@ async def start(client, message):
                 chk = await check_premium_for_quality(message, file_name_)
                 if not chk:
                     return
-    except:
-        pass             
+    except Exception as e:
+        print("error in preminum quality check start command: " , e)
     try:
         await react_msg(client, message)
     except:
