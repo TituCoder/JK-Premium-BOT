@@ -943,7 +943,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• QR •', callback_data='qr_pm'),
             InlineKeyboardButton('• UPI •', callback_data='upi_pm')
         ],[
-            InlineKeyboardButton("📸sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ📸", url=f"https://t.me/safaridev")
+            InlineKeyboardButton("📸sᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ sᴄʀᴇᴇɴsʜᴏᴛ📸", url=f"https://t.me/Jaynath_Request_Group_bot")
         ],[
             InlineKeyboardButton('🚫 ᴄʟᴏꜱᴇ 🚫', callback_data='close_data')
         ]]
@@ -959,7 +959,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.reply_photo(CODE)
 
     elif query.data == "upi_pm":
-        await query.message.reply_text("☟ ᴛᴀᴘ ᴛᴏ ᴄᴏᴘʏ ☟\n\n<code>thehappyhour003@okicici</code>")
+        await query.message.reply_text("☟ ᴛᴀᴘ ᴛᴏ ᴄᴏᴘʏ ☟\n\n<code>jaynath0143@axl</code>")
 
     elif query.data == "gfiltersdeleteallconfirm":
         await del_allg(query.message, 'gfilters')
