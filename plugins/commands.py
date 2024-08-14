@@ -249,7 +249,7 @@ async def start(client, message):
             title = msg.get("title")
             size=get_size(int(msg.get("size", 0)))
             f_caption=msg.get("caption", "")
-            chk = await check_premium_for_quality(client, message, title)
+            chk = await check_premium_for_quality(message, title)
             if chk == False:
                 continue
             if BATCH_FILE_CAPTION:
