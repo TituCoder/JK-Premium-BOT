@@ -25,7 +25,7 @@ PICS = (environ.get('PICS', 'https://telegra.ph/file/0ed351c8605c23e8cae79.jpg h
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/1e78c9bd456edfa1f534b.jpg" )
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
-
+VID = environ.get('VID', 'https://graph.org/file/943ab14a83315640f65e8.mp4')
 
 # premium QR & PHOTO
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/12adf3a7451bf2a72b454.jpg'))
