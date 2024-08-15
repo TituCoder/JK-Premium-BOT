@@ -29,7 +29,7 @@ VID = environ.get('VID', 'https://graph.org/file/943ab14a83315640f65e8.mp4')
 
 # premium QR & PHOTO
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/ffd0ce0182b0b94c57c53.jpg'))
-CODE = (environ.get('CODE', 'https://graph.org/Scan--Pay-02-28')) # Scanner Code image 
+CODE = (environ.get('CODE', 'https://telegra.ph/file/ffd0ce0182b0b94c57c53.jpg')) # Scanner Code image 
 
 #refer time, or user count
 REFERAL_USER_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
