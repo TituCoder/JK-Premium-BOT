@@ -113,6 +113,8 @@ async def start(client, message):
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
+                ],[
+                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
@@ -193,6 +195,8 @@ async def start(client, message):
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
+                ],[
+                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
