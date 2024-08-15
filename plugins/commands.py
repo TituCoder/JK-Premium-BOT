@@ -599,7 +599,7 @@ async def start(client, message):
                                 InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                               ]]
                     reply_markup = InlineKeyboardMarkup(buttons)
-                    await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+                    return await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
                     reply_markup=reply_markup)
             msg=await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -651,7 +651,7 @@ async def start(client, message):
                             InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                           ]]
                 reply_markup = InlineKeyboardMarkup(buttons)
-                await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+                return await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
                 reply_markup=reply_markup)
             if IS_VERIFY and not await check_verification(client, message.from_user.id) and not await db.has_premium_access(message.from_user.id):
                 btn = [[
@@ -726,7 +726,7 @@ async def start(client, message):
                     InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
+        return await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
         reply_markup=reply_markup)
     if IS_VERIFY and not await check_verification(client, message.from_user.id) and not await db.has_premium_access(message.from_user.id):
         btn = [[
