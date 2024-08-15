@@ -575,11 +575,11 @@ async def start(client, message):
                         ]
                     )
                 )
+                filesarr.append(msg)
             else:
                 non_480p_files.append(files1.file_name)
-        if non_480p_files:
-            await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
-                filesarr.append(msg)
+            if non_480p_files:
+                await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
         for x in filesarr:
             await asyncio.sleep(300)
