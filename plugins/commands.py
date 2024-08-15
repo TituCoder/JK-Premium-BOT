@@ -509,6 +509,7 @@ async def start(client, message):
         if not files:
             return await message.reply('<b><i>Nᴏ Sᴜᴄʜ Fɪʟᴇ Eᴇxɪsᴛ.</b></i>')
         filesarr = []
+        non_480p_files = []
         for file in files:
             file_id = file.file_id
             files_ = await get_file_details(file_id)
@@ -516,6 +517,9 @@ async def start(client, message):
             title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))
             size=get_size(files1.file_size)
             f_caption=files1.caption
+            await db.update_files(message.from_user.id, "send_all", send_count + 1)
+            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
+            files_count=await db.files_count(message.from_user.id, "send_all")
             if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
@@ -526,8 +530,7 @@ async def start(client, message):
                     f_caption=f_caption
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
-            await db.update_files(message.from_user.id, "send_all", send_count + 5)
-            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
+           
             if not await db.has_premium_access(message.from_user.id) and send_count is not None and send_count >= 15:
                 buttons = [[
                             InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
@@ -550,24 +553,35 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            msg = await client.send_cached_media(
-                chat_id=message.from_user.id,
-                file_id=file_id,
-                caption=f_caption,
-                protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                     [
-                      InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
-                   ],[
-                      InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
-                      [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
-                     ]
-                    ]
+            if "480p" in files1.file_name or await db.has_premium_access(message.from_user.id):
+                msg = await client.send_cached_media(
+                    chat_id=message.from_user.id,
+                    file_id=file_id,
+                    caption=f_caption,
+                    protect_content=True if pre == 'filep' else False,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
+                       ],[
+                          InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                          InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
+                          [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                         ]
+                        ]
+                    )
                 )
-            )
-            
+            else:
+                non_480p_files.append(files1.file_name)
+        if non_480p_files:
+            await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
+                filesarr.append(msg)
+        k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
+        for x in filesarr:
+            await asyncio.sleep(300)
+            await x.delete()
+        await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
+        return
     elif data.startswith("files"):
         
         if await db.has_premium_access(message.from_user.id):
@@ -582,6 +596,9 @@ async def start(client, message):
                 title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
                 size=get_size(files.file_size)
                 f_caption=files.caption
+                await db.update_files(message.from_user.id, "files_count", files_counts + 1)
+                await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
+                files_count=await db.files_count(message.from_user.id, "files_count")
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
@@ -690,6 +707,7 @@ async def start(client, message):
             title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), file.file_name.split()))
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
+            files_count=await db.files_count(message.from_user.id, "files_count")
             if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
@@ -711,16 +729,19 @@ async def start(client, message):
     title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), files.file_name.split()))
     size=get_size(files.file_size)
     f_caption=files.caption
+    await db.update_files(message.from_user.id, "files_count", files_counts + 1)
+    await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
+    files_count=await db.files_count(message.from_user.id, "files_count")
     if CUSTOM_FILE_CAPTION:
         try:
             f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+            if not await db.has_premium_access(message.from_user.id):
+                f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/15</b>"
         except Exception as e:
             logger.exception(e)
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('Linkz') and not x.startswith('{') and not x.startswith('Links') and not x.startswith('@') and not x.startswith('www'), files.file_name.split()))}"
-    await db.update_files(message.from_user.id, "files_count", files_counts + 1)
-    await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
     if not await db.has_premium_access(message.from_user.id) and files_counts is not None and files_counts >= 15:
         buttons = [[
                     InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
