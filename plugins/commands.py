@@ -535,7 +535,7 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
            
-            if not await db.has_premium_access(message.from_user.id) and send_count is not None and send_count >= 15:
+            if not await db.has_premium_access(message.from_user.id) and send_count is not None and send_count >= 3:
                 buttons = [[
                             InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
                           ]]
