@@ -465,7 +465,7 @@ User - {}"""
 
 • ꜰᴜʟʟ ɴᴀᴍᴇ : Mᴀɴᴀɢᴇʀ⚡
 • ᴜꜱᴇʀɴᴀᴍᴇ : @Jaynath_Request_Group_bot
-• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Owner_0143'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
+• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Jaynath_Request_Group_bot'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
 
     NORSLTS = """
 ★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
