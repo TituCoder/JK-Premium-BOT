@@ -521,14 +521,9 @@ async def start(client, message):
             title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))
             size=get_size(files1.file_size)
             f_caption=files1.caption
-            await db.update_files(message.from_user.id, "send_all", send_count + 1)
-            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
-            files_count=await db.files_count(message.from_user.id, "send_all")
             if CUSTOM_FILE_CAPTION:
                 try:
                     f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
-                    if not await db.has_premium_access(message.from_user.id):
-                        f_caption += f"<b>\n\nSᴇɴᴅ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/3</b>"
                 except Exception as e:
                     logger.exception(e)
                     f_caption=f_caption
@@ -558,6 +553,11 @@ async def start(client, message):
                 )
                 return
             if "480p" in files1.file_name or await db.has_premium_access(message.from_user.id):
+                await db.update_files(message.from_user.id, "send_all", send_count + 1)
+                await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
+                files_count=await db.files_count(message.from_user.id, "send_all")
+                if not await db.has_premium_access(message.from_user.id):
+                    f_caption += f"<b>\n\nSᴇɴᴅ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/3</b>"
                 msg = await client.send_cached_media(
                     chat_id=message.from_user.id,
                     file_id=file_id,
@@ -578,8 +578,8 @@ async def start(client, message):
                 filesarr.append(msg)
             else:
                 non_480p_files.append(files1.file_name)
-            if non_480p_files:
-                await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
+        if non_480p_files:
+            await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
         for x in filesarr:
             await asyncio.sleep(300)
@@ -587,7 +587,6 @@ async def start(client, message):
         await k.edit_text("<b>Your All Files/Videos is successfully deleted!!!</b>")
         return
     elif data.startswith("files"):
-        
         if await db.has_premium_access(message.from_user.id):
             files = await get_file_details(file_id)
             if not files:
@@ -600,14 +599,9 @@ async def start(client, message):
                 title = ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))
                 size=get_size(files.file_size)
                 f_caption=files.caption
-                await db.update_files(message.from_user.id, "files_count", files_counts + 1)
-                await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 1)
-                files_count=await db.files_count(message.from_user.id, "files_count")
                 if CUSTOM_FILE_CAPTION:
                     try:
                         f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
-                        if not await db.has_premium_access(message.from_user.id):
-                            f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/15</b>"
                     except Exception as e:
                         logger.exception(e)
                         f_caption=f_caption
@@ -622,6 +616,10 @@ async def start(client, message):
                     reply_markup = InlineKeyboardMarkup(buttons)
                     return await message.reply(f"<b>आप इस bot से डेली 15 फाइल ले सकते है\n\nआज आपने 15 फाइल ले चुके हैं\n\nNote: = रात्रि 12 बजे के बाद फिर से 15 फाइल से सकते है\n\nअनलिमिटेड फाइल लेने के लिए प्रिमियम इस bot का खरीदे सिर्फ 20₹ में\n💲By Premium Only 20₹ monthly.\n\nReset Time Count = {hours} hours, {minutes} minutes, {seconds} seconds.</b>",
                     reply_markup=reply_markup)
+            
+            files_count=await db.files_count(message.from_user.id, "files_count")
+            if not await db.has_premium_access(message.from_user.id):
+                f_caption += f"<b>\n\nDᴀɪʟʏ Fɪʟᴇ Lɪᴍɪᴛ: {files_count}/15</b>"
             msg=await client.send_cached_media(
                 chat_id=message.from_user.id,
                 file_id=file_id,
