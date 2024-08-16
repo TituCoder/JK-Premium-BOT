@@ -43,6 +43,6 @@ async def channel(_, message):
     await message.reply_text(CHANNEL)
 
 
-@Client.on_message(filters.command("𝐌𝐫 𝐉𝐚𝐲𝐧𝐚𝐭𝐡 𝐕𝟒.𝟐 ⚡", COMMAND_HAND_LER) & f_onw_fliter)
+@Client.on_message(filters.command("Jaynath", COMMAND_HAND_LER) & f_onw_fliter)
 async def ajax(_, message):
     await message.reply_text(JAYNATH)
