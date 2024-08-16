@@ -144,6 +144,7 @@ async def reply_stream(client, message):
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def force_sub(client, message):
+    user_id = message.from_user.id
     user = await db.get_userr(user_id)
     last_reset = user.get("last_reset")
     kolkata = pytz.timezone('Asia/Kolkata')
@@ -204,6 +205,7 @@ async def give_filter(client, message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
+    user_id = message.from_user.id
     user = await db.get_userr(user_id)
     last_reset = user.get("last_reset")
     kolkata = pytz.timezone('Asia/Kolkata')
