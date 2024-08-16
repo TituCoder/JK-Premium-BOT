@@ -144,6 +144,20 @@ async def reply_stream(client, message):
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def force_sub(client, message):
+    user = await db.get_userr(user_id)
+    last_reset = user.get("last_reset")
+    kolkata = pytz.timezone('Asia/Kolkata')
+    current_datetime = datetime.now(kolkata)
+    next_day = current_datetime + timedelta(days=1)
+    next_day_midnight = datetime(next_day.year, next_day.month, next_day.day, tzinfo=kolkata)
+    time_difference = next_day_midnight - current_datetime
+    # Extract hours, minutes, and seconds
+    hours, remainder = divmod(time_difference.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    today = current_datetime.strftime("%Y-%m-%d")
+    if last_reset != today:
+        await db.reset_all_files_count()
+        await db.reset_allsend_files()
     await db3.update_top_messages(message.from_user.id, message.text)
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
@@ -190,6 +204,20 @@ async def give_filter(client, message):
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
+    user = await db.get_userr(user_id)
+    last_reset = user.get("last_reset")
+    kolkata = pytz.timezone('Asia/Kolkata')
+    current_datetime = datetime.now(kolkata)
+    next_day = current_datetime + timedelta(days=1)
+    next_day_midnight = datetime(next_day.year, next_day.month, next_day.day, tzinfo=kolkata)
+    time_difference = next_day_midnight - current_datetime
+    # Extract hours, minutes, and seconds
+    hours, remainder = divmod(time_difference.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    today = current_datetime.strftime("%Y-%m-%d")
+    if last_reset != today:
+        await db.reset_all_files_count()
+        await db.reset_allsend_files()
     if not PM_FILTER and not await db.has_premium_access(message.from_user.id):
         content = message.text
         user = message.from_user.first_name
