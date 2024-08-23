@@ -37,9 +37,9 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'tnshort.net')
-STREAM_API = environ.get('IMPORT_JK_API', 'f77e5e1d30a8796b43c289d298acfd5d5a56842b')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'sharedisklinks.com')
+STREAM_API = environ.get('IMPORT_JK_API', '754d861c697f057d02ffa4e9071317e6f1544b52')
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
