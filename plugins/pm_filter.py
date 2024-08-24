@@ -55,20 +55,8 @@ async def stream_download(bot, query):
     download = f"{URL}download/{msg.id}"
     non_online = await import_site(online)
     non_download = await import_site(download)
-    if await db.has_premium_access(user_id):  
-        await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\nPREMIUM USER ✅",
-            reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)]]))   
-        await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
-                ],[
-                    InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
-    else:
-        if JK_STREAM_MODE is True:
-            await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} LINK MODE ON",
+    if not await db.has_premium_access(user_id) and JK_STREAM_MODE is True:
+        await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} LINK MODE ON",
                 reply_markup=InlineKeyboardMarkup([[
                         InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                         InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=non_online)]]))
@@ -81,18 +69,18 @@ async def stream_download(bot, query):
                         InlineKeyboardButton('📥Hᴏᴡ Tᴏ Wᴀᴛᴄʜ & Dᴏᴡɴʟᴏᴀᴅ📺', url=STREAMHTO)
                     ],[
                         InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
-        else:
-            await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} SHORT MODE OFF",
-                reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                        InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)]]))
-            await query.edit_message_reply_markup(
-                reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
-                        InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
-                    ],[
-                        InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
-
+    else:
+        await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\nPREMIUM USER ✅",
+            reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
+                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)]]))   
+        await query.edit_message_reply_markup(
+            reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
+                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
+                ],[
+                    InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
+    
 @Client.on_message(filters.private & filters.command("stream"))
 async def reply_stream(client, message):
     reply_message = message.reply_to_message
@@ -111,8 +99,8 @@ async def reply_stream(client, message):
     except Exception as e:
         return await message.reply_text(f"Error: {str(e)}")
 
-    online = f"{URL}watch/{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
-    download = f"{URL}{str(msg.id)}/{quote_plus(get_name(msg))}?hash={get_hash(msg)}"
+    online = f"{URL}watch/{msg.id}"
+    download = f"{URL}download/{msg.id}"
     non_online = await stream_site(online)
     non_download = await stream_site(download)
 
