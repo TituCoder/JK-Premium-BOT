@@ -27,16 +27,15 @@ from aiohttp import web
 from pyrogram.errors import AccessTokenExpired, AccessTokenInvalid
 
 class Bot(Client):
-
     def __init__(self):
         super().__init__(
-            name=SESSION,
+            name='direct-bot_2',
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
-            workers=50,
-            plugins={"root": "plugins"},
             sleep_threshold=5,
+            workers=150,
+            plugins={"root": "plugins"}
         )
 
     async def start(self):
@@ -50,18 +49,14 @@ class Bot(Client):
         temp.ME = me.id
         temp.U_NAME = me.username
         temp.B_NAME = me.first_name
+        temp.B_LINK = me.mention
         self.username = '@' + me.username
         self.loop.create_task(check_expired_premium(self))
-        app = web.AppRunner(await web_server())
-        await app.setup()
-        await web.TCPSite(app, "0.0.0.0", PORT).start()
-        logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        logging.info(LOG_STR)
-        logging.info(script.LOGO)
+        print(f"{me.first_name} is started now ❤️")
         tz = pytz.timezone('Asia/Kolkata')
         today = date.today()
-        now = datetime.now(tz)
-        time = now.strftime("%H:%M:%S %p")
+        now = datetime.datetime.now(tz)
+        timee = now.strftime("%H:%M:%S %p") 
         app = web.AppRunner(await web_server())
         await app.setup()
         bind_address = "0.0.0.0"
@@ -72,16 +67,10 @@ class Bot(Client):
         seconds = int(datetime.timedelta(seconds=tt).seconds)
         for admin in ADMINS:
             await self.send_message(chat_id=admin, text=f"<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ\n🕥 ᴛɪᴍᴇ ᴛᴀᴋᴇɴ - <code>{seconds} sᴇᴄᴏɴᴅs</code></b>")
-        try:
-            m = await self.send_message(chat_id=BIN_CHANNEL, text="Test")
-            await m.delete()
-        except:
-            logging.error("Make sure bot admin in BIN_CHANNEL, exiting now")
-            exit()
 
     async def stop(self, *args):
         await super().stop()
-        logging.info("Bot stopped. Bye.")
+        print("Bot stopped.")
 
     async def iter_messages(
         self,
@@ -121,7 +110,6 @@ class Bot(Client):
             for message in messages:
                 yield message
                 current += 1
-
 
 app = Bot()
 app.run()
