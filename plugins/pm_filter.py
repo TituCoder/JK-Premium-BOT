@@ -60,15 +60,15 @@ async def stream_download(bot, query):
                 reply_markup=InlineKeyboardMarkup([[
                         InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
                         InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=non_online)]]))
-            await query.answer("𝐍𝐨𝐭𝐞:\n𝐓𝐡𝐞 𝐀𝐝𝐬-𝐅𝐫𝐞𝐞 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬\n\n‼️Tᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ, ᴄʜᴇᴀᴋ ʙᴇʟᴏᴡ..!!! Pʀᴇᴍɪᴜᴍ Bᴜʏ", show_alert=True)
-            await query.edit_message_reply_markup(
-                reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
-                        InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=non_online)
-                    ],[
-                        InlineKeyboardButton('📥Hᴏᴡ Tᴏ Wᴀᴛᴄʜ & Dᴏᴡɴʟᴏᴀᴅ📺', url=STREAMHTO)
-                    ],[
-                        InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
+        await query.answer("𝐍𝐨𝐭𝐞:\n𝐓𝐡𝐞 𝐀𝐝𝐬-𝐅𝐫𝐞𝐞 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐔𝐬𝐞𝐫𝐬\n\n‼️Tᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ, ᴄʜᴇᴀᴋ ʙᴇʟᴏᴡ..!!! Pʀᴇᴍɪᴜᴍ Bᴜʏ", show_alert=True)
+        await query.edit_message_reply_markup(
+            reply_markup=InlineKeyboardMarkup([[
+                    InlineKeyboardButton("📥 ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=non_download),
+                    InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=non_online)
+                ],[
+                    InlineKeyboardButton('📥Hᴏᴡ Tᴏ Wᴀᴛᴄʜ & Dᴏᴡɴʟᴏᴀᴅ📺', url=STREAMHTO)
+                ],[
+                    InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
     else:
         await msg.reply_text(text=f"tg://openmessage?user_id={user_id}\n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username}\nPREMIUM USER ✅",
             reply_markup=InlineKeyboardMarkup([[
