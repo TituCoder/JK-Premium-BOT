@@ -68,7 +68,7 @@ async def media(bot, message):
 
             for file_id, file_name, caption, file_size in collected_files:
                 size_text = get_size(file_size)
-                file_url = f"📁 [{size_text}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>"
+                file_url = f"😍 [{size_text}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>"
 
                 if imdb_info is None:
                     try:
@@ -91,7 +91,7 @@ async def media(bot, message):
                 year = imdb_info.get('year', 'N/A')
                 year = imdb_info.get('year', 'N/A')
                 
-                urls_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
+                urls_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                 caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>" 
                 reply_markup=InlineKeyboardMarkup([[
                      InlineKeyboardButton('Search Group', url=GRP_LNK)],
@@ -117,7 +117,7 @@ async def media(bot, message):
                                 reply_markup=reply_markup
                             )
                     else:
-                        url_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
+                        url_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                         captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>"
                         reply_markup=InlineKeyboardMarkup([[
                             InlineKeyboardButton('Search Group', url=GRP_LNK)],
