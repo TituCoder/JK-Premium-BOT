@@ -92,9 +92,11 @@ async def media(bot, message):
                 year = imdb_info.get('year', 'N/A')
                 
                 urls_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
-                caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>", reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton('Search Group', url=GRP_LNK)],
-                [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]])
+                caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>" 
+                reply_markup=InlineKeyboardMarkup([[
+                     InlineKeyboardButton('Search Group', url=GRP_LNK)],
+                     [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]
+                ])
                 for channel in POST_CHANNELS:
                     if poster_url:
                         try:
@@ -103,6 +105,7 @@ async def media(bot, message):
                                 photo=poster_url,
                                 caption=caption,
                                 parse_mode=enums.ParseMode.HTML
+                                reply_markup=reply_markup
                             )
                         except Exception as e:
                             logging.error(f"Error sending poster to channel {channel}: {str(e)}")
@@ -111,15 +114,19 @@ async def media(bot, message):
                                 chat_id=channel,
                                 text=caption,
                                 parse_mode=enums.ParseMode.HTML
+                                reply_markup=reply_markup
                             )
                     else:
                         url_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
-                        captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>", reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton('Search Group', url=GRP_LNK)],
-                        [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]])
+                        captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>"
+                        reply_markup=InlineKeyboardMarkup([[
+                            InlineKeyboardButton('Search Group', url=GRP_LNK)],
+                            [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]
+                        ])
                         await bot.send_message(
                             chat_id=channel,
                             text=captionn,
                             parse_mode=enums.ParseMode.HTML
+                            reply_markup=reply_markup
                         )
         collected_files = []
