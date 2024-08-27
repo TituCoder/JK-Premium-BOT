@@ -14,7 +14,7 @@ post_active = False
 
 media_filter = filters.document | filters.video | filters.audio
 
-POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001998895377, -1002101778109').split(','))))
+POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001883539506').split(','))))
 
 @Client.on_message(filters.chat(CHANNELS) & media_filter)
 async def media(bot, message):
