@@ -29,7 +29,7 @@ BLACKLIST = ['tamilblaster', 'filmyzilla', 'streamershub', 'xyz', 'cine', 'www',
 
 def clean_filename(file_name):
     for word in BLACKLIST:
-        file_name = file_name.replace(word, '', flags=re.IGNORECASE) # Replace word ignoring case
+        file_name = re.sub(word, '', file_name, flags=re.IGNORECASE) # Using re.sub instead of str.replace
     return file_name
     
 @Client.on_message(filters.chat(CHANNELS) & media_filter)
