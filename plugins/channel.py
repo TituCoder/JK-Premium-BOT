@@ -104,7 +104,7 @@ async def media(bot, message):
                                 chat_id=channel,
                                 photo=poster_url,
                                 caption=caption,
-                                parse_mode=enums.ParseMode.HTML
+                                parse_mode=enums.ParseMode.HTML,
                                 reply_markup=reply_markup
                             )
                         except Exception as e:
@@ -113,7 +113,7 @@ async def media(bot, message):
                             await bot.send_message(
                                 chat_id=channel,
                                 text=caption,
-                                parse_mode=enums.ParseMode.HTML
+                                parse_mode=enums.ParseMode.HTML,
                                 reply_markup=reply_markup
                             )
                     else:
@@ -126,7 +126,7 @@ async def media(bot, message):
                         await bot.send_message(
                             chat_id=channel,
                             text=captionn,
-                            parse_mode=enums.ParseMode.HTML
+                            parse_mode=enums.ParseMode.HTML,
                             reply_markup=reply_markup
                         )
         collected_files = []
