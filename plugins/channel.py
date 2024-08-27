@@ -16,6 +16,21 @@ media_filter = filters.document | filters.video | filters.audio
 
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001883539506').split(','))))
 
+BLACKLIST = ['tamilblaster', 'filmyzilla', 'streamershub', 'xyz', 'cine', 'www', 'http', 'https',
+                'cloudsmoviesstore', 'moviez2you', 'bkp', 'cinema', 'filmy', 'flix', 'cutemoviez',
+                '4u', 'hub', 'movies', 'otthd', 'telegram', 'hoichoihok', '@', ']', '[', 'missqueenbotx',
+                'filmy', 'films', 'cinema', 'join', 'club', 'apd', 'F-Press', 'GDTOT', 'mkv', 'NETFLIX_OFFICIAL',
+                'backup', 'primeroom', 'theprofffesorr', 'premium', 'vip', '4wap', 'toonworld4all', 'mlwbd',
+                'Telegram@alpacinodump', 'bollywood', "AllNewEnglishMovie", "7MovieRulz", "1TamilMV",
+                'Bazar', '_Corner20', 'CornersOfficial', 'support', 'iMediaShare', 'Uᴘʟᴏᴀᴅᴇᴅ', 'Bʏ', 'PFM', 'alpacinodump', 
+                "Us", "boxoffice", "Links", "Linkz", "Villa", "Original", "bob", "Files1", "MW", "LinkZ", "}", "{" 
+                ]
+
+def clean_filename(file_name):
+    for word in BLACKLIST:
+        file_name = file_name.replace(word, '', flags=re.IGNORECASE) # Replace word ignoring case
+    return file_name
+    
 @Client.on_message(filters.chat(CHANNELS) & media_filter)
 async def media(bot, message):
     global post_active, collected_files
@@ -41,7 +56,8 @@ async def media(bot, message):
         collected_files = []
 
     if post_active:
-        collected_files.append((file_id, media.file_name.replace('_', ' '), media.caption, media.file_size))
+        clean_name = clean_filename(media.file_name.replace('_', ' '))
+        collected_files.append((file_id, clean_name, media.caption, media.file_size))
 
     if success and "send post" in (media.caption or "").lower():
         post_active = False 
