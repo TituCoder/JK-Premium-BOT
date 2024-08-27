@@ -29,9 +29,10 @@ BLACKLIST = ['tamilblaster', 'filmyzilla', 'streamershub', 'xyz', 'cine', 'www',
 
 def clean_filename(file_name):
     for word in BLACKLIST:
-        file_name = re.sub(word, '', file_name, flags=re.IGNORECASE) # Using re.sub instead of str.replace
+        escaped_word = re.escape(word)  # Escape the word to make it regex-safe
+        file_name = re.sub(escaped_word, '', file_name, flags=re.IGNORECASE) 
     return file_name
-    
+
 @Client.on_message(filters.chat(CHANNELS) & media_filter)
 async def media(bot, message):
     global post_active, collected_files
