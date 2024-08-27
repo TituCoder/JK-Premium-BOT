@@ -95,8 +95,8 @@ async def media(bot, message):
                 urls_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                 caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>" 
                 reply_markup=InlineKeyboardMarkup([[
-                     InlineKeyboardButton('Search Group', url=GRP_LNK)],
-                     [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]
+                     InlineKeyboardButton('Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url=GRP_LNK)],
+                     [InlineKeyboardButton("🎁 ʙʏ ᴘʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                 ])
                 for channel in POST_CHANNELS:
                     if poster_url:
@@ -106,7 +106,8 @@ async def media(bot, message):
                                 photo=poster_url,
                                 caption=caption,
                                 parse_mode=enums.ParseMode.HTML,
-                                reply_markup=reply_markup
+                                reply_markup=reply_markup, 
+                                has_spoiler=True
                             )
                         except Exception as e:
                             logging.error(f"Error sending poster to channel {channel}: {str(e)}")
@@ -121,8 +122,8 @@ async def media(bot, message):
                         url_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                         captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>"
                         reply_markup=InlineKeyboardMarkup([[
-                            InlineKeyboardButton('Search Group', url=GRP_LNK)],
-                            [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]
+                            InlineKeyboardButton('Sᴇᴀʀᴄʜ Gʀᴏᴜᴘ 🔍', url=GRP_LNK)],
+                            [InlineKeyboardButton("🎁 ʙʏ ᴘʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                         ])
                         await bot.send_message(
                             chat_id=channel,
