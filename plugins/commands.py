@@ -154,20 +154,7 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
-     if len(message.command) == 2 and message.command[1] in ["Safaridev"]:
-        buttons = [[
-                    InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=f"https://t.me/Jaynath_Request_Group_bot")
-                  ],[
-                    InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
-                  ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=(SUBSCRIPTION),
-            caption=script.PREMIUM_PM,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-        return  
+     
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
@@ -442,7 +429,21 @@ async def start(client, message):
                 text="<b>Iɴᴠᴀʟɪᴅ ʟɪɴᴋ ᴏʀ Exᴘɪʀᴇᴅ ʟɪɴᴋ !</b>",
                 protect_content=True if PROTECT_CONTENT else False
             )
-    if data.startswith("sendfiles"):
+    if data.startswith("Safaridev"):
+        buttons = [[
+                    InlineKeyboardButton('📲 ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ', url=f"https://t.me/Jaynath_Request_Group_bot")
+                  ],[
+                    InlineKeyboardButton('❌ ᴄʟᴏꜱᴇ ❌', callback_data='close_data')
+                  ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+            photo=(SUBSCRIPTION),
+            caption=script.PREMIUM_PM,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        return  
+    elif data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
         g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=allfiles_{file_id}")
