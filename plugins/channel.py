@@ -8,6 +8,7 @@ from database.ia_filterdb import save_file, get_file_details
 from utils import get_poster, get_size, temp
 from os import environ
 import logging
+import re
 
 collected_files = []
 post_active = False
