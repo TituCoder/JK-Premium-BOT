@@ -41,7 +41,7 @@ async def media(bot, message):
         collected_files = []
 
     if post_active:
-        collected_files.append((file_id, media.file_name, media.caption, media.file_size))
+        collected_files.append((file_id, media.file_name.replace('_', ' '), media.caption, media.file_size))
 
     if success and "send post" in (media.caption or "").lower():
         post_active = False 
