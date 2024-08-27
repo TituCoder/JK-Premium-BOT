@@ -3,7 +3,7 @@
 
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from info import CHANNELS
+from info import CHANNELS, GRP_LNK
 from database.ia_filterdb import save_file, get_file_details
 from utils import get_poster, get_size, temp
 from os import environ
@@ -14,7 +14,7 @@ post_active = False
 
 media_filter = filters.document | filters.video | filters.audio
 
-POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001883539506').split(','))))
+POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1001998895377, -1002101778109').split(','))))
 
 @Client.on_message(filters.chat(CHANNELS) & media_filter)
 async def media(bot, message):
@@ -75,36 +75,34 @@ async def media(bot, message):
                 year = imdb_info.get('year', 'N/A')
                 
                 urls_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
-                caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}</b>\n\n{urls_text}"
+                caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>", reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton('Search Group', url=GRP_LNK)],
+                [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]])
                 for channel in POST_CHANNELS:
-                    try:
-                        if poster_url:
+                    if poster_url:
+                        try:
                             await bot.send_photo(
                                 chat_id=channel,
                                 photo=poster_url,
                                 caption=caption,
                                 parse_mode=enums.ParseMode.HTML
                             )
-                        else:
+                        except Exception as e:
+                            logging.error(f"Error sending poster to channel {channel}: {str(e)}")
+                            # Fallback to sending text if the poster fails
                             await bot.send_message(
                                 chat_id=channel,
                                 text=caption,
                                 parse_mode=enums.ParseMode.HTML
                             )
-                    except Exception as e:
-                        logging.error(f"Error sending poster to channel {channel}: {str(e)}")
-            else:
-                urls_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
-                caption = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}</b>\n\n{urls_text}"
-                for channel in POST_CHANNELS:
-                    try:
+                    else:
+                        url_text = "\n\n".join([f"📁 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
+                        captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>", reply_markup=InlineKeyboardMarkup([[
+                        InlineKeyboardButton('Search Group', url=GRP_LNK)],
+                        [InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", url='https://t.me/{temp.U_NAME}?start=Safaridev')]])
                         await bot.send_message(
                             chat_id=channel,
-                            text=caption,
+                            text=captionn,
                             parse_mode=enums.ParseMode.HTML
                         )
-                    except Exception as e:
-                        logging.error(f"Error sending message to channel {channel}: {str(e)}")
-
-
         collected_files = []
