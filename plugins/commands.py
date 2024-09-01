@@ -456,7 +456,7 @@ async def start(client, message):
                     ],[
                         InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                     ], [
-                       InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                       InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                     ]
                 ]
             )
@@ -518,7 +518,7 @@ async def start(client, message):
                             ],[
                             InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                             ], [
-                            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                             ]]))
                 await asyncio.sleep(900) 
                 await k.edit_text("<b>Your message is successfully deleted!!!</b>")
@@ -559,7 +559,7 @@ async def start(client, message):
                         ],[
                         InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                         ], [
-                        InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                        InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                         ]]
                 await message.reply_text(
                     text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
@@ -669,7 +669,7 @@ async def start(client, message):
                                 ],[
                                 InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                                 ], [
-                                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                                 ]]))
                     await asyncio.sleep(900) 
                     await k.edit_text("<b>Your message is successfully deleted!!!</b>")
@@ -694,7 +694,7 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                 ], [
-                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                    InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                 ]]
                 await message.reply_text(
                     text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
@@ -773,7 +773,7 @@ async def start(client, message):
         ],[
             InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
         ], [
-            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
         ]]
         await message.reply_text(
             text="<b>हर दो दिन में 10 सेकंड का वेरिफिकेशन जरूरी हे !\nJust 10second Bro 🥲\nAfter Get Unlimited Movies...✅</b>",
