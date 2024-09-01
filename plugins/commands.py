@@ -114,11 +114,11 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                 ],[
-                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
+                    InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
-                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
             ])
             buttons.append([
                 InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
@@ -197,11 +197,11 @@ async def start(client, message):
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                 ],[
-                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
+                    InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
-                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
             ])
             buttons.append([
                 InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
