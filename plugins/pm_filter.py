@@ -1247,7 +1247,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         ],[
                             InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
                         ], [
-                            InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                         ]]
                         await client.send_message(
                             chat_id=query.from_user.id,
@@ -1348,7 +1348,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
                 InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
             ], [
-                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer2')
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
             ]]
             await client.send_message(
                 chat_id=query.from_user.id,
@@ -1789,7 +1789,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch')
                 ],[
-                    InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='reffer')
+                    InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
                   ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
