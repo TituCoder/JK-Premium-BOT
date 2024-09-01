@@ -96,7 +96,7 @@ async def media(bot, message):
                 caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>" 
                 reply_markup=InlineKeyboardMarkup([[
                      InlineKeyboardButton('🔰 𝗦ᴇᴀʀᴄʜ 𝗚ʀᴏᴜᴘ 🔍', url=GRP_LNK)],
-                     [InlineKeyboardButton("🎁 𝗕ʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
+                     [InlineKeyboardButton("🎁 𝗕ᴜʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                 ])
                 for channel in POST_CHANNELS:
                     if poster_url:
@@ -123,7 +123,7 @@ async def media(bot, message):
                         captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>"
                         reply_markup=InlineKeyboardMarkup([[
                             InlineKeyboardButton('🔰 𝗦ᴇᴀʀᴄʜ 𝗚ʀᴏᴜᴘ 🔍', url=GRP_LNK)],
-                            [InlineKeyboardButton("🎁 𝗕ʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
+                            [InlineKeyboardButton("🎁 𝗕ᴜʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                         ])
                         await bot.send_message(
                             chat_id=channel,
