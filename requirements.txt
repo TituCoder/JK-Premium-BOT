@@ -24,11 +24,9 @@ openai
 
 youtube-dl
 youtube_search
-googletrans==3.1.0a0
 telegraph
 beautifulsoup4
 gTTS
-googletrans==3.1.0a0
 NumPy
 glitch_this
 opencv-python-headless
