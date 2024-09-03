@@ -108,7 +108,7 @@ async def start(client, message):
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
-                   InlineKeyboardButton('ʙᴏᴛ ᴀʟɪᴠᴇ: ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data=f'donation')
+                   InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data='donation')
                 ],[
                     InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
@@ -192,7 +192,7 @@ async def start(client, message):
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
                     InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
-                    InlineKeyboardButton('ʙᴏᴛ ᴀʟɪᴠᴇ: ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data=f'donation')
+                    InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data='donation')
                 ],[
                     InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
