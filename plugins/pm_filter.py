@@ -280,6 +280,9 @@ async def next_page(bot, query):
     else:
         btn = []
         btn.insert(0, [
+            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+        ])
+        btn.insert(0, [
             InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
         ])
@@ -419,6 +422,9 @@ async def years_search(bot, query):
             ])
         else:
             btn = []
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
@@ -576,6 +582,9 @@ async def language_check(bot, query):
         else:
             btn = []
             btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
+            btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
@@ -712,6 +721,9 @@ async def quality_check(bot, query):
         else:
             btn = []
             btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
+            btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
             ])
@@ -841,6 +853,9 @@ async def seasons_check(bot, query):
             ])
         else:
             btn = []
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
@@ -1827,7 +1842,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
                     InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='), 
-                    InlineKeyboardButton('ʙᴏᴛ ᴀʟɪᴠᴇ: ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data=f'donation')
+                    InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data='donation')
                 ],[
                     InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
@@ -2250,13 +2265,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(PICS)
-            )
+            InputMediaPhoto(random.choice(PICS))
+        )
         await query.message.edit_text(
             text=script.DONATION_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
-        )       
+        )
     elif query.data == "extra_data":
         buttons = [[
             InlineKeyboardButton('𝚂𝙾𝙽𝙶', callback_data='songs'),
@@ -2975,6 +2990,9 @@ async def auto_filter(client, msg, spoll=False):
         ])
     else:
         btn = []
+        btn.insert(0, [
+            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+        ])
         btn.insert(0, [
             InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
