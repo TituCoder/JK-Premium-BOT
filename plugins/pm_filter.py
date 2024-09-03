@@ -1,4 +1,6 @@
-# Kanged From @JK_DEV
+# This code has been modified by Safaridev
+# Please do not remove this credit
+
 import asyncio
 import re
 import ast
@@ -80,7 +82,7 @@ async def stream_download(bot, query):
                     InlineKeyboardButton("🖥️ ꜱᴛʀᴇᴇᴍ 🖥️", url=online)
                 ],[
                     InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')]]))
-    
+# special thanks for safaridev
 @Client.on_message(filters.private & filters.command("stream"))
 async def reply_stream(client, message):
     reply_message = message.reply_to_message
@@ -129,7 +131,7 @@ async def reply_stream(client, message):
                 ]]),
                 disable_web_page_preview=True
         )
-
+# special thanks for safaridev
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def force_sub(client, message):
     user_id = message.from_user.id
@@ -191,6 +193,7 @@ async def give_filter(client, message):
                 parse_mode=enums.ParseMode.HTML
             )
 
+# special thanks for safaridev
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pm_text(bot, message):
     user_id = message.from_user.id
@@ -259,6 +262,9 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+        btn.insert(0, [
+            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+       ])
         btn.insert(0, [
             InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{req}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}"), 
@@ -365,8 +371,8 @@ async def next_page(bot, query):
         except MessageNotModified:
             pass
         await query.answer()
-
-
+        
+# special thanks for safaridev
 @Client.on_callback_query(filters.regex(r"^years"))
 async def years_search(bot, query):
     _, userid, years = query.data.split("#")
@@ -396,6 +402,9 @@ async def years_search(bot, query):
                 ]
                 for file in files
             ]
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
@@ -464,6 +473,7 @@ async def years_search(bot, query):
     else:
         return await query.answer(f"Sᴏʀʀʏ, Nᴏ ғɪʟᴇs ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ᴏ̨ᴜᴇʀʏ {movie}.", show_alert=True)
 
+# special thanks for safaridev
 @Client.on_callback_query(filters.regex(r"^search_years"))
 async def select_years(bot, query):
     _, userid = query.data.split("#")
@@ -547,6 +557,9 @@ async def language_check(bot, query):
                 ]
                 for file in files
             ]
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
@@ -650,6 +663,7 @@ async def select_language(bot, query):
         pass
     await query.answer()
 
+# special thanks for safaridev
 @Client.on_callback_query(filters.regex(r"^lusifilms"))
 async def quality_check(bot, query):
     _, userid, quality = query.data.split("#")
@@ -679,6 +693,9 @@ async def quality_check(bot, query):
                 ]
                 for file in files
             ]
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{userid}")
@@ -775,7 +792,8 @@ async def select_quality(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
-    
+
+# special thanks for safaridev
 @Client.on_callback_query(filters.regex(r"^seasons"))
 async def seasons_check(bot, query):
     _, userid, seasons = query.data.split("#")
@@ -805,6 +823,9 @@ async def seasons_check(bot, query):
                 ]
                 for file in files
             ]
+            btn.insert(0, [
+                InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+            ])
             btn.insert(0, [
                 InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{userid}"),
                 InlineKeyboardButton("❗ Sᴇʟᴇᴄᴛ Aɢᴀɪɴ ❗", callback_data=f"jk_dev#{userid}")
@@ -907,50 +928,73 @@ async def select_seasons(bot, query):
         pass
     await query.answer()
 
+# special thanks for safaridev
 @Client.on_callback_query(filters.regex(r"^spol"))
-async def advantage_spoll_choker(bot, query):
-    _, user, movie_ = query.data.split('#')
-    movies = SPELL_CHECK.get(query.message.reply_to_message.id)
-    if not movies:
-        return await query.answer(script.OLD_ALRT_TXT.format(query.from_user.first_name), show_alert=True)
+async def pm_spoll_choker(bot, query):
+    _, id, user = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer(script.ALRT_TXT.format(query.from_user.first_name), show_alert=True)
-    if movie_ == "close_spellcheck":
-        return await query.message.delete()
-    movie = movies[(int(movie_))]
-    movie = re.sub(r"[:\-]", " ", movie)
-    movie = re.sub(r"\s+", " ", movie).strip()
-    await query.answer(script.TOP_ALRT_MSG)
-    gl = await global_filters(bot, query.message, text=movie)
-    if gl == False:
-        k = await manual_filters(bot, query.message, text=movie)
-        if k == False:
-            files, offset, total_results = await get_search_results(query.message.chat.id, movie, offset=0, filter=True)
-            if files:
-                k = (movie, files, offset, total_results)
-                await auto_filter(bot, query, k)
-            else:
-                reqstr1 = query.from_user.id if query.from_user else 0
-                reqstr = await bot.get_users(reqstr1)
-                if NO_RESULTS_MSG:
-                    safari = [[
-                        InlineKeyboardButton('Not Release 📅', callback_data=f"not_release:{reqstr1}:{movie}"),
-                    ],[
-                        InlineKeyboardButton('Already Available🕵️', callback_data=f"already_available:{reqstr1}:{movie}"),
-                        InlineKeyboardButton('Not Available🙅', callback_data=f"not_available:{reqstr1}:{movie}")
-                    ],[
-                        InlineKeyboardButton('Uploaded Done✅', callback_data=f"uploaded:{reqstr1}:{movie}")
-                    ],[
-                        InlineKeyboardButton('Series Error🙅', callback_data=f"series:{reqstr1}:{movie}"),
-                        InlineKeyboardButton('Spell Error✍️', callback_data=f"spelling_error:{reqstr1}:{movie}")
-                    ],[
-                        InlineKeyboardButton('⁉️ Close ⁉️', callback_data=f"close_data")
-                    ]]
-                    reply_markup = InlineKeyboardMarkup(safari)
-                    await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)), reply_markup=InlineKeyboardMarkup(safari))
-                k = await query.message.edit(script.MVE_NT_FND)
-                await asyncio.sleep(10)
-                await k.delete()
+        return await query.answer(script.ALRT_TXT, show_alert=True)
+    movie = await get_poster(id, id=True)
+    search = movie.get('title')
+    await query.answer('ᴄʜᴇᴄᴋɪɴɢ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ 🌚')
+    files, offset, total_results = await get_search_results(query.message.chat.id, search)
+    if files:
+        k = (search, files, offset, total_results)
+        await auto_filter(bot, query, k)
+    else:
+        try:
+            reqstr1 = query.from_user.id if query.from_user else 0
+            reqstr = await bot.get_users(reqstr1)
+            if NO_RESULTS_MSG:
+                safari = [[
+                    InlineKeyboardButton('Not Release 📅', callback_data=f"not_release:{reqstr1}:{search}"),
+                ],[
+                    InlineKeyboardButton('Already Available🕵️', callback_data=f"already_available:{reqstr1}:{search}"),
+                    InlineKeyboardButton('Not Available🙅', callback_data=f"not_available:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('Uploaded Done✅', callback_data=f"uploaded:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('Series Error🙅', callback_data=f"series:{reqstr1}:{search}"),
+                    InlineKeyboardButton('Spell Error✍️', callback_data=f"spelling_error:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('⁉️ Close ⁉️', callback_data=f"close_data")
+                ]]
+                reply_markup = InlineKeyboardMarkup(safari)
+                total=await bot.get_chat_members_count(query.message.chat.id)
+                await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(query.message.chat.title, query.message.chat.id, total, temp.B_NAME, reqstr.mention, search)), reply_markup=InlineKeyboardMarkup(safari))
+            k = await query.message.edit(script.MVE_NT_FND)
+            await asyncio.sleep(60)
+            await k.delete()
+            try:
+                await query.message.reply_to_message.delete()
+            except:
+                pass
+        except Exception as e:
+            reqstr1 = query.from_user.id if query.from_user else 0
+            reqstr = await bot.get_users(reqstr1)
+            if NO_RESULTS_MSG:
+                safari = [[
+                    InlineKeyboardButton('Not Release 📅', callback_data=f"not_release:{reqstr1}:{search}"),
+                ],[
+                    InlineKeyboardButton('Already Available🕵️', callback_data=f"already_available:{reqstr1}:{search}"),
+                    InlineKeyboardButton('Not Available🙅', callback_data=f"not_available:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('Uploaded Done✅', callback_data=f"uploaded:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('Series Error🙅', callback_data=f"series:{reqstr1}:{search}"),
+                    InlineKeyboardButton('Spell Error✍️', callback_data=f"spelling_error:{reqstr1}:{search}")
+                ],[
+                    InlineKeyboardButton('⁉️ Close ⁉️', callback_data=f"close_data")
+                ]]
+                reply_markup = InlineKeyboardMarkup(safari)
+                await bot.send_message(chat_id=LOG_CHANNEL, text=(script.PMNORSLTS.format(temp.B_NAME, reqstr.mention, search)), reply_markup=InlineKeyboardMarkup(safari))
+            k = await query.message.edit(script.MVE_NT_FND)
+            await asyncio.sleep(60)
+            await k.delete()
+            try:
+                await query.message.reply_to_message.delete()
+            except:
+                pass
 
 
 @Client.on_callback_query()
@@ -1782,7 +1826,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ 🤡', callback_data="shortlink_info"),
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
-                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ==') 
+                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='), 
+                    InlineKeyboardButton('ʙᴏᴛ ᴀʟɪᴠᴇ: ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data=f'donation')
                 ],[
                     InlineKeyboardButton(' 📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
                     InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
@@ -2197,6 +2242,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "donation":
+        buttons = [[
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(PICS)
+            )
+        await query.message.edit_text(
+            text=script.DONATION_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )       
     elif query.data == "extra_data":
         buttons = [[
             InlineKeyboardButton('𝚂𝙾𝙽𝙶', callback_data='songs'),
@@ -2898,6 +2958,9 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
         btn.insert(0, [
+            InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
+        ])
+        btn.insert(0, [
             InlineKeyboardButton(f"📆 Yᴇᴀʀ", callback_data=f"search_years#{message.from_user.id}"),
             InlineKeyboardButton("🥶Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{message.from_user.id}")
         ])
@@ -3056,15 +3119,15 @@ async def auto_filter(client, msg, spoll=False):
         await msg.message.delete()
 
 
-async def advantage_spell_chok(client, msg):
-    mv_id = msg.id
-    mv_rqst = msg.text
-    reqstr1 = msg.from_user.id if msg.from_user else 0
-    reqstr = await client.get_users(reqstr1)
-    settings = await get_settings(msg.chat.id)
-    find = mv_rqst.split(" ")
+async def advantage_spell_chok(client, message):
+    mv_id = message.id
+    search = message.text
+    chat_id = message.chat.id
+    user = message.from_user.id
+    settings = await get_settings(chat_id)
+    find = search.split(" ")
     query = ""
-    removes = ["in","upload", "series", "full", "horror", "thriller", "mystery", "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "karo"]
+    removes = ["in","upload", "series", "full", "horror", "thriller", "mystery", "print", "file", "send", "chahiye", "chiye", "movi", "movie", "bhejo", "dijiye", "jaldi", "hd", "bollywood", "hollywood", "south", "karo"]
     for x in find:
         if x in removes:
             continue
@@ -3072,71 +3135,48 @@ async def advantage_spell_chok(client, msg):
             query = query + x + " "
     query = re.sub(
         r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
-        "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
+        "", message.text, flags=re.IGNORECASE)
     query = query.strip() + " movie"
     try:
-        movies = await get_poster(mv_rqst, bulk=True)
-    except Exception as e:
-        logger.exception(e)
-        reqst_gle = mv_rqst.replace(" ", "+")
-        button = [[
-                   InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
-        ]]
-        if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(button)
-        )
-        await asyncio.sleep(30)
+        movies = await get_poster(search, bulk=True)
+    except:
+        k = await message.reply(script.I_CUDNT.format(message.from_user.mention))
+        await asyncio.sleep(60)
         await k.delete()
+        try:
+            await message.delete()
+        except:
+            pass
         return
-    movielist = []
     if not movies:
-        reqst_gle = mv_rqst.replace(" ", "+")
+        google = search.replace(" ", "+")
         button = [[
-                   InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
+            InlineKeyboardButton("🔍 ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ ᴏɴ ɢᴏᴏɢʟᴇ 🔍", url=f"https://www.google.com/search?q={google}")
         ]]
-        if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(button)
-        )
-        await asyncio.sleep(30)
+        k = await message.reply_text(text=script.I_CUDNT.format(search), reply_markup=InlineKeyboardMarkup(button))
+        await asyncio.sleep(120)
         await k.delete()
+        try:
+            await message.delete()
+        except:
+            pass
         return
-    movielist += [movie.get('title') for movie in movies]
-    movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
-    SPELL_CHECK[mv_id] = movielist
-    btn = [
-        [
-            InlineKeyboardButton(
-                text=movie_name.strip(),
-                callback_data=f"spol#{reqstr1}#{k}",
-            )
-        ]
-        for k, movie_name in enumerate(movielist)
+    user = message.from_user.id if message.from_user else 0
+    buttons = [[
+        InlineKeyboardButton(text=movie.get('title'), callback_data=f"spol#{movie.movieID}#{user}")
     ]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck')])
-    spell_check_del = await msg.reply_photo(
-        photo=(SPELL_IMG),
-        caption=(script.CUDNT_FND.format(mv_rqst)),
-        reply_markup=InlineKeyboardMarkup(btn)
+        for movie in movies
+    ]
+    buttons.append(
+        [InlineKeyboardButton(text="🚫 ᴄʟᴏsᴇ 🚫", callback_data='close_data')]
     )
+    d = await message.reply_text(text=script.CUDNT_FND.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), reply_to_message_id=message.id)
+    await asyncio.sleep(120)
+    await d.delete()
     try:
-        if settings['auto_delete']:
-            await asyncio.sleep(600)
-            await spell_check_del.delete()
-    except KeyError:
-            grpid = await active_connection(str(msg.from_user.id))
-            await save_group_settings(grpid, 'auto_delete', True)
-            settings = await get_settings(msg.chat.id)
-            if settings['auto_delete']:
-                await asyncio.sleep(600)
-                await spell_check_del.delete()
+        await message.delete()
+    except:
+        pass
 
 
 async def manual_filters(client, message, text=False):
