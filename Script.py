@@ -448,7 +448,7 @@ Group link - {}
 Total members - <code>{}</code>
 User - {}"""
 
-    LOG_TEXT_P = """#NewUser
+    LOG_TEXT_P = """<b>#NewUser
 ≈ ɪᴅ:- <code>{}</code>
 ≈ ɴᴀᴍᴇ:- {}</b>"""
 
