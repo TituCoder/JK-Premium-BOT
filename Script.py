@@ -489,6 +489,13 @@ User - {}"""
 
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
+    PMNORSLTS = """
+#Pm_NoResult
+★ BOT {}
+★ User <b>: {}</b>
+
+★ Message <code>{}</code>"""
+
     CAPTION = """
 <b><blockquote>📂 Fɪʟᴇ ɴᴀᴍᴇ : </b><a href="https://t.me/Jaynath_Movie_Channel">{file_name}</a></blockquote><b>
 
