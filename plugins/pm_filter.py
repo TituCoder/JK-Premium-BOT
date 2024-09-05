@@ -136,7 +136,7 @@ async def reply_stream(client, message):
 async def force_sub(client, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
-        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
+        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, temp.U_NAME))
     user_id = message.from_user.id
     user = await db.get_userr(user_id)
     last_reset = user.get("last_reset")
