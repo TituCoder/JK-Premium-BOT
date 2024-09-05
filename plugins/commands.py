@@ -42,8 +42,27 @@ async def check_premium_for_quality(message,  file_name: str):
     except Exception as e:
         print("Error in preminum quality check : " , e)
         return True
+
+@Client.on_message(filters.command('delete_user') & filters.user(ADMINS))
+async def delete_user(bot, message):
+    if len(message.command) == 1:
+        return await message.reply('giv me user id')
+    user_id = message.command[1]
+    try:
+        user_id = int(user_id)
+    except:
+        user_id = user_id
+    try:
+        await db.delete_user(user_id)
+        await message.reply("user removed in database")
+    except Exception as e:
+        await message.reply(f'Error - {e}')
+        
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    if not await db.is_user_exist(message.from_user.id):
+        await db.add_user(message.from_user.id, message.from_user.first_name)
+        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     send_count = await db.files_count(message.from_user.id, "send_all") or 0
     files_counts = await db.files_count(message.from_user.id, "files_count") or 0
     lifetime_files = await db.files_count(message.from_user.id, "lifetime_files")
@@ -97,9 +116,7 @@ async def start(client, message):
             await client.send_message(LOG_CHANNEL, script.LOG_TEXT_G.format(message.chat.title, message.chat.id, total, "Unknown"))       
             await db.add_chat(message.chat.id, message.chat.title)
         return 
-    if not await db.is_user_exist(message.from_user.id):
-        await db.add_user(message.from_user.id, message.from_user.first_name)
-        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
+    
     if len(message.command) != 2:
         buttons = [[
                     InlineKeyboardButton('☆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ☆', url=f'http://telegram.me/{temp.U_NAME}?startgroup=true')
