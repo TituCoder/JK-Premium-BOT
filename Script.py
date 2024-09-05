@@ -482,13 +482,13 @@ BOT {}"""
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/Jaynath_Request_Group_bot'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
 
     NORSLTS = """
-★ #𝗡𝗼𝗥𝗲𝘀𝘂𝗹𝘁𝘀 ★
+#NoResult
+★ Group Name <b>: {}</b>(<code>{}</code>)
+★ Total Users {}
+★ BOT {}
+★ User <b>: {}</b>
 
-𝗜𝗗 <b>: {}</b>
-
-𝗡𝗮𝗺𝗲 <b>: {}</b>
-
-𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
+★ Message <code>{}</code>"""
 
     PMNORSLTS = """
 #Pm_NoResult
