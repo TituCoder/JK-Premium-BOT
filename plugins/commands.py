@@ -62,7 +62,7 @@ async def delete_user(bot, message):
 async def start(client, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id, message.from_user.first_name)
-        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
+        await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, temp.U_NAME))
     send_count = await db.files_count(message.from_user.id, "send_all") or 0
     files_counts = await db.files_count(message.from_user.id, "files_count") or 0
     lifetime_files = await db.files_count(message.from_user.id, "lifetime_files")
