@@ -588,34 +588,34 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-            if "480p" in files1.file_name or await db.has_premium_access(message.from_user.id):
-                await db.update_files(message.from_user.id, "send_all", send_count + 1)
-                await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
-                files_count=await db.files_count(message.from_user.id, "send_all")
-                if not await db.has_premium_access(message.from_user.id):
-                    f_caption += f"<b>\n\nSᴇɴᴅ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/3</b>"
-                msg = await client.send_cached_media(
-                    chat_id=message.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if pre == 'filep' else False,
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                         [
-                          InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
-                       ],[
-                          InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
-                          InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
-                          [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
-                         ]
-                        ]
-                    )
+            #if "480p" in files1.file_name or await db.has_premium_access(message.from_user.id):
+            await db.update_files(message.from_user.id, "send_all", send_count + 1)
+            await db.update_files(message.from_user.id, "lifetime_files", lifetime_files + 10)
+            files_count=await db.files_count(message.from_user.id, "send_all")
+            if not await db.has_premium_access(message.from_user.id):
+                f_caption += f"<b>\n\nSᴇɴᴅ Bᴜᴛᴛᴏɴ Lɪᴍɪᴛ : {files_count}/3</b>"
+            msg = await client.send_cached_media(
+                chat_id=message.from_user.id,
+                file_id=file_id,
+                caption=f_caption,
+                protect_content=True if pre == 'filep' else False,
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                      InlineKeyboardButton("🖥️ ᴡᴀᴛᴄʜ / ᴅᴏᴡɴʟᴏᴀᴅ 📥", callback_data=f"streaming#{file_id}")
+                   ],[
+                      InlineKeyboardButton('😍 Gʀᴏᴜᴘ 😍', url=GRP_LNK),
+                      InlineKeyboardButton('🍀 Cʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)],
+                      [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')
+                     ]
+                    ]
                 )
-                filesarr.append(msg)
-            else:
-                non_480p_files.append(files1.file_name)
-        if non_480p_files:
-            await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
+            )
+            filesarr.append(msg)
+            # else:
+                # non_480p_files.append(files1.file_name)
+        # if non_480p_files:
+            # await message.reply(f"File Name: {title}\n\nYou Can Only Access 480p Quality Files !To Get All Quality Files You Need To Take Premium Subscription !\n\nआप केवल 480p Quality वाली फ़ाइलों ही ले सकते हैं! सभी Quality वाली फ़ाइलें प्राप्त करने के लिए आपको Premium लेनी होगी!")
         k = await client.send_message(chat_id = message.from_user.id, text=f"<b><u>❗️❗️❗️IMPORTANT❗️️❗️❗️</u></b>\n\nThis Movie Files/Videos will be deleted in <b><u>10 mins</u> 🫥 <i></b>(Due to Copyright Issues)</i>.\n\n<b><i>Please forward this ALL Files/Videos to your Saved Messages and Start Download there</i></b>")
         for x in filesarr:
             await asyncio.sleep(300)
