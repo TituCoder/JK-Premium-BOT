@@ -39,7 +39,7 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'sharedisklinks.com')
 STREAM_API = environ.get('IMPORT_JK_API', '754d861c697f057d02ffa4e9071317e6f1544b52')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/59'))
 
 #premium Users Satuts
