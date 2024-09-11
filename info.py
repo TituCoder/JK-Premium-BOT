@@ -21,7 +21,7 @@ TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', 'https://envs.sh/PLh.jpg')).split()
+PICS = (environ.get('PICS', 'https://envs.sh/PL2.jpg')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/1e78c9bd456edfa1f534b.jpg" )
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
