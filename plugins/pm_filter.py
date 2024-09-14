@@ -222,7 +222,7 @@ async def pm_text(bot, message):
         user_id = message.from_user.id
         if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
         if user_id in ADMINS: return # ignore admins
-        await message.reply_text("<b>ए दोस्त यहां सिफ़्ह PREMIUM UESR मूवी ले साखते है NORMAL USER को नही मिलेगा ग्रुप में मांगो 👉@Jaynath_Request_Group</b>",
+        await message.reply_text("<b>ए दोस्त यहां सिफ़्ह PREMIUM UESR मूवी ले साखते है NORMAL USER को नही मिलेगा ग्रुप में मांगो 👉@Jaynath_Movie_Request</b>",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton('✨Bʏ Pʀᴇᴍɪᴜᴍ: Rᴇᴍᴏᴠᴇ Lɪᴍɪᴛᴇ 🚫✨', callback_data=f'seepl')]]))
         await bot.send_message(
