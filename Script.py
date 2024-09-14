@@ -64,9 +64,9 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.</blockquote></b>""
 
 ✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: <a
 href=https://t.me/MovieTM0143_Bot>ᴍʀ ᴊᴀʏɴᴀᴛʜ ᴠ4.2 ⚡</a>
-✯ ᴍʏ ʟᴏᴠᴇ: <a href=https://t.me/Jaynath_Request_Group>ᴍʏ ɢʀᴏᴜᴘs 🥰</a>
+✯ ᴍʏ ʟᴏᴠᴇ: <a href=https://t.me/https://t.me/Jaynath_Movie_Request>ᴍʏ ɢʀᴏᴜᴘs 🥰</a>
 ✯ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ: <a href=https://t.me/Jaynath_Movie_Channel>ᴊᴀʏɴᴀᴛʜ ᴍᴏᴠɪᴇ ᴄʜ...</a>
-✯ ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘ: <a href=https://t.me/Jaynath_Request_Group>ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘs 🥳</a>
+✯ ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘ: <a href=https://t.me/https://t.me/Jaynath_Movie_Request>ᴍᴏᴠɪᴇs ɢʀᴏᴜᴘs 🥳</a>
 ✯ ᴍʏ ᴏᴡɴᴇʀ: <a href=https://t.me/Mr_Jaynath>Dᴇᴠʟᴏᴘᴇʀ 🧑‍💻</a>
 ✯ ᴍʏ ᴍᴀɴᴀɢᴇʀ : <a href="https://telegram.me/Jaynath_Request_Group_bot">ᴍᴀɴᴀɢᴇʀ⚡</a>
 ✯ ʀᴇᴘᴏ : <a href="https://telegram.me/Mr_Jaynath">ʟɪɴᴋ</a>
@@ -503,7 +503,7 @@ BOT {}"""
 मेरे भाई बैकअप चैनल ज्वाइन कर के रखो📥 
 पता न कब कॉपीराइट आ जाए 👇
 ========== • ✠ • ==========
-▫️ Backup Channel🤫 :  <a href="https://t.me/Jaynath_Movie_Channel">Click Here</a>
+▫️ Backup Channel🤫 :  <a href="https://t.me/https://t.me/Jaynath_Movie_Request">Click Here</a>
 ▫️ Request Group🤫 :  <a href="https://t.me/Jaynath_Request_Group">Click Here</a>
 ========== • ✠ • ==========
 </b>"""
