@@ -127,8 +127,8 @@ async def start(client, message):
                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
                    InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data='donation')
                 ],[
-                    InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
-                    InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
+                    InlineKeyboardButton('🎗️ ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
+                    InlineKeyboardButton('🔰 ᴅᴇᴛᴀɪʟs ', callback_data='about')
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch'),
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ ✨', callback_data="premium_info")
@@ -212,8 +212,8 @@ async def start(client, message):
                     InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
                     InlineKeyboardButton('ᴅᴏɴᴀᴛɪᴏɴ  💰', callback_data='donation')
                 ],[
-                    InlineKeyboardButton('📝 ᴄᴏᴍᴍᴀɴᴅꜱ 📝', callback_data='help'),
-                    InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🫠', callback_data='about')
+                    InlineKeyboardButton('🎗️ ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
+                    InlineKeyboardButton('🔰 ᴅᴇᴛᴀɪʟs', callback_data='about')
                 ],[
                     InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch'),
                     InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ ✨', callback_data="premium_info")
