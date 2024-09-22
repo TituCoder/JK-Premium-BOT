@@ -124,13 +124,13 @@ async def start(client, message):
                     InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ 🤡', callback_data="shortlink_info"),
                     InlineKeyboardButton('🌿 ᴜᴘᴅᴀᴛᴇꜱ', callback_data='channels')
                 ],[
-                   InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
+                   InlineKeyboardButton('🆔 ɪɴsᴛᴀɢʀᴀᴍ', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
                    InlineKeyboardButton('💰 ᴅᴏɴᴀᴛɪᴏɴ', callback_data='donation')
                 ],[
                     InlineKeyboardButton('🎗️ ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
                     InlineKeyboardButton('🔰 ᴅᴇᴛᴀɪʟs ', callback_data='about')
                 ],[
-                    InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch'),
+                    InlineKeyboardButton('⚡ ᴛᴏᴘ ᴛʀᴇɴᴅɪɴɢ', callback_data='topsearch'),
                     InlineKeyboardButton('🎀 ᴘʀᴇᴍɪᴜᴍ', callback_data="premium_info")
                 ],[
                     InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
@@ -209,13 +209,13 @@ async def start(client, message):
                     InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ 🤡', callback_data="shortlink_info"),
                     InlineKeyboardButton('♻️ ᴜᴘᴅᴀᴛᴇꜱ ♻️', callback_data='channels')
                 ],[
-                    InlineKeyboardButton('ɪɴsᴛᴀɢʀᴀᴍ ᴀᴄᴄᴏᴜɴᴛ 🌐', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
+                    InlineKeyboardButton('🆔 ɪɴsᴛᴀɢʀᴀᴍ', url=f'https://www.instagram.com/jaynath_vishwakarma_0143?igsh=MTZyMnBxYmJlaHRiZQ=='),
                     InlineKeyboardButton('💰 ᴅᴏɴᴀᴛɪᴏɴ', callback_data='donation')
                 ],[
                     InlineKeyboardButton('🎗️ ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
                     InlineKeyboardButton('🔰 ᴅᴇᴛᴀɪʟs', callback_data='about')
                 ],[
-                    InlineKeyboardButton('Tᴏᴘ Sᴇᴀʀᴄʜ 🔍', callback_data='topsearch'),
+                    InlineKeyboardButton('⚡ ᴛᴏᴘ ᴛʀᴇɴᴅɪɴɢ', callback_data='topsearch'),
                     InlineKeyboardButton('🎀 ᴘʀᴇᴍɪᴜᴍ', callback_data="premium_info")
                 ],[
                     InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
