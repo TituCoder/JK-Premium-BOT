@@ -9,6 +9,7 @@ import random
 import os
 lock = asyncio.Lock()
 import pytz
+from telegram import InputMediaPhoto
 from datetime import datetime, timedelta, date, time
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
@@ -1878,7 +1879,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
@@ -1904,6 +1905,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             photo=random.choice(PICS),
             caption=script.REFFER_TXT.format(temp.U_NAME, query.from_user.id, USERS_COUNT),
             reply_markup=reply_markup,
+            has_spoiler=True,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "reffer":
@@ -1918,7 +1920,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         await query.message.edit_text(
             text=script.REFFER_TXT.format(temp.U_NAME, query.from_user.id, USERS_COUNT),
@@ -1963,7 +1965,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(CODE)
+            InputMediaPhoto(CODE), has_spoiler=True
             )
         await query.message.edit_text(
             text=script.QR_TXT.format(query.from_user.mention),
@@ -2039,7 +2041,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(SUBSCRIPTION)
+            InputMediaPhoto(SUBSCRIPTION), has_spoiler=True
             )
             await query.message.edit_text(
                 text=script.PLAN_TXT.format(query.from_user.mention),
@@ -2234,7 +2236,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2255,7 +2257,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS)has_spoiler=True)
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2271,7 +2273,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS)has_spoiler=True)
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         await query.message.edit_text(
             text=script.DONATION_TXT,
@@ -2318,7 +2320,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -2674,7 +2676,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         await query.message.edit_text(
             text=script.SOURCE_TXT,
@@ -2752,7 +2754,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -2776,7 +2778,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
+            InputMediaPhoto(random.choice(PICS), has_spoiler=True)
         )
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -2799,7 +2801,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
                 query.message.chat.id, 
                 query.message.id, 
-                InputMediaPhoto(random.choice(PICS))
+                InputMediaPhoto(random.choice(PICS), has_spoiler=True)
             )
             reply_markup = InlineKeyboardMarkup(btn)
             await query.message.edit_text(
