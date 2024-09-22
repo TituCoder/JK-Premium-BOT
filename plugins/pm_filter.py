@@ -1878,12 +1878,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS)has_spoiler=True)
+            InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, gtxt, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
-            has_spoiler=True, parse_mode=enums.ParseMode.HTML
+            parse_mode=enums.ParseMode.HTML
         )
         await query.answer(MSG_ALRT)
     elif query.data == "show_reff":
@@ -1904,7 +1904,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             photo=random.choice(PICS),
             caption=script.REFFER_TXT.format(temp.U_NAME, query.from_user.id, USERS_COUNT),
             reply_markup=reply_markup,
-            has_spoiler=True, parse_mode=enums.ParseMode.HTML
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "reffer":
         user_id = query.from_user.id
@@ -1918,12 +1918,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(random.choice(PICS)has_spoiler=True)
+            InputMediaPhoto(random.choice(PICS))
         )
         await query.message.edit_text(
             text=script.REFFER_TXT.format(temp.U_NAME, query.from_user.id, USERS_COUNT),
             reply_markup=reply_markup,
-            has_spoiler=True, parse_mode=enums.ParseMode.HTML
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "purchase":
         buttons = [[
