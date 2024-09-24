@@ -2171,9 +2171,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
   
     elif query.data == "channels":
         buttons = [[
-            InlineKeyboardButton('⚜️ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ⚜️', url=CHNL_LNK)
+            InlineKeyboardButton('🍀 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 🍀', url=CHNL_LNK)
         ],[
-            InlineKeyboardButton('✉️ ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ ✉️', url=GRP_LNK)
+            InlineKeyboardButton('🥰 ʀᴇǫᴜᴇꜱᴛ ɢʀᴏᴜᴘ 🥰', url=GRP_LNK)
         ],[
             InlineKeyboardButton('⇇ ʙᴀᴄᴋ', callback_data='start'),
             InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ 👮', url=CHNL_LNK)
@@ -2223,12 +2223,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('✨ ʙᴏᴛ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ ✨', callback_data='admic')
+            InlineKeyboardButton('🎭 ʙᴏᴛ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ 🎭 ', callback_data='admic')
         ],[
-            InlineKeyboardButton('✨ ᴜꜱᴇʀ ✨', callback_data='users'),
-            InlineKeyboardButton('✨ ɢʀᴏᴜᴘ ✨', callback_data='group')
+            InlineKeyboardButton('👻 ᴜꜱᴇʀ', callback_data='users'),
+            InlineKeyboardButton('🥰 ɢʀᴏᴜᴘ', callback_data='group')
         ],[
-            InlineKeyboardButton('💥 ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅ 💥', callback_data='extra_data') 
+            InlineKeyboardButton('🎁 ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅ 🎁', callback_data='extra_data') 
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
@@ -2248,8 +2248,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
         ], [
-            InlineKeyboardButton('🫠 ᴏᴡɴᴇʀ 🫠', url=f"https://t.me/{OWNER_USER_NAME}"),
-            InlineKeyboardButton('🔻 ꜱᴛᴀᴛꜱ 🔻', callback_data='stats')
+            InlineKeyboardButton('🧑🏻‍💻 ᴏᴡɴᴇʀ', url=f"https://t.me/{OWNER_USER_NAME}"),
+            InlineKeyboardButton('😜 ꜱᴛᴀᴛꜱ', callback_data='stats')
         ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
