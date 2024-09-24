@@ -1857,14 +1857,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('🎀 ᴘʀᴇᴍɪᴜᴍ', callback_data="premium_info")
                 ],[
                     InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer')
-                  ]]
-        if IS_VERIFY or IS_SHORTLINK is True:
-            buttons.append([
-                InlineKeyboardButton('ʀᴇғғᴇʀ 🎁', callback_data='reffer') 
-            ])
-            buttons.append([
-                InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
-                ]) 
+                ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
@@ -2041,7 +2034,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
-            InputMediaPhoto(SUBSCRIPTION), has_spoiler=True
+            InputMediaPhoto(SUBSCRIPTION)
             )
             await query.message.edit_text(
                 text=script.PLAN_TXT.format(query.from_user.mention),
