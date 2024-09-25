@@ -37,10 +37,10 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'sharedisklinks.com')
-STREAM_API = environ.get('IMPORT_JK_API', '754d861c697f057d02ffa4e9071317e6f1544b52')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/59'))
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'publicearn.com')
+STREAM_API = environ.get('IMPORT_JK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/41'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
@@ -68,12 +68,12 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/59")
-VERIFY2_URL = environ.get('VERIFY2_URL', "livekhabar.online")
-VERIFY2_API = environ.get('VERIFY2_API', "12ec82d0862c93225c46edfd4f9039a83a89fa09")
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/41")
+VERIFY2_URL = environ.get('VERIFY2_URL', "publicearn.com")
+VERIFY2_API = environ.get('VERIFY2_API', "25de9949b4bbb5418181925b78f6d6cf61ee81ed")
 # how to open link
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/59')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/41')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
