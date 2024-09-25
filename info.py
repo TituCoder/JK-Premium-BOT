@@ -77,8 +77,8 @@ TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/41')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'livekhabar.online')
-SHORTLINK_API = environ.get('SHORTLINK_API', '12ec82d0862c93225c46edfd4f9039a83a89fa09')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '25de9949b4bbb5418181925b78f6d6cf61ee81ed')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 YEARS =  ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000",]
