@@ -22,7 +22,7 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
 PICS = (environ.get('PICS', 'https://envs.sh/PL2.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/1e78c9bd456edfa1f534b.jpg" )
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/PL2.jpg" )
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
 VID = environ.get('VID', 'https://graph.org/file/943ab14a83315640f65e8.mp4')
@@ -40,7 +40,7 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shortyfi.link')
 STREAM_API = environ.get('IMPORT_JK_API', '6358c2c732def109f8f0435a510a1e3c3af7e1ad')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/73'))
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/74'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
@@ -69,11 +69,11 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/73")
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/74")
 VERIFY2_URL = environ.get('VERIFY2_URL', "shortyfi.link")
 VERIFY2_API = environ.get('VERIFY2_API', "6358c2c732def109f8f0435a510a1e3c3af7e1ad")
 # how to open link
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/73')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/74')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
