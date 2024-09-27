@@ -39,14 +39,14 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shortyfi.link')
 STREAM_API = environ.get('IMPORT_JK_API', '6358c2c732def109f8f0435a510a1e3c3af7e1ad')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/74'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 @
-CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'False')), True)
+CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5069888600 6445840990').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002043695166 -1002055127272').split()]
@@ -68,7 +68,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/74")
 VERIFY2_URL = environ.get('VERIFY2_URL', "shortyfi.link")
 VERIFY2_API = environ.get('VERIFY2_API', "6358c2c732def109f8f0435a510a1e3c3af7e1ad")
