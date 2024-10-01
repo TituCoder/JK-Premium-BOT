@@ -40,7 +40,7 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'onepageyam.com')
 STREAM_API = environ.get('IMPORT_JK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/74'))
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/76'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002073485610')
@@ -69,11 +69,11 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/74")
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/76")
 VERIFY2_URL = environ.get('VERIFY2_URL', "onepageyam.com")
 VERIFY2_API = environ.get('VERIFY2_API', "70db509936f7f315fa550b241f50b24d00dc0c80")
 # how to open link
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/74')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/76')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
