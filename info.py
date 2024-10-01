@@ -37,8 +37,8 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'yamlinks.com')
-STREAM_API = environ.get('IMPORT_JK_API', 'ee5556d5bd8d291cda6da7f361f43d7567814e72')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'onepageyam.com')
+STREAM_API = environ.get('IMPORT_JK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), False)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/74'))
 
@@ -70,15 +70,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/74")
-VERIFY2_URL = environ.get('VERIFY2_URL', "yamlinks.com")
-VERIFY2_API = environ.get('VERIFY2_API', "ee5556d5bd8d291cda6da7f361f43d7567814e72")
+VERIFY2_URL = environ.get('VERIFY2_URL', "onepageyam.com")
+VERIFY2_API = environ.get('VERIFY2_API', "70db509936f7f315fa550b241f50b24d00dc0c80")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/74')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'yamlinks.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'ee5556d5bd8d291cda6da7f361f43d7567814e72')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'onepageyam.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 YEARS =  ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000",]
