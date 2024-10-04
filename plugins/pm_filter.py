@@ -1308,9 +1308,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     if IS_VERIFY and not await check_verification(client, query.from_user.id) and not await db.has_premium_access(query.from_user.id):
                         btn = [[
                             InlineKeyboardButton("Vᴇʀɪғʏ", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
-                            InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
+                            InlineKeyboardButton("🚸 Hᴏᴡ Tᴏ Vᴇʀɪғʏ 🚸", url=HOW_TO_VERIFY)
                         ],[
-                            InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                            InlineKeyboardButton("😄 ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ 😄", callback_data='seeplans')
                         ], [
                             InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
                         ]]
@@ -1409,9 +1409,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if IS_VERIFY and not await check_verification(client, query.from_user.id) and not await db.has_premium_access(query.from_user.id):
             btn = [[
                 InlineKeyboardButton("Vᴇʀɪғʏ", url=await get_token(client, query.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=", file_id)),
-                InlineKeyboardButton("Hᴏᴡ Tᴏ Vᴇʀɪғʏ", url=HOW_TO_VERIFY)
+                InlineKeyboardButton("🚸 Hᴏᴡ Tᴏ Vᴇʀɪғʏ 🚸", url=HOW_TO_VERIFY)
             ],[
-                InlineKeyboardButton("✨ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ꜰɪʟᴇs : ʙᴜʏ sᴜʙsᴄʀɪᴘᴛɪᴏɴ ✨", callback_data='seeplans')
+                InlineKeyboardButton("😄 ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ 😄", callback_data='seeplans')
             ], [
                 InlineKeyboardButton('🎁 ɢᴇᴛ ғʀᴇᴇ ᴘʀᴇᴍɪᴜᴍ 🎁', callback_data='reffer2')
             ]]
