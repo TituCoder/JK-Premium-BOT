@@ -95,8 +95,8 @@ async def media(bot, message):
                 urls_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                 caption = f"<b>🏷 Title: {title}\n🎭 Genres: {genre}\n📆 Year: {year}\n🌟 Rating: {rating}\n\n{urls_text}</b>" 
                 reply_markup=InlineKeyboardMarkup([[
-                     InlineKeyboardButton('🔰 𝗦ᴇᴀʀᴄʜ 𝗚ʀᴏᴜᴘ 🔍', url=GRP_LNK)],
-                     [InlineKeyboardButton("🎁 𝗕ᴜʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
+                     InlineKeyboardButton('🔰𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗚𝗿𝗼𝘂𝗽🔰', url=GRP_LNK)],
+                     [InlineKeyboardButton("🎗️𝗕𝘂𝘆 𝗣𝗿𝗲𝗺𝗶𝘂𝗺🎗️", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                 ])
                 for channel in POST_CHANNELS:
                     if poster_url:
@@ -122,8 +122,8 @@ async def media(bot, message):
                         url_text = "\n\n".join([f"😍 [{get_size(size)}]👇\n<a href='https://t.me/{temp.U_NAME}?start=files_{file_id}'>{file_name}</a>" for file_id, file_name, caption, size in collected_files])
                         captionn = f"<b>#Information_Not_Available\n\nTotal Files: {len(collected_files)}\n\n{url_text}</b>"
                         reply_markup=InlineKeyboardMarkup([[
-                            InlineKeyboardButton('🔰 𝗦ᴇᴀʀᴄʜ 𝗚ʀᴏᴜᴘ 🔍', url=GRP_LNK)],
-                            [InlineKeyboardButton("🎁 𝗕ᴜʏ 𝗣ʀᴇᴍɪᴜᴍ ✨", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
+                            InlineKeyboardButton('🔰𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗚𝗿𝗼𝘂𝗽🔰', url=GRP_LNK)],
+                            [InlineKeyboardButton("🎗️𝗕𝘂𝘆 𝗣𝗿𝗲𝗺𝗶𝘂𝗺🎗️", url=f'https://t.me/{temp.U_NAME}?start=Safaridev')]
                         ])
                         await bot.send_message(
                             chat_id=channel,
