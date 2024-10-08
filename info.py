@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '27106563'))
 API_HASH = environ.get('API_HASH', 'bc347e85dfa4ce7cae0fe3479cda705f')
-BOT_TOKEN = environ.get('BOT_TOKEN', '6697056535:AAGsGsYwyXy_NewmBfgZwJt0WAH-8NubcMA')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -63,8 +63,8 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jaynath0143:jaynath0143@cluster0.liw9lc8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Jaynath")
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # verify Shortener 
