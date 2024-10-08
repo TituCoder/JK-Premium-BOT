@@ -43,7 +43,7 @@ JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Jaynath_Backup_Channel/76'))
 
 #premium Users Satuts
-premium = environ.get('PREMIUM_LOGS', '-1002073485610')
+premium = environ.get('PREMIUM_LOGS', '-1002480563811')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 @
 CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
@@ -90,7 +90,7 @@ PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK','https://t.me/Jaynath_Movie_Request')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Jaynath_Movie_Channel')
 MSG_ALRT = environ.get('MSG_ALRT', '𝗠𝗿 𝗝𝗮𝘆𝗻𝗮𝘁𝗵⚡')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002073485610))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002480563811))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Jaynath_Movie_Request')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
@@ -126,7 +126,7 @@ EMOJIS = [
         "💙","🌻","🐰","😱"]
 
 # Streaming
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002073485610")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002480563811")
 if len(BIN_CHANNEL) == 0:
     logging.error('BIN_CHANNEL is missing, exiting now')
     exit()
