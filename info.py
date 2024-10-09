@@ -49,7 +49,7 @@ OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 
 CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7798486856 7327834683').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002364559204 -1004526728121').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002152610182').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', "-1002364559204")
