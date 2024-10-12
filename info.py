@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '24613084'))
-API_HASH = environ.get('API_HASH', '6997f04db886d0af3a4cd9a543d6ab25')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8072917318:AAGZP9uD8b64GhDMxDvwsGz3KDKlKzSNW-c')
+API_ID = int(environ.get('API_ID', '28502424'))
+API_HASH = environ.get('API_HASH', '91f949750d97b60cb424f9d7e0b95f09')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7475794969:AAH1laE_Lm9_fpHQtOZrJAQsGePvdyzoA8A')
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -43,13 +43,13 @@ JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Titu_Movies_Request'))
 
 #premium Users Satuts
-premium = environ.get('PREMIUM_LOGS', '-1002480563811')
+premium = environ.get('PREMIUM_LOGS', '-1002429850306')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 @
 CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7798486856 7327834683').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002152610182').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7515612612').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002287159890').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', "-1002364559204")
@@ -90,7 +90,7 @@ PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK','https://t.me/Titu_Movie_Request')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Titu_Movies_Channel')
 MSG_ALRT = environ.get('MSG_ALRT', 'Tɪᴛᴜᴜᴜ Mᴏᴠɪᴇss 💓')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002480563811))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002429850306))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Titu_Movies_Request')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
