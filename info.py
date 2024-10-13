@@ -63,7 +63,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://titu:titu@titu.9mduh.mongodb.net/?retryWrites=true&w=majority&appName=titu")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://titu:titu@titu.ibp4m.mongodb.net/?retryWrites=true&w=majority&appName=titu")
 DATABASE_NAME = environ.get('DATABASE_NAME', "titu")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TituBot')
 
