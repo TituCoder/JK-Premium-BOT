@@ -21,15 +21,15 @@ TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = is_enabled((environ.get('USE_CAPTION_FILTER', 'True')), True)
 
-PICS = (environ.get('PICS', 'https://envs.sh/PL2.jpg')).split()
-NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/PL2.jpg" )
+PICS = (environ.get('PICS', 'https://envs.sh/ngN.jpg')).split()
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/ngN.jpg" )
 MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/451f038b4e7c2ddd10dc0.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/5e2d4418525832bc9a1b9.jpg")
 VID = environ.get('VID', 'https://graph.org/file/943ab14a83315640f65e8.mp4')
 
 # premium QR & PHOTO
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://telegra.ph/file/ffd0ce0182b0b94c57c53.jpg'))
-CODE = (environ.get('CODE', 'https://telegra.ph/file/ffd0ce0182b0b94c57c53.jpg')) # Scanner Code image 
+CODE = (environ.get('CODE', 'https://envs.sh/nOd.jpg')) # Scanner Code image 
 
 #refer time, or user count
 REFERAL_USER_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
