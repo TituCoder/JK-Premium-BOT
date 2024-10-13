@@ -34,7 +34,7 @@ CODE = (environ.get('CODE', 'https://telegra.ph/file/ffd0ce0182b0b94c57c53.jpg')
 #refer time, or user count
 REFERAL_USER_TIME = int(environ.get('REFERAL_USER_TIME', "2592000")) # set in seconds | already seted 1 month premium
 USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
-INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
+INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "18000")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shareus.io')
