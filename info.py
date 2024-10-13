@@ -37,7 +37,7 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "18000")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shareus.io')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'api.shareus.io/easy_api')
 STREAM_API = environ.get('IMPORT_JK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), True)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/+zRkE-xV94so4MmY1'))
@@ -70,14 +70,14 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TituBot')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/76")
-VERIFY2_URL = environ.get('VERIFY2_URL', "shareus.io")
+VERIFY2_URL = environ.get('VERIFY2_URL', "api.shareus.io/easy_api")
 VERIFY2_API = environ.get('VERIFY2_API', "Af2bIvU8gLRNfl3lvZLII2eChnF3")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/76')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io/easy_api')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
