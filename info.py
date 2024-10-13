@@ -39,8 +39,8 @@ INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in sec
 #streming link shortner
 STREAM_SITE = environ.get('IMPORT_JK_SITE', 'onepageyam.com')
 STREAM_API = environ.get('IMPORT_JK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
-JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'False')), False)
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Titu_Movies_Request'))
+JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), True)
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/+zRkE-xV94so4MmY1'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002429850306')
