@@ -126,7 +126,7 @@ EMOJIS = [
         "💙","🌻","🐰","😱"]
 
 # Streaming
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002480563811")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002429850306")
 if len(BIN_CHANNEL) == 0:
     logging.error('BIN_CHANNEL is missing, exiting now')
     exit()
