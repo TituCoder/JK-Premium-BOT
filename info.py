@@ -37,15 +37,15 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'onepageyam.com')
-STREAM_API = environ.get('IMPORT_JK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shareus.io')
+STREAM_API = environ.get('IMPORT_JK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), True)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/+zRkE-xV94so4MmY1'))
 
 #premium Users Satuts
 premium = environ.get('PREMIUM_LOGS', '-1002429850306')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
-OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Owner0423_Bot") # widout 👉 @
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "TituHelpBot") # widout 👉 @
 CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7515612612').split()]
@@ -70,15 +70,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TituBot')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/76")
-VERIFY2_URL = environ.get('VERIFY2_URL', "onepageyam.com")
-VERIFY2_API = environ.get('VERIFY2_API', "70db509936f7f315fa550b241f50b24d00dc0c80")
+VERIFY2_URL = environ.get('VERIFY2_URL', "shareus.io")
+VERIFY2_API = environ.get('VERIFY2_API', "Af2bIvU8gLRNfl3lvZLII2eChnF3")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/76')
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'onepageyam.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '70db509936f7f315fa550b241f50b24d00dc0c80')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 YEARS =  ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000",]
@@ -87,11 +87,11 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK','https://t.me/Titu_Movie_Request')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Titu_Movies_Channel')
+GRP_LNK = environ.get('GRP_LNK','https://t.me/+zRkE-xV94so4MmY1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Titu_Movie')
 MSG_ALRT = environ.get('MSG_ALRT', 'Tɪᴛᴜᴜᴜ Mᴏᴠɪᴇss 💓')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002429850306))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Titu_Movies_Request')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+zRkE-xV94so4MmY1')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
