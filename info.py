@@ -43,16 +43,16 @@ JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), True)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/+zRkE-xV94so4MmY1'))
 
 #premium Users Satuts
-premium = environ.get('PREMIUM_LOGS', '-1002429850306')
+premium = environ.get('PREMIUM_LOGS', '-1002335695942')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
-OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "TituHelpBot") # widout 👉 @
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Mr_Tituu") # widout 👉 @
 CHECK_PREMIUM_FOR_QUALITY = is_enabled((environ.get('CHECK_PREMIUM_FOR_QUALITY', 'True')), True)
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7515612612').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002287159890').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', "-1002287159890")
+auth_channel = environ.get('AUTH_CHANNEL', "-1002392538113")
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
@@ -87,11 +87,11 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "7")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK','https://t.me/+zRkE-xV94so4MmY1')
+GRP_LNK = environ.get('GRP_LNK','https://t.me/+uACZ9iyGXms0NTJl')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Titu_Movie')
 MSG_ALRT = environ.get('MSG_ALRT', 'Tɪᴛᴜᴜᴜ Mᴏᴠɪᴇss 💓')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002429850306))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+zRkE-xV94so4MmY1')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL',  -1002335695942))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '+uACZ9iyGXms0NTJl')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
