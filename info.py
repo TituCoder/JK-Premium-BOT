@@ -70,15 +70,15 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'TituBot')
 # verify Shortener 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Jaynath_Backup_Channel/76")
-VERIFY2_URL = environ.get('VERIFY2_URL', "api.shareus.io/easy_api")
-VERIFY2_API = environ.get('VERIFY2_API', "Af2bIvU8gLRNfl3lvZLII2eChnF3")
+VERIFY2_URL = environ.get('VERIFY2_URL', "shrinkearn.com")
+VERIFY2_API = environ.get('VERIFY2_API', "5a527132a287de7586880fe3dbadd1dfb601d092")
 # how to open link
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Jaynath_Backup_Channel/76')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 
 # files Shortner site
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io/easy_api')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shrinkearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '5a527132a287de7586880fe3dbadd1dfb601d092')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 YEARS =  ["2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000",]
