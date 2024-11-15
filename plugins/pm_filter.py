@@ -225,7 +225,7 @@ async def pm_text(bot, message):
         if user_id in ADMINS: return # ignore admins
         await message.reply_text("<b>ए दोस्त यहां सिफ़्ह PREMIUM UESR मूवी ले साखते है NORMAL USER को नही मिलेगा ग्रुप में मांगो 👉@Jaynath_Movie_Request</b>",
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('🤖 ʙᴜʏ ʙᴏᴛ ᴘᴍ ᴘʀᴇᴍɪᴜᴍ 🎗️', callback_data=f'seepl'),[InlineKeyboardButton('💫 Request Here', url="https://t.me/+5mkRHNxvgT1lNjNl")]]))
+            [InlineKeyboardButton('🤖 ʙᴜʏ ʙᴏᴛ ᴘᴍ ᴘʀᴇᴍɪᴜᴍ 🎗️', callback_data=f'seepl)]]))
         await bot.send_message(
             chat_id=LOG_CHANNEL,
             text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
