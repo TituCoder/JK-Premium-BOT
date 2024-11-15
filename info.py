@@ -37,8 +37,8 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "10")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "18000")) #set in seconds, free trail invites users in 1 day, 
 
 #streming link shortner
-STREAM_SITE = environ.get('IMPORT_JK_SITE', 'api.shareus.io/easy_api')
-STREAM_API = environ.get('IMPORT_JK_API', 'Af2bIvU8gLRNfl3lvZLII2eChnF3')
+STREAM_SITE = environ.get('IMPORT_JK_SITE', 'shrinkearn.com')
+STREAM_API = environ.get('IMPORT_JK_API', '5a527132a287de7586880fe3dbadd1dfb601d092')
 JK_STREAM_MODE = is_enabled((environ.get('JK_STREAM_MODE', 'True')), True)
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/+zRkE-xV94so4MmY1'))
 
